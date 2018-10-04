@@ -1,0 +1,18 @@
+<!--suppress CheckEmptyScriptTag -->
+<rt-require dependency="baseUI/controls/infoIcon" as="infoIcon"/>
+
+<div class="control-radio-buttons{this.props.disabled ? ' disabled' : ''}">
+    <infoIcon rt-if="this.props.infoText"
+              key="infoIcon"
+              text="{this.props.infoText}"
+              title="{this.props.infoTitle}"/>
+
+    <div rt-if="this.props.label" key="label">{this.translateIfNeeded(this.props.label)}</div>
+    <label rt-repeat="option in this.props.options" rt-scope="this.getValueFromProps(this.props) as selectedValue"
+           class="{option.className}" onMouseOver="{this.onMouseOver}" key="option-{option.value}">
+        <input type="radio" name="{this.getRadioGroupId()}" value="{option.value}" disabled="{this.props.disabled}"
+               checked="{option.value === selectedValue}" onChange="()=>this.handleChange(option.value, option.type);">
+        <span></span>
+        <span onClick="{this.onClick}">{this.translateIfNeeded(option.label)}</span>
+    </label>
+</div>

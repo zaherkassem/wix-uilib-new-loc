@@ -1,0 +1,204 @@
+@import "../framework/framework";
+
+.video-input {
+
+  $background-color: $g-color-b5;
+  $background-color-bottom: rgba(177, 221, 248, 0.4);
+  $button-color: #fff;
+  $button-color-hover: $g-color-b5;
+  $button-color-active: #fff;
+  $button-text-color: $g-color-b1;
+
+  $play-button-color: #fff;
+  $play-button-color-hover: $g-color-b1;
+  $arrow-size: 24px;
+
+  width: 288px;
+  height: 155px;
+  box-sizing: border-box;
+  background-color: $background-color;
+  position: relative;
+  text-align: center;
+
+  .video-wrapper {
+    height: 100%;
+    font-size: 0; // without it .video-wrapper will be about 4 pixels taller than the video which creates a scrollbar :(
+
+    > iframe {
+      border: none;
+    }
+
+    &, >iframe {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+
+  .button-wrapper {
+    height: 54px;
+    display: block;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 100%;
+    background-color: $background-color-bottom;
+
+    button.action {
+      height: 32px;
+      line-height: 32px;
+      margin-bottom: 0 !important;
+      border: 0;
+      border-radius: 17px;
+      background-color: $button-color;
+      cursor: pointer;
+      outline: none;
+      color: $button-text-color;
+      font-size: 14px;
+      vertical-align: top;
+      text-overflow: clip; // we NEVER want to see ellipsis (and there are cases where although the label is short enough to fit the button, not overriding text-overflow would result in ellipsis)
+
+      &.has-icon {
+        padding-left: 0;
+      }
+
+      &:nth-of-type(1):nth-last-of-type(1) {
+        // There's only one button
+        width: 167px;
+      }
+
+      &:nth-of-type(1):nth-last-of-type(2) {
+        // There are two buttons
+        $margin: 23px;
+        margin-right: $margin;
+        &, & + button {
+          width: calc(50% - 2 * #{$margin});
+        }
+      }
+
+      &:hover {
+        background-color: $button-color-hover;
+      }
+
+      &:active {
+        background-color: $button-color-active;
+      }
+
+      svg {
+        float: left;
+        margin: 0 15px 0 9px !important;
+        width: 14px;
+        height: 32px;
+      }
+
+      span {
+        color: $button-text-color;
+        @include g-font-f04();
+        line-height: 17px;
+        text-align: left;
+        left: -3px;
+        position: relative;
+      }
+    }
+  }
+
+  .placeholder-wrapper {
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -75%);
+      path {
+        fill: $g-color-b1;
+      }
+    }
+  }
+
+  .video-controls {
+    width: 100%;
+    height: 100%;
+
+    .blocking-layer {
+      background: #000;
+      width: 100%;
+      height: 100%;
+
+      &.play {
+        opacity: 0;
+      }
+
+      &.pause {
+        opacity: 0.4;
+      }
+    }
+
+    .pause-button,
+    .play-button {
+      width: 44px;
+      height: 44px;
+      border: 2px solid $play-button-color;
+      position: absolute;
+      margin: 46px 0 65px 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      top: 6px;
+    }
+
+    .pause-button {
+      .pause {
+        display: block;
+        border-left: 5px solid $play-button-color;
+        border-right: 5px solid $play-button-color;
+        width: 10%;
+        height: 40%;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+
+      &:hover {
+        border-color: $play-button-color-hover;
+        cursor: pointer;
+
+        .pause {
+          border-left-color: $play-button-color-hover;
+          border-right-color: $play-button-color-hover;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .play-button {
+      .triangle {
+        width: 0;
+        height: 0;
+        position: relative;
+        display: block;
+        border-color: inherit;
+        border-left: 24px solid $play-button-color;
+        border-bottom: 14px transparent solid;
+        border-top: 14px transparent solid;
+        top: 50%;
+        left: calc(50% + 4px);
+        transform: translate(-50%, -50%);
+      }
+
+      &:hover {
+        border-color: $play-button-color-hover;
+        cursor: pointer;
+
+        .triangle {
+          border-left-color: $play-button-color-hover;
+          border-right-color: $play-button-color-hover;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

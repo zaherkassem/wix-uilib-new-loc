@@ -1,0 +1,26 @@
+@import "../framework/framework";
+
+//changing css here applies to ALL buttons across the editor - please modify with care
+.control-button2 {
+  &[disabled] {cursor: default;}
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  input {
+    display: none;
+
+  }
+
+  .label,
+  .symbol {
+    display: inline-block;
+  }
+
+  .label {
+    font-size: initial;
+  }
+}

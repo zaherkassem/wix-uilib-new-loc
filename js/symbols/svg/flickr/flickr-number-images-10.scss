@@ -1,0 +1,13 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(flickr-number-images-10) {
+  .st1 {
+    fill: #54CCF9;
+  }
+}
+
+@include toggle-selected-up(flickr-number-images-10) {
+  .st1 {
+    fill: #ffffff;
+  }
+}

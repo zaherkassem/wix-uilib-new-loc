@@ -1,0 +1,57 @@
+@import "../../../framework/framework";
+
+.imageAndTextTooltip {
+  $border-radius: 8px;
+  white-space: normal;
+
+  .text-container {
+    padding: 24px;
+
+    .title {
+      @include g-font-f01();
+      color: $g-color-d2;
+      margin-bottom: 12px;
+    }
+
+    .text {
+      @include g-font-f03();
+      color: $g-color-d2;
+    }
+
+    .learn-more {
+      cursor: pointer;
+      color: $g-color-b1;
+      @include g-font-f03();
+      margin-top: 10px;
+      :hover {
+        text-decoration: underline;
+      }
+    }
+
+    &.text-no-image {
+      padding: 18px;
+    }
+  }
+
+  .image-container {
+    background-color: $g-color-b1;
+    text-align: center;
+    left: 0;
+    right: 0;
+
+    &.upper-image {
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+    }
+
+    &.lower-image {
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+
+    svg {
+      margin-top: 22px;
+      margin-bottom: 22px;
+    }
+  }
+}

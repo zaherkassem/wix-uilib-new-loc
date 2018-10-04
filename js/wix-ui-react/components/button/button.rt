@@ -1,0 +1,2 @@
+<rt-require dependency="baseUI/controls/button" as="myButton"/>
+<myButton rt-props="this.getProps()"/>

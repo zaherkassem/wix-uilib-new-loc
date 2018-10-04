@@ -1,0 +1,107 @@
+@import "../framework/framework";
+
+$mandatorySelectedBackgroundColor: $g-color-d5;
+$mandatoryNotSelectedBackgroundColor: $g-color-d5;
+
+$mandatorySelectedBackgroundColorOnHover: $g-color-b5;
+$mandatoryNotSelectedBackgroundColorOnHover: $g-color-d6;
+
+$mandatorySelectedIconColor: $g-color-b1;
+$mandatoryNotSelectedIconColor: $g-color-e6;
+
+$mandatorySelectedIconColorOnHover: $g-color-b1;
+$mandatoryNotSelectedIconColorOnHover: $g-color-b4;
+$borderColor: $g-color-b1;
+
+.control-mandatory {
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    content: attr(data-text);
+    display: inline-block;;
+    margin-left: 13px;
+    position: absolute;
+    white-space: nowrap;
+    line-height: 18px;
+  }
+
+  input {
+    display: none;
+
+    + span {
+      width: 16px;
+      height: 16px;
+      border: solid 1px $borderColor;
+      display: inline-block;
+      border-radius: 50%;
+      transition-property: background-color, color;
+      transition-duration: .2s;
+      position: relative;
+      background-color: $mandatoryNotSelectedBackgroundColor;
+
+      &:before {
+        content: '*';
+        color: $mandatoryNotSelectedIconColor;
+        font-size: 30px;
+        position: absolute;
+        top: 4.5px;
+        left: 2.7px;
+        line-height: 18px;
+      }
+    }
+
+    &:checked {
+      + span {
+        background-color: $mandatorySelectedBackgroundColor;
+
+        &:before {
+          color: $mandatorySelectedIconColor;
+        }
+      }
+    }
+
+    &:disabled{
+      + span {
+        border-color: $g-color-b1x;
+
+        &:before {
+          color: $g-color-b1x;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    input {
+      + span {
+        background-color: $mandatoryNotSelectedBackgroundColorOnHover;
+
+        &:before {
+          color: $mandatoryNotSelectedIconColor;
+        }
+      }
+      &:checked {
+        + span {
+          background-color: $mandatorySelectedBackgroundColorOnHover;
+
+          &:before {
+            color: $mandatorySelectedIconColorOnHover;
+          }
+        }
+      }
+
+      &:disabled{
+        + span {
+          border-color: $g-color-b1x;
+          background-color: $mandatorySelectedBackgroundColor;
+
+
+          &:before {
+            color: $g-color-b1x;
+          }
+        }
+      }
+    }
+  }
+}

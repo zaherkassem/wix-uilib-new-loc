@@ -1,0 +1,8 @@
+<rt-require dependency="baseUI/popovers/tooltip" as="tooltip"/>
+<tooltip
+    value="{this.props.value}"
+    alignment="{this.props.alignment}"
+    styleType="{this.props.styleType}"
+    width="{this.props.width}">
+    <span>{this.props.children}</span>
+</tooltip>

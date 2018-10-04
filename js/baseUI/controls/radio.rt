@@ -1,0 +1,27 @@
+<!--suppress CheckEmptyScriptTag -->
+<rt-require dependency="symbols" as="symbols"/>
+<rt-require dependency="util" as="util"/>
+<rt-require dependency="baseUI/popovers/tooltip" as="tooltip"/>
+
+<tooltip ref="tooltip" value="{this.props.tooltip || this.props.label}" disabled="{!this.shouldShowTooltip()}" shouldTranslate="{true}">
+    <label class="radio-control {this.getClassName('control-' + this.props.name)}" rt-class="{'active': this.props.value}"
+           key="{this.props.name}"
+           onMouseOver="{this.props.onMouseOver}"
+           onMouseOut="{this.props.onMouseOut}">
+        <input class="input-{this.props.name}"
+               type="radio"
+               name="{this.props.group}"
+               checked="{this.getValueFromProps(this.props)}"
+               disabled="{!!this.props.disabled}"
+               onChange="{this.props.onChange}"/>
+
+        <symbols.symbol rt-if="this.props.radioType === 'symbol'" rt-class="this.getRadioClasses()" key="radio-symbol" name="{this.props.name}"/>
+        <div rt-if="this.props.radioType === 'class'" class="class-{this.props.name}" key="radio-class"></div>
+
+        <div rt-if="this.props.radioType === 'image'" class="image-radio image-radio-{this.props.valueName}" key="radio-image">
+            <img rt-if="!this.props.value" src="{this.props.src}">
+            <img rt-if="this.props.value" src="{this.props.activeSrc}">
+        </div>
+        <span rt-if="this.props.label" ref="label" class="label label-{this.props.name}" key="radio-label">{this.props.translate ? util.translate(this.props.label) : this.props.label}</span>
+    </label>
+</tooltip>

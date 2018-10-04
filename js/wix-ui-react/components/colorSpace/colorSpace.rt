@@ -1,0 +1,21 @@
+<rt-require dependency="util" as="util"/>
+<rt-require dependency="baseUI" as="baseUI"/>
+
+<div class="add-color-content">
+    <baseUI.colorSpace valueLink="{this.linkColor('customColor')}"/>
+     <div class="color-indicator">
+        <span class="color-sample initial-color" onMouseDown="{this.resetToInitialColor}" style="background-color: {this.resolveColor(this.initialColor)}"></span>
+        <span class="color-sample current-color" style="background-color: {util.colors.hsbToHex(this.state.customColor.HSB)}"></span>
+    </div>
+    <div>
+        <baseUI.colorFormat value="{this.state.customColor.HSB}" onChange="{this.handleChange}"/>
+    </div>
+     <div class="footer">
+            <baseUI.button class="cancel-button btn-md btn-confirm-secondary"
+                       label="Cancel"
+                        onClick="{this.handleCancel}"></baseUI.button>
+            <baseUI.button class="confirm-button btn-md"
+                       label="Add"
+                       onClick="{this.callOnChangeAndClose}"></baseUI.button>
+        </div>
+</div>

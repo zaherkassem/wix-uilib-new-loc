@@ -1,0 +1,31 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(textLink) {
+  fill: $g-color-d2;
+}
+
+@include toggle-regular-down(textLink) {
+  fill: $g-color-d6;
+}
+
+@include toggle-selected-up(textLink) {
+  fill: $g-color-d6;
+}
+
+@include toggle-regular-disabled(textLink) {
+  fill: $g-color-d2x;
+}
+
+@include symbol-up(textLink) {
+  //overrides:
+  .text-link-dd & {
+    pointer-events: none;
+    vertical-align: middle;
+    padding: 0;
+    display: inline-block;
+  }
+
+  .selected & {
+    fill: #ffffff;
+  }
+}

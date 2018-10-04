@@ -1,0 +1,11 @@
+<!--suppress CheckEmptyScriptTag -->
+<rt-require dependency="baseUI/panelInputs/slider" as="slider"/>
+<rt-require dependency="baseUI/colorPicker/colorPickerInput" as="colorPicker"/>
+
+<div class="color-picker-input-with-opacity">
+    <label rt-if="this.props.label" key="label" rt-class="{'color-picker-input-with-opacity-label': true, disabled: this.props.disabled}">{this.translateIfNeeded(this.props.label)}</label>
+    <div class="color-picker-input-with-opacity-slider">
+        <slider isSmallStepper="{this.props.isSmallStepper}" disabled="{this.props.disabled}" units="%" valueLink="{this.linkOpacity()}" onSlideEnd="{this.props.onSlideEnd}" min="{0}" max="{100}" step="{1}" handleStepperChange="{this.props.handleStepperChange}"/>
+        <colorPicker disabled="{this.props.disabled}" valueLink="{this.linkColor()}" rt-props="this.getPropsForColorInput()"/>
+    </div>
+</div>

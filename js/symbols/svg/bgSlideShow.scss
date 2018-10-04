@@ -1,0 +1,28 @@
+@import "../../../baseUI/src/main/framework/framework";
+
+.symbol-bgSlideShow {
+  .slideshow-icon .st2 {
+    fill: $g-color-b1;
+  }
+
+  .slideshow-icon .st6 {
+    fill: #E9F1F4;
+  }
+
+  .slideshow-icon:hover .st2 {
+    fill: #ECF7FF;
+  }
+
+  .slideshow-icon:hover .st6 {
+    fill: $g-color-b1;
+  }
+
+  .slideshow-icon .disable .st2 {
+    fill: #A7A7A7;
+  }
+
+  .slideshow-icon .disable .st6 {
+    fill: #E9F1F4;
+  }
+
+}

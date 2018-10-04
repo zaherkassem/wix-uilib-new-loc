@@ -1,0 +1,59 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(play) {
+  .st0 {
+    fill: transparent;
+    stroke: $g-color-b1;
+    stroke-width: 1.15;
+    opacity: 0.5;
+  }
+
+  .st1 {
+    fill: $g-color-b1;
+  }
+
+  .st2 {
+    fill: transparent;
+  }
+
+  .st3 {
+    fill: transparent;
+    stroke: $g-color-b1;
+    stroke-width: 1.15;
+  }
+}
+
+@include toggle-regular-hover(play) {
+  .st0 {
+    fill: $g-color-b5;
+  }
+}
+
+@include toggle-selected-up(play) {
+  .st0 {
+    fill: transparent;
+    stroke: $g-color-b1;
+    stroke-width: 1.15;
+    opacity: 0.5;
+  }
+
+  .st1 {
+    fill: transparent;
+  }
+
+  .st2 {
+    fill: $g-color-b1;
+  }
+
+  .st3 {
+    fill: transparent;
+    stroke: $g-color-b1;
+    stroke-width: 1.15;
+  }
+}
+
+@include toggle-selected-hover(play) {
+  .st0 {
+    fill: $g-color-b5;
+  }
+}

@@ -1,0 +1,5 @@
+<rt-require dependency="textControls/comps/colorDrop" as="colorDrop"/>
+<rt-require dependency="textControls/comps/iconButton" as="iconButton"/>
+<span>
+    <iconButton onClick="{this.props.onClick}" tooltipValue="{this.props.tooltipValue}" tooltipStyleType="{this.props.tooltipStyleType}"><colorDrop isBackColor="{this.props.isBackColor}" fill="{this.props.value}"></colorDrop></iconButton>
+</span>

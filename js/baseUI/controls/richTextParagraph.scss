@@ -1,0 +1,39 @@
+@import "../framework/framework";
+
+.rich-text-paragraph {
+  font-family: $g-font45;
+
+  .rich-text-paragraph-title {
+    color: $g-color-d2;
+    @include g-font-f14();
+    font-weight: 300;
+    text-align: left;
+    margin: 10px 0 0;
+  }
+
+  .rich-text-paragraph-content {
+    color: $g-color-d3;
+    font-weight: 300;
+    @include g-font-f03();
+    line-height: 21px;
+    text-align: left;
+    margin: 0;
+
+    a {
+      color: $g-color-b1;
+      text-decoration: none;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+
+    b,
+    strong {
+      @include g-font-f04();
+      color: $g-color-d2;
+      font-weight: normal;
+    }
+  }
+}

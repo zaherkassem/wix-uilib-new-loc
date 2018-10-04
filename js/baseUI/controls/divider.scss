@@ -1,0 +1,15 @@
+@import "../framework/framework";
+
+hr {
+  &.divider-long,
+  &.divider-short {
+    background-color: $g-color-d4;
+    border: 0;
+    height: 1px;
+    margin: 0;
+  }
+
+  &.divider-short {
+    margin: 0 24px;
+  }
+}

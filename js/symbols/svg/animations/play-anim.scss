@@ -1,0 +1,47 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(play-anim) {
+  .st0 {
+    fill: transparent;
+    stroke: $g-color-d6;
+    stroke-width: 2;
+    opacity: 0.5;
+  }
+
+  .st1 {
+    fill: $g-color-d6;
+  }
+
+  .st2 {
+    fill: transparent;
+  }
+
+  .st3 {
+    fill: transparent;
+    stroke: $g-color-d6;
+    stroke-width: 2;
+  }
+}
+
+@include toggle-selected-up(play-anim) {
+  .st0 {
+    fill: transparent;
+    stroke: $g-color-d6;
+    stroke-width: 2;
+    opacity: 0.5;
+  }
+
+  .st1 {
+    fill: transparent;
+  }
+
+  .st2 {
+    fill: $g-color-d6;
+  }
+
+  .st3 {
+    fill: transparent;
+    stroke: $g-color-d6;
+    stroke-width: 2;
+  }
+}

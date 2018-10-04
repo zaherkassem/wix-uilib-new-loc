@@ -1,0 +1,147 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+$control-name: checkbox;
+
+@include toggle-regular-up($control-name) {
+  vertical-align: top;
+
+  .bg {
+    fill: #fff;
+  }
+  .border {
+    fill: $g-color-b1;
+  }
+  .check,
+  .minus {
+    fill: transparent;
+  }
+
+  @include with-parent-class(show-on-all-pages) {
+    .border {
+      fill: $g-color-o1;
+    }
+  }
+}
+
+@include toggle-regular-up($control-name, label) {
+  color: $g-color-d1;
+  margin: 0 13px;
+}
+
+@include toggle-regular-up($control-name, info) {
+  position: absolute;
+  right: 12px;
+  top: 1px;
+}
+
+@include toggle-regular-hover($control-name) {
+  .bg {
+    fill: $g-color-b4;
+  }
+
+  @include with-parent-class(show-on-all-pages) {
+    .bg {
+      fill: $g-color-o4;
+    }
+  }
+}
+
+@include toggle-regular-down($control-name) {
+  .bg {
+    fill: #fff;
+  }
+}
+
+@include toggle-regular-disabled($control-name) {
+  .bg {
+    fill: $g-color-b5x;
+  }
+  .border {
+    fill: $g-color-e5x;
+  }
+}
+
+@include toggle-selected-up($control-name) {
+  .bg,
+  .border {
+    fill: $g-color-b1;
+  }
+  .check {
+    fill: #fff;
+  }
+  .minus {
+    fill: transparent;
+  }
+
+  @include with-parent-class(show-on-all-pages) {
+    .bg,
+    .border {
+      fill: $g-color-o1;
+    }
+  }
+}
+
+@include toggle-selected-hover($control-name) {
+  .bg,
+  .border {
+    fill: $g-color-b2;
+  }
+
+  @include with-parent-class(show-on-all-pages) {
+    .bg,
+    .border {
+      fill: $g-color-o2;
+    }
+  }
+}
+
+@include toggle-selected-down($control-name) {
+  .bg,
+  .border {
+    fill: $g-color-b1;
+  }
+}
+
+@include toggle-selected-disabled($control-name) {
+  .bg {
+    fill: $g-color-e5x;
+  }
+  .border {
+    fill: $g-color-e7x;
+  }
+}
+
+@include toggle-indeterminate-up($control-name) {
+  .bg {
+    fill: #fff;
+  }
+  .border,
+  .minus {
+    fill: $g-color-b1;
+  }
+  .check {
+    fill: transparent;
+  }
+}
+
+@include toggle-indeterminate-hover($control-name) {
+  .bg {
+    fill: $g-color-b4;
+  }
+}
+
+@include toggle-indeterminate-down($control-name) {
+  .bg {
+    fill: #fff;
+  }
+}
+
+@include toggle-indeterminate-disabled($control-name) {
+  .bg {
+    fill: $g-color-b4x;
+  }
+  .border,
+  .minus {
+    fill: $g-color-e5x;
+  }
+}

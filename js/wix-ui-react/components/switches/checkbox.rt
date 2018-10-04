@@ -1,0 +1,11 @@
+<rt-require dependency="baseUI/controls/toggle" as="toggle"/>
+<toggle name="checkbox"
+            label="{this.props.label}"
+            labelAfterSymbol="{true}"
+            disabled="{this.state.disabled}"
+            class="{this.props.className}"
+            value="{this.state.checked}"
+            infoTitle="{this.props.infoTitle}"
+            infoText="{this.props.infoText}"
+            onChange="{this.handleChange}">
+</toggle>

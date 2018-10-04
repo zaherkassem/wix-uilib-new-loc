@@ -1,0 +1,55 @@
+@import "../framework/framework";
+
+//set css rules which apply to all boolean controls
+.boolean-control {
+  overflow: hidden; // fixes SE-6685
+
+  input {
+    display: none;
+
+    ~ svg,
+    ~ .label {
+      cursor: pointer;
+    }
+
+    &:disabled {
+      ~ svg,
+      ~ .label {
+        cursor: default;
+      }
+    }
+  }
+
+  span.label {
+    @include ellipsis();
+    width: inherit;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &.medium-scale {
+
+    svg {
+      transform: scale(0.8);
+      margin-bottom: -3px;
+      vertical-align: middle;
+      padding: 1px;
+    }
+  }
+
+  &.no-scale {
+
+    svg {
+      transform: scale(1);
+      vertical-align: middle;
+      padding: 1px;
+    }
+
+  }
+
+  span:not(.info-icon) svg {
+    > path {
+      fill: $g-color-d3x !important;
+    }
+  }
+}

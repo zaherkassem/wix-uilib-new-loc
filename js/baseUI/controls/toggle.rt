@@ -1,0 +1,32 @@
+<!--suppress CheckEmptyScriptTag -->
+<rt-require dependency="symbols" as="symbols"/>
+<rt-require dependency="util" as="util"/>
+<rt-require dependency="baseUI/controls/infoIcon" as="infoIcon"/>
+
+<label rt-class="this.getClasses()" disabled="{!!this.props.disabled}">
+    <input class="input-{this.props.name}"
+           type="checkbox"
+           checked="{this.getValueFromProps(this.props)}"
+           disabled="{!!this.props.disabled}"
+           data-indeterminate="{!!this.props.indeterminate}"
+           onChange="(e)=>this.handleChange(e);"/>
+
+    <span rt-if="this.props.label && !this.props.labelAfterSymbol"
+          key="labelBefore"
+          class="label label-{this.props.name}">{this.translateIfNeeded(this.props.label)}</span>
+
+    <symbols.symbol name="{this.props.name}"/>
+
+    <span rt-if="this.props.label && this.props.labelAfterSymbol"
+          key="labelAfter"
+          class="label label-{this.props.name}">{this.translateIfNeeded(this.props.label)}</span>
+
+    <infoIcon rt-if="this.props.shouldDisplayInfoIcon || this.props.infoText || this.props.infoTitle"
+              class="info-{this.props.name}"
+              key="infoIcon"
+              title="{this.props.infoTitle}"
+              text="{this.props.infoText}"
+              alignment="{this.props.infoAlignment}"
+              fitToBounds="{this.props.infoFitToBounds}"/>
+</label>
+

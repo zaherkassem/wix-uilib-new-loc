@@ -1,0 +1,34 @@
+<svg class="symbol-building-out-of-mobile-gridline-clipart" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72px" height="125px" viewBox="-6 0 72 125">
+  <ellipse style="fill:#D3EDFF;" cx="29.336" cy="121.963" rx="24" ry="2.5"/>
+  <defs>
+    <path id="SVGID_151_" d="M59,100.5c0,3.314-2.686,6-6,6H6c-3.314,0-6-2.686-6-6v-94c0-3.314,2.686-6,6-6h47c3.314,0,6,2.686,6,6V100.5z"/>
+  </defs>
+  <use xlink:href="#SVGID_151_"  style="overflow:visible;fill:#A7E3FA;"/>
+  <clipPath id="SVGID_2_">
+    <use xlink:href="#SVGID_151_"  style="overflow:visible;"/>
+  </clipPath>
+  <rect x="-14" y="-10.5" style="clip-path:url(#SVGID_2_);fill:#EAF7FF;" width="90" height="99"/>
+  <path style="clip-path:url(#SVGID_2_);fill:#5FCEF5;" d="M67,118.307c0,2.868-2.325,5.193-5.193,5.193H-4.807
+                                                          c-2.868,0-5.193-2.325-5.193-5.193V92.693c0-2.868,2.325-5.193,5.193-5.193h66.613c2.868,0,5.193,2.325,5.193,5.193V118.307z"/>
+  <path style="clip-path:url(#SVGID_2_);fill:#5FCEF5;" d="M67,2.307C67,5.175,64.675,7.5,61.807,7.5H-4.807
+                                                          C-7.675,7.5-10,5.175-10,2.307v-25.613c0-2.868,2.325-5.193,5.193-5.193h66.613c2.868,0,5.193,2.325,5.193,5.193V2.307z"/>
+  <g style="clip-path:url(#SVGID_2_);">
+    <line style="fill:none;stroke:#7FCCF7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:1,3;" x1="64" y1="20" x2="-3" y2="20"/>
+  </g>
+  <g style="clip-path:url(#SVGID_2_);">
+    <rect x="31.5" y="54" style="fill:none;stroke:#4EB7F5;stroke-miterlimit:10;" width="44" height="24"/>
+    <g>
+      <circle style="fill:#4EB7F5;" cx="32" cy="53.963" r="2"/>
+      <circle style="fill:#4EB7F5;" cx="32" cy="76.963" r="2"/>
+    </g>
+  </g>
+  <circle style="fill:#FFFFFF;" cx="30.426" cy="95.69" r="3.244"/>
+  <defs>
+    <path id="SVGID_153_" d="M72,73c0,0.552-0.448,1-1,1H36c-0.552,0-1-0.448-1-1V58c0-0.552,0.448-1,1-1h35c0.552,0,1,0.448,1,1V73z"/>
+  </defs>
+  <use xlink:href="#SVGID_153_"  style="overflow:visible;fill:#5FCEF5;"/>
+  <clipPath id="SVGID_3_">
+    <use xlink:href="#SVGID_153_"  style="overflow:visible;"/>
+  </clipPath>
+  <path style="clip-path:url(#SVGID_3_);fill:#2B81CB;" d="M73,77H59V54h14c0.552,0,1,0.448,1,1v21C74,76.552,73.552,77,73,77z"/>
+</svg>

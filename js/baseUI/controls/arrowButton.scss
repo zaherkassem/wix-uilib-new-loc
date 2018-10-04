@@ -1,0 +1,45 @@
+@import "../framework/framework.scss";
+
+i.arrow-button {
+  border: 2px solid $g-color-b1;
+  border-radius: 50%;
+  display: inline-block;
+  height: 21px;
+  width: 21px;
+  opacity: 0.67;
+  cursor: pointer;
+
+  svg {
+    fill: $g-color-b1;
+    padding: 5px;
+    vertical-align: middle;
+  }
+
+  &:hover {
+    background-color: $g-color-b1;
+
+    svg {
+      fill: #fff;
+    }
+  }
+
+  &.without-border {
+    border: none;
+    width: 9px;
+    height: 9px;
+    opacity: 1;
+
+    svg {
+      width: 9px;
+      padding: 0;
+    }
+
+    &:hover {
+      background-color: transparent;
+
+      svg {
+        fill: $g-color-b1;
+      }
+    }
+  }
+}

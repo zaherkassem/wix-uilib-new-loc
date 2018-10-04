@@ -1,0 +1,14 @@
+@import "../../framework/framework";
+
+$button-name: btn-text;
+
+@include button-up($button-name) {
+  background: 0;
+  font-size: 18px;
+  color: $g-color-b1;
+  padding: 0;
+}
+
+@include button-hover($button-name, label) {
+  text-decoration: underline;
+}

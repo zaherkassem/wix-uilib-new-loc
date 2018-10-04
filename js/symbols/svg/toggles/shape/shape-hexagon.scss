@@ -1,0 +1,13 @@
+@import "../../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(shape-hexagon) {
+  .st1 {
+    fill: $g-color-b1;
+  }
+}
+
+@include toggle-selected-up(shape-hexagon) {
+  .st1 {
+    fill: $g-color-b5;
+  }
+}

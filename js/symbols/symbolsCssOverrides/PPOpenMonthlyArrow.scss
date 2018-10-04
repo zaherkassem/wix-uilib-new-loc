@@ -1,0 +1,9 @@
+@import "../../../baseUI/src/main/framework/framework";
+
+$name: playAnimation;
+
+@include symbol-up($name) {
+  circle {
+    fill: none !important;
+  }
+}

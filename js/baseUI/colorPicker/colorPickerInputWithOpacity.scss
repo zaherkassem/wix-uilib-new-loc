@@ -1,0 +1,32 @@
+@import "../framework/framework";
+
+.color-picker-input-with-opacity {
+  position: relative;
+
+  .color-picker-input-with-opacity-label {
+    display: block;
+    font-size: 14px;
+    color: $g-color-d2;
+    overflow: hidden;
+    font-family: $g-font45;
+    text-overflow: ellipsis;
+
+    &.disabled{
+      opacity: 0.5;
+    }
+  }
+
+  .color-picker-input-with-opacity-slider {
+    position: relative;
+  }
+
+  .input-slider {
+    margin-right: 40px;
+  }
+
+  .color-picker-input {
+    position: absolute;
+    right: 0;
+    top: 2px;
+  }
+}

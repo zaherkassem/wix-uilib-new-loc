@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>L_Dropdown Menu</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M9,12 L22,12 L22,11 L9,11 L9,12 Z M9,17 L22,17 L22,16 L9,16 L9,17 Z M9,22 L22,22 L22,21 L9,21 L9,22 Z M20,0 L2,0 C0.895,0 0,0.895 0,2 L0,4 C0,5.105 0.895,6 2,6 L20,6 C21.105,6 22,5.105 22,4 L22,2 C22,0.895 21.105,0 20,0 L20,0 Z M21,4 C21,4.551 20.551,5 20,5 L2,5 C1.449,5 1,4.551 1,4 L1,2 C1,1.449 1.449,1 2,1 L20,1 C20.551,1 21,1.449 21,2 L21,4 L21,4 Z" id="L_Dropdown-Menu" fill="#3899ec" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>

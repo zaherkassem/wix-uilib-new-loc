@@ -1,0 +1,47 @@
+@import "../../../../../baseUI/src/main/framework/framework";
+
+// regular - up
+@include toggle-regular-up(transition-gallery-shrink) {
+  .st2 {
+    fill: #4EB7F6;
+  }
+
+  .st3 {
+    fill: #9ED7FB;
+  }
+
+  .st4,
+  .st5 {
+    fill: $g-color-b4;
+  }
+
+  .st6,
+  .st7,
+  .st8,
+  .st9 {
+    fill: #7FCCF8;
+  }
+}
+
+// selected - up
+@include toggle-selected-up(transition-gallery-shrink) {
+  .st2 {
+    fill: $g-color-b4;
+  }
+
+  .st3 {
+    fill: #A1D9FA;
+  }
+
+  .st4,
+  .st5 {
+    fill: #7FCCF8;
+  }
+
+  .st6,
+  .st7,
+  .st8,
+  .st9 {
+    fill: #FFFFFF;
+  }
+}

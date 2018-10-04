@@ -1,0 +1,118 @@
+@import "../framework/framework";
+
+$inactive-background-color: #edf7ff;
+$active-background-color: $g-color-b1;
+$hover-background-color: $g-color-b4;
+
+$inactive-disabled-background-color: #f6f6f6;
+$inactive-disabled-color: $g-color-b1x;
+$active-disabled-background-color: $g-color-b1x;
+
+.control-buttons-group {
+  @include g-font-f03();
+  white-space: nowrap;
+  color: $g-color-d2;
+  position: relative;
+
+  p {
+    font-size: 14px;
+    color: $g-color-d2;
+    font-weight: 300;
+    margin-bottom: 15px;
+    margin-top: 0;
+    text-align: left;
+  }
+
+  .group-buttons-container-left {
+    text-align: left;
+  }
+
+  .group-buttons-container-right {
+    text-align: right;
+  }
+
+  .group-buttons-container-center {
+    text-align: center;
+  }
+
+  .info-icon {
+    display: none;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+
+  &:hover {
+    .info-icon {
+      display: inline-block;
+    }
+  }
+
+  input {
+    display: none;
+
+    + span {
+      color: $g-color-b1;
+      cursor: pointer;
+      height: 36px;
+      background-color: $inactive-background-color;
+      display: inline-block;
+      position: relative;
+      white-space: nowrap;
+      line-height: 36px;
+      vertical-align: middle;
+      font-size: 14px;
+      padding: 0 14px;
+      max-width: 93px;
+      min-width: 74px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 2px 0 0 #d4e7fb;
+    }
+
+    &:checked + span {
+      color: #fff;
+      position: relative;
+      top: 2px;
+      background-color: $active-background-color;
+      box-shadow: inset 0 2px 0 0 rgba(0, 0, 0, 0.11);
+    }
+
+    &:disabled {
+      + span {
+        cursor: default;
+        background-color: $inactive-disabled-background-color;
+      }
+
+      &:checked + span {
+        background-color: $active-disabled-background-color;
+      }
+
+      &:not(:checked) + span {
+        color: $inactive-disabled-color;
+        box-shadow: 0 2px 0 0 #e5e5e5;
+      }
+    }
+  }
+
+  label {
+    display: inline-block;
+
+    input:not(:checked, :disabled) + span:hover {
+      background-color: $hover-background-color;
+    }
+
+    &:first-of-type span {
+      border-radius: 20px 0 0 20px;
+    }
+
+    &:last-of-type span {
+      border-radius: 0 20px 20px 0;
+    }
+  }
+
+  .animation-panel & {
+    text-align: center;
+  }
+}

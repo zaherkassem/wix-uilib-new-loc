@@ -1,0 +1,61 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(anim-fade-in) {
+  .st1,
+  .st2,
+  .st3,
+  .st4,
+  .st5 {
+    fill: $g-color-b2;
+  }
+
+  .st1 {
+    opacity: 0.3;
+  }
+
+  .st2 {
+    opacity: 0.4;
+  }
+
+  .st3 {
+    opacity: 0.5;
+  }
+
+  .st4 {
+    opacity: 0.6;
+  }
+
+  .st5 {
+    opacity: 0.8;
+  }
+}
+
+@include toggle-selected-up(anim-fade-in) {
+  .st1,
+  .st2,
+  .st3,
+  .st4 {
+    fill: $g-color-b4;
+  }
+
+  .st1 {
+    opacity: 0.3;
+  }
+
+  .st2 {
+    opacity: 0.4;
+  }
+
+  .st3 {
+    opacity: 0.5;
+  }
+
+  .st4 {
+    opacity: 0.6;
+  }
+
+  .st5 {
+    fill: $g-color-d6;
+    opacity: 0.8;
+  }
+}

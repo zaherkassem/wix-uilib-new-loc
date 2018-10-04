@@ -1,0 +1,22 @@
+<rt-require dependency="symbols" as="symbols"/>
+
+<div class="thumbnails-with-icons"
+     rt-scope="this.getValueFromProps(this.props) as selectedValue">
+    <div rt-if="this.props.label" key="label" class="thumbnails-with-icons-label">{this.translateIfNeeded(this.props.label)}</div>
+    <label rt-repeat="option in this.props.options" class="{option.className}" key="option-{option.value}">
+        <input type="radio"
+               name="{this.getRadioGroupId()}"
+               value="{option.value}"
+               checked="{option.value === selectedValue}"
+               onChange="()=> this.handleChange(option.value);">
+        <span>
+            <span class="image-container">
+                <span rt-if="option.imageUrl" key="imgurl" style="background: url('{option.imageUrl}') 50% 50% no-repeat;
+                                                     height: 100%; width: 100%; display: inline-block;">
+                 </span>
+                <symbols.symbol rt-if="!option.imageUrl" key="symbol" name="{option.symbolName}"></symbols.symbol>
+            </span>
+            <span class="option-title">{this.translateIfNeeded(option.title)}</span>
+        </span>
+    </label>
+</div>

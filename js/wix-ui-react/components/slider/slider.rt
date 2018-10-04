@@ -1,0 +1,12 @@
+<rt-require dependency="baseUI/panelInputs/slider" as="slider"/>
+<slider label="{this.props.title}"
+        min="{this.props.min}"
+        max="{this.props.max}"
+        step="{this.props.step}"
+        value="{this.state.value}"
+        onChange="{this.handleChange}"
+        onSlideEnd="{this.handleSlideEnd}"
+        units="{this.props.units}"
+        infoText="{this.props.infoText}"
+        infoTitle="{this.props.infoTitle}">
+</slider>

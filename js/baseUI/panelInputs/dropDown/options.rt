@@ -1,0 +1,17 @@
+<rt-require dependency="symbols" as="symbols"></rt-require>
+
+<section class="dropdown-options {this.state.className} {this.state.visible ? 'expanded' : ''}">
+    <div class="options" ref="options" onWheel="{this.wheelScroll}" tabindex="0" onBlur="{this.onBlur}" onMouseLeave="{this.onMouseLeave}" onMouseDown="{this.disableBlur}" onMouseUp="{this.enableBlur}">
+        <i class="top arrow" onMouseEnter="(direction) => this.scrollTo(-1)" onMouseLeave="{this.stopScrollAnimation}">
+            <symbols.symbol name="arrowDown"></symbols.symbol>
+        </i>
+
+        <ol class="list" ref="list">{this.getCached('options')}</ol>
+
+        <footer rt-if="this.getCached('footer')" ref="footer" key="options-footer">{this.getCached('footer')}</footer>
+
+        <i class="bottom arrow" onMouseEnter="(direction) => this.scrollTo(1)" onMouseLeave="{this.stopScrollAnimation}">
+            <symbols.symbol name="arrowDown"></symbols.symbol>
+        </i>
+    </div>
+</section>

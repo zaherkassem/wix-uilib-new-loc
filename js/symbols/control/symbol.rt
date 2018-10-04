@@ -1,0 +1,8 @@
+<svg class="{this.getClassName('symbol-' + this.props.name)}"
+     style="{this.props.style ? this.props.style : {}}"
+     rt-scope="this.getSvgDef() as def"
+     rt-props="def.svg"
+     onClick="{this.props.onClick}"
+>
+    {def.content}
+</svg>

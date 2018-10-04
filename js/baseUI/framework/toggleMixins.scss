@@ -1,0 +1,122 @@
+@import "helperMixins";
+
+//mixins for defining a two-state (or indeterminate tri-state) controls.
+//e.g: toggle, checkbox, mandatory, thumbnails icons, etc
+
+// ********** SYNTAX **********
+// toggle-<regular || selected || indeterminate>-<up || hover || down || disabled>
+
+// ********** PARAMETERS **********
+//$name: the name of the svg file (the symbol name)
+//$part: optionaL. defaults to "symbol", but it can be any other predefined toggle part.
+
+// ********** EXAMPLES **********
+// 1) passing ("checkbox") will apply css for ".control-checkbox .symbol-checkbox {...}". the $part parameter defaults to "symbol".
+// 2) passing ("checkbox", "label") will apply css for ".control-checkbox .label-checkbox {...}"
+// 3) passing ("my-boolean-control, "something-else") will generate an error.
+
+@mixin verify-toggle-part-param($part) {
+  @if not contains(input label class symbol info, $part) {
+    @error "invalid $part param for styling: '" + $part + "', please specify 'input', 'label', 'class' or default to 'symbol'";
+  }
+  @content;
+}
+
+@mixin toggle-regular-up($name, $part: symbol) {
+  @include verify-toggle-part-param($part) {
+    .control-#{$name} .#{$part}-#{$name} {
+      @content;
+    }
+  }
+}
+
+@mixin toggle-regular-hover($name, $part: symbol) {
+  @include verify-toggle-part-param($part) {
+    .control-#{$name}:hover .#{$part}-#{$name} {
+      @content;
+    }
+  }
+}
+
+@mixin toggle-regular-down($name, $part: symbol) {
+  @include verify-toggle-part-param($part) {
+    .control-#{$name}:active .#{$part}-#{$name} {
+      @content;
+    }
+  }
+}
+
+@mixin toggle-regular-disabled($name, $part: symbol) {
+  @include verify-toggle-part-param($part) {
+    .control-#{$name} .input-#{$name}:disabled ~ .#{$part}-#{$name} {
+      pointer-events: none;
+      @content;
+    }
+  }
+}
+
+@mixin toggle-selected-up($name, $part: symbol) {
+  @include verify-toggle-part-param($part) {
+    .control-#{$name} .input-#{$name}:checked ~ .#{$part}-#{$name} {
+      @content;
+    }
+  }
+}
+
+@mixin toggle-selected-hover($name, $part: symbol) {
+  @include verify-toggle-part-param($part) {
+    .control-#{$name}:hover .input-#{$name}:not(:disabled):checked ~ .#{$part}-#{$name} {
+      @content;
+    }
+  }
+}
+
+@mixin toggle-selected-down($name, $part: symbol) {
+  @include verify-toggle-part-param($part) {
+    .control-#{$name}:active .input-#{$name}:checked ~ .#{$part}-#{$name} {
+      @content;
+    }
+  }
+}
+
+@mixin toggle-selected-disabled($name, $part: symbol) {
+  @include verify-toggle-part-param($part) {
+    .control-#{$name} .input-#{$name}:checked:disabled ~ .#{$part}-#{$name} {
+      pointer-events: none;
+      @content;
+    }
+  }
+}
+
+@mixin toggle-indeterminate-up($name, $part: symbol) {
+  @include verify-toggle-part-param($part) {
+    .control-#{$name} .input-#{$name}[data-indeterminate="true"] ~ .#{$part}-#{$name} {
+      @content;
+    }
+  }
+}
+
+@mixin toggle-indeterminate-hover($name, $part: symbol) {
+  @include verify-toggle-part-param($part) {
+    .control-#{$name}:hover .input-#{$name}[data-indeterminate="true"] ~ .#{$part}-#{$name} {
+      @content;
+    }
+  }
+}
+
+@mixin toggle-indeterminate-down($name, $part: symbol) {
+  @include verify-toggle-part-param($part) {
+    .control-#{$name}:active .input-#{$name}[data-indeterminate="true"] ~ .#{$part}-#{$name} {
+      @content;
+    }
+  }
+}
+
+@mixin toggle-indeterminate-disabled($name, $part: symbol) {
+  @include verify-toggle-part-param($part) {
+    .control-#{$name} .input-#{$name}[data-indeterimnate="true"]:disabled ~ .#{$part}-#{$name} {
+      pointer-events: none;
+      @content;
+    }
+  }
+}

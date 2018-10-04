@@ -1,0 +1,5 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include symbol-up('add-custom-color-plus') {
+  fill: $g-color-b1;
+}

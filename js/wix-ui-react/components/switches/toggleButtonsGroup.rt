@@ -1,0 +1,12 @@
+<rt-require dependency="baseUI/controls/infoIcon" as="infoIcon"/>
+
+<div class="control-buttons-group">
+    <p rt-if="this.props.title" key="title">{this.props.title}</p>
+    <infoIcon key="infoIcon" rt-if="this.props.title && (this.props.infoText || this.props.infoTitle)" text="{this.props.infoText}" title="{this.props.infoTitle}" size="{18}"/>
+    <div class="group-buttons-container{this.props.align ? '-' + this.props.align : ''}">
+        <label rt-repeat="option in this.props.options" key="{option.value}" class="{option.className}">
+            <input type="checkbox" value="{option.value}" checked="{_(this.state.checked).includes(option.value)}" onChange="()=>this.handleChange(option.value);">
+            <span>{option.label}</span>
+        </label>
+    </div>
+</div>

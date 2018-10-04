@@ -1,0 +1,38 @@
+@import "../../../baseUI/src/main/framework/framework";
+
+$control-name: preloader;
+
+@include symbol-up($control-name) {
+  width: $g-preloader-width;
+  height: $g-preloader-height;
+  .path {
+    stroke-dasharray: 157;
+    stroke: $g-color-b3;
+    fill: none;
+
+    transform-origin: 55px 55px;
+    animation: preload 1s infinite linear;
+  }
+}
+
+@keyframes preload {
+  from {
+    transform: rotate(0deg);
+    stroke-dashoffset: 20;
+    animation-timing-function: ease-out;
+  }
+  45% {
+    transform: rotate(18deg);
+    stroke-dashoffset: 140;
+    stroke: $g-color-b1;
+  }
+  55% {
+    transform: rotate(54deg);
+    stroke-dashoffset: 140;
+  }
+  to {
+    transform: rotate(360deg);
+    stroke-dashoffset: 20;
+
+  }
+}

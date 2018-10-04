@@ -1,0 +1,81 @@
+@import "../../../../../packages/baseUI/src/main/framework/framework.scss";
+
+.dropdown-options {
+  .option.icons-dd-option {
+    line-height: 32px !important;
+    height: 32px !important;
+    padding: 0 !important;
+    text-align: center;
+
+    svg {
+      fill: $g-color-d2;
+      width: 22px;
+      height: 22px;
+      padding: 0;
+      display: inline-block;
+      vertical-align: middle;
+      pointer-events: none;
+    }
+
+    svg.symbol-textListNone {
+      width: 18px !important;
+      height: 18px !important;
+    }
+
+    &.selected svg {
+      fill: #ffffff;
+    }
+
+  }
+}
+
+.icons-dd {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: $g-color-b5;
+  }
+
+  &:active {
+    background-color: $g-color-b2;
+    svg {
+      fill: #ffffff !important;
+    }
+  }
+
+  .selected-container {
+    height: 32px !important;
+    line-height: 32px !important;
+    min-height: 32px !important;
+    padding-left: 9px;
+    padding-right: 24px !important;
+
+    svg:not(.symbol-arrowDown){
+      vertical-align: middle;
+    }
+  }
+
+  i.expand.arrow {
+    border: none !important;
+    width: 9px !important;
+    opacity: 1 !important;
+    right: 8px !important;
+
+    svg {
+      width: 9px;
+      padding: 0;
+    }
+
+    &:hover {
+      background-color: transparent !important;
+
+      svg {
+        fill: $g-color-b1 !important;
+      }
+    }
+  }
+
+}

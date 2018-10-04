@@ -1,0 +1,47 @@
+
+.control-link {
+  div {
+    width: 29px;
+    height: 26px;
+    border-radius: 6px;
+    background-color: transparent;
+    border: solid 1px #d6e1e8;
+    display: block;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+
+    transition-duration: .2s;
+    transition-property: background-color, border-color;
+
+    &:hover {
+      background-color: #d3edff;
+      border-color: #d3edff;
+    }
+  }
+
+  path {
+    fill: #7a92a5;
+    transition-duration: .2s;
+    transition-property: fill;
+  }
+
+  input {
+    display: none;
+
+    &:checked {
+      + div {
+        background-color: #3899ec;
+        border-color: transparent;
+
+        path {
+          fill: #fff;
+        }
+
+        &:hover {
+          background-color: #4eb7f5;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<svg class="symbol-building-out-of-editor-gridline-right-computer-only-clipart" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140px" height="127px" viewBox="0 0 140 127">
+  <ellipse style="fill:#D3EDFF;" cx="69" cy="124" rx="66" ry="3"/>
+  <path style="fill:#5FCEF5;" d="M75.287,101.5H63.834c0,0-2.533,15.421-9.136,21.248c-0.695,0.613-0.276,1.752,0.651,1.752h28.424
+                                 c0.927,0,1.346-1.139,0.651-1.752C77.82,116.921,75.287,101.5,75.287,101.5z"/>
+  <defs>
+    <path id="SVGID_163_" d="M140,103.5c0,2.209-1.791,4-4,4H4c-2.209,0-4-1.791-4-4v-99c0-2.209,1.791-4,4-4h132
+                             c2.209,0,4,1.791,4,4V103.5z"/>
+  </defs>
+  <use xlink:href="#SVGID_163_"  style="overflow:visible;fill:#A7E3FA;"/>
+  <clipPath id="SVGID_2_">
+    <use xlink:href="#SVGID_163_"  style="overflow:visible;"/>
+  </clipPath>
+  <rect x="-4" y="-5.5" style="clip-path:url(#SVGID_2_);fill:#5FCEF5;" width="159" height="25"/>
+  <rect x="27" y="19.5" style="clip-path:url(#SVGID_2_);fill:#EAF7FF;" width="86" height="88"/>
+  <g style="clip-path:url(#SVGID_2_);">
+    <line style="fill:none;stroke:#3899EC;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:1,3;" x1="1" y1="38" x2="140" y2="38"/>
+    <line style="fill:none;stroke:#3899EC;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:1,3;" x1="26.5" y1="106.5" x2="26.5" y2="19.5"/>
+    <line style="fill:none;stroke:#3899EC;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:1,3;" x1="113.723" y1="105.962" x2="113.298" y2="18.963"/>
+  </g>
+  <circle style="fill:#FFFFFF;" cx="9.733" cy="9.316" r="2.5"/>
+  <circle style="fill:#FFFFFF;" cx="18.553" cy="9.316" r="2.5"/>
+  <path style="fill:#FFFFFF;" d="M132,9.525c0,1.367-1.108,2.475-2.475,2.475H27.475C26.108,12,25,10.892,25,9.525v-0.05
+                                 C25,8.108,26.108,7,27.475,7h102.05C130.892,7,132,8.108,132,9.475V9.525z"/>
+  <rect x="113" y="52.5" style="fill:#ADE3F9;" width="5" height="23"/>
+  <rect x="108" y="52.5" style="fill:#EAF7FF;" width="5" height="23"/>
+  <defs>
+    <path id="SVGID_165_" d="M124,70.5c0,0.552-0.448,1-1,1H88c-0.552,0-1-0.448-1-1v-13c0-0.552,0.448-1,1-1h35c0.552,0,1,0.448,1,1V70.5z"/>
+  </defs>
+  <use xlink:href="#SVGID_165_"  style="overflow:visible;fill:#5FCEF5;"/>
+  <clipPath id="SVGID_3_">
+    <use xlink:href="#SVGID_165_"  style="overflow:visible;"/>
+  </clipPath>
+  <rect x="113" y="53.5" style="clip-path:url(#SVGID_3_);fill:#2B81CB;" width="15" height="21"/>
+  <rect x="83.5" y="53" style="fill:none;stroke:#5FCEF5;stroke-miterlimit:10;" width="44" height="22"/>
+  <circle style="fill:#5FCEF5;" cx="83.56" cy="52.963" r="2"/>
+  <circle style="fill:#5FCEF5;" cx="83.56" cy="73.963" r="2"/>
+  <circle style="fill:#5FCEF5;" cx="126.56" cy="52.963" r="2"/>
+  <circle style="fill:#5FCEF5;" cx="126.56" cy="73.963" r="2"/>
+</svg>

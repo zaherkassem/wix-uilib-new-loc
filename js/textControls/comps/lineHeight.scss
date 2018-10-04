@@ -1,0 +1,19 @@
+@import "../../../../../packages/baseUI/src/main/framework/framework.scss";
+
+.control-line-height {
+  position: relative;
+
+  .info-icon {
+    position: absolute;
+    right: 12px;
+    top: 0;
+    visibility: hidden;
+  }
+
+  &:hover {
+    .info-icon {
+      visibility: visible;
+    }
+  }
+
+}

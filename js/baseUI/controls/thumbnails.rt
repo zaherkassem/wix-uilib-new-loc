@@ -1,0 +1,40 @@
+<!--suppress CheckEmptyScriptTag -->
+<rt-require dependency="util" as="util"/>
+<rt-require dependency="symbols" as="symbols"/>
+<rt-require dependency="baseUI/controls/infoIcon" as="infoIcon"/>
+<rt-require dependency="baseUI/controls/radio" as="UIRadio"/>
+
+<div class="{this.getClasses()}"
+     data-max-thumbs-per-row="{this.props.maxThumbsPerRow}"
+     data-items-to-skip="{this.props.itemsToSkip}">
+    <infoIcon rt-if="this.props.infoText || this.props.infoTitle"
+              key="infoIcon"
+              title="{this.props.infoTitle}"
+              text="{this.props.infoText}"/>
+    <div rt-if="this.props.title" class="title" key="title">{util.translate(this.props.title)}</div>
+    <UIRadio
+            rt-repeat="option in this.props.options"
+            key="{option.value}"
+            rt-scope="this.getValueFromProps(this.props) as selectedValue"
+            radioType="{option.radioType || this.props.radioType}"
+            name="{option.symbolName || option.className}"
+            src="{option.src}"
+            activeSrc="{option.activeSrc || option.src}"
+
+            imageData="{option.imageData}"
+            imageWidth="{option.width}"
+            imageHeight="{option.height}"
+            disabled="{option.disabled}"
+            translate="{option.translate}"
+
+            label="{option.label}"
+            tooltip="{option.tooltip}"
+            ellipsis="{true}"
+            group="{this.getRadioGroupId()}"
+            value="{_.isEqual(option.value, selectedValue)}"
+            valueName="{option.value}"
+            onChange="()=>this.handleChange(option.value, option.type)"
+            onMouseOver="()=>this.onMouseOver(option.value)"
+            onMouseOut="()=>this.onMouseOut(selectedValue)"
+    />
+</div>

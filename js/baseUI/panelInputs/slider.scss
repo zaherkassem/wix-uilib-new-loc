@@ -1,0 +1,124 @@
+@import "../framework/framework.scss";
+
+.input-slider {
+
+  position: relative;
+
+  > label {
+    display: none;
+  }
+
+  &.has-label > label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: $g-color-d2;
+    @include g-font-f03();
+    text-align: left;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .info-icon {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0px;
+  }
+
+  .sliderArea {
+    position: relative;
+  }
+
+  .slider {
+    position: relative;
+    height: 36px;
+    margin: 0 81px 0 0;
+    padding-top: 3px;
+
+    .line {
+      position: absolute;
+      top: 17px;
+      left: 0;
+      height: 6px;
+      width: 100%;
+      background-color: $g-color-b4;
+      border-radius: 3px;
+      box-shadow: inset 0 1px 0 0 #c0e1f2;
+      cursor: pointer;
+    }
+
+    .knobContainer {
+      margin-right: 16px;
+      position: relative;
+    }
+
+    .coloredLine {
+      position: absolute;
+      top: 14px;
+      left: 0;
+      height: 6px;
+      background-color: $g-color-b1;
+      border-radius: 3px;
+      box-shadow: inset 0 1px 0 0 $g-color-b1;
+      will-change: width;
+      cursor: pointer;
+    }
+
+    .sliderKnob {
+      position: absolute;
+      content: '';
+      top: 9px;
+      display: inline-block;
+      border-radius: 50%;
+      background-color: $g-color-d6;
+      box-shadow: 0px 1px 3px 0px rgba(52, 94, 151, 0.6);
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      will-change: left;
+      transition: box-shadow 0.25s ease-in-out 0s;
+
+      &:after {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        border-radius: 50%;
+        background-color: $g-color-b1;
+        width: 8px;
+        height: 8px;
+        left: 4px;
+        top: 4px;
+        cursor: pointer;
+      }
+
+      &:hover {
+        box-shadow: 0px 1px 2px 2px rgba(138, 209, 250, 0.58);
+      }
+    }
+  }
+
+  .input-stepper {
+    position: absolute;
+    right: 0;
+
+    .input {
+      text-align: right;
+    }
+  }
+
+  &:hover {
+    .input-stepper, .input-stepper > * {
+      background-color: $g-color-b5;
+    }
+    .info-icon {
+      display: inline-block;
+    }
+  }
+
+  &.disabled {
+    opacity: .5;
+  }
+}

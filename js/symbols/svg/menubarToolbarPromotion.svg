@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="90px" height="92px" viewBox="0 0 90 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="tool_bar_illustration" sketch:type="MSArtboardGroup">
+            <g id="Imported-Layers" sketch:type="MSLayerGroup">
+                <path d="M86,0 L4,0 C1.791,0 0,1.791 0,4 L0,13 L90,13 L90,4 C90,1.791 88.209,0 86,0" id="Fill-1" fill="#6DD0F2" sketch:type="MSShapeGroup"></path>
+                <path d="M86,64 L4,64 C1.791,64 0,62.209 0,60 L0,13 L90,13 L90,60 C90,62.209 88.209,64 86,64" id="Fill-2" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M9.693,7.099 C9.693,8.305 8.716,9.282 7.511,9.282 C6.306,9.282 5.329,8.305 5.329,7.099 C5.329,5.894 6.306,4.917 7.511,4.917 C8.716,4.917 9.693,5.894 9.693,7.099" id="Fill-3" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M16.651,7.099 C16.651,8.305 15.675,9.282 14.469,9.282 C13.264,9.282 12.287,8.305 12.287,7.099 C12.287,5.894 13.264,4.917 14.469,4.917 C15.675,4.917 16.651,5.894 16.651,7.099" id="Fill-4" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M77,54 L69,54 C68.448,54 68,53.552 68,53 L68,24 C68,23.448 68.448,23 69,23 L77,23 C77.552,23 78,23.448 78,24 L78,53 C78,53.552 77.552,54 77,54" id="Fill-5" fill="#3899EC" sketch:type="MSShapeGroup"></path>
+                <path id="Stroke-6" stroke="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M70,28 L72,28 L72,30 L70,30 L70,28 Z" id="Fill-7" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M74,28 L76,28 L76,30 L74,30 L74,28 Z" id="Fill-8" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M70,32 L72,32 L72,34 L70,34 L70,32 Z" id="Fill-9" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M74,32 L76,32 L76,34 L74,34 L74,32 Z" id="Fill-10" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M70,36 L72,36 L72,38 L70,38 L70,36 Z" id="Fill-11" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M74,36 L76,36 L76,38 L74,38 L74,36 Z" id="Fill-12" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M70,42 L76,42 L76,44 L70,44 L70,42 Z" id="Fill-13" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M70,46 L76,46 L76,48 L70,48 L70,46 Z" id="Fill-14" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M81,89.5 C81,90.88 64.658,92 44.5,92 C24.342,92 8,90.88 8,89.5 C8,88.119 24.342,87 44.5,87 C64.658,87 81,88.119 81,89.5" id="Fill-15" fill="#A2DBF4" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

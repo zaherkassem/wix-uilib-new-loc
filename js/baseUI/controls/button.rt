@@ -1,0 +1,6 @@
+<rt-require dependency="symbols" as="symbols" />
+
+<button class="{this.getClassName('control-button')}" disabled="{this.props.disabled ? 'disabled' : ''}" rt-props="this.filteredProps()">
+    <symbols.symbol rt-if="this.props.icon" key="symbol-{this.props.icon}" class="{this.props.label ? 'symbol-with-label' : ''}" name="{this.props.icon}"/>
+    <span>{this.translateIfNeeded(this.props.label)}</span>
+</button>

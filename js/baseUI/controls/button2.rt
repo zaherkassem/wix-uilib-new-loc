@@ -1,0 +1,9 @@
+<rt-require dependency="symbols" as="symbols"/>
+
+<div rt-props="this.getWrapperProps({class: 'control-button2-wrapper'})">
+    <div class="{this.getClassName('control-button2')}" rt-props="this.filteredProps()" disabled="{this.props.disabled ? 'disabled' : ''}">
+        <input type="button" disabled="{this.props.disabled ? 'disabled' : ''}"/>
+        <symbols.symbol rt-if="this.props.symbolName" name="{this.props.symbolName}" class="symbol" key="symbol"></symbols.symbol>
+        <span rt-if="this.props.label" class="label {this.props.customLabelClass}" key="label">{this.translateIfNeeded(this.props.label)}</span>
+    </div>
+</div>

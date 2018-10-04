@@ -1,0 +1,19 @@
+@import "../../framework/framework";
+
+$button-name: btn-confirm-secondary;
+
+@include button-up($button-name) {
+  background-color: $g-color-b5;
+  color: $g-color-b1;
+}
+
+@include button-hover($button-name) {
+  color: $g-color-b1;
+  background-color: $g-color-b4;
+}
+
+@include button-down($button-name) {
+  color: $g-color-b1;
+  background-color: $g-color-b5;
+}
+

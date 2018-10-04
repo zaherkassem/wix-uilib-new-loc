@@ -1,0 +1,9 @@
+@import "../../../baseUI/src/main/framework/framework";
+
+.symbol-quickActionsLinkArrow {
+  transform: scale(-1, 1);
+
+  .st1 {
+    fill: $g-color-d2;
+  }
+}

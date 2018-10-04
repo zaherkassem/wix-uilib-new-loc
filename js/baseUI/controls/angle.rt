@@ -1,0 +1,11 @@
+<rt-require dependency="baseUI/panelInputs/stepper" as="stepper" />
+
+<div class="control-angle">
+    <label rt-class="{disabled: this.props.disabled}" >{this.translate(this.props.label)}</label>
+    <div rt-class="{circle:true, disabled: this.props.disabled}" style="{this.getCircleStyle()}">
+        <div class="circle-center"></div>
+        <div class="knob" style="{this.getKnobStyle()}" onMouseDown="{this.onKnobMouseDown}"></div>
+    </div>
+
+    <stepper disabled="{this.props.disabled}" units="°" value="{this.getValueFromProps()}" onChange="{this.callOnChangeIfExists}" onBlur="{this.reportChangeFromUser}" min="{-1}" max="{360}" step="{1}"/>
+</div>

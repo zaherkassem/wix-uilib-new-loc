@@ -1,0 +1,39 @@
+<!--suppress CheckEmptyScriptTag -->
+<rt-require dependency="baseUI/popovers/tooltip" as="tooltip"/>
+<rt-require dependency="baseUI/framework/uiConstants" as="uiConstants"/>
+<rt-require dependency="symbols" as="symbols"/>
+<rt-require dependency="baseUI/controls/infoIcon" as="infoIcon"/>
+
+<div rt-props="this.filteredProps()" rt-class="this.getWrapperClasses()"
+     rt-scope="this.getInputElementClass() as inputClass">
+    <label key="textInputControlTitle" rt-if="this.hasLabel()">{this.translateIfNeeded(this.getLabel())}</label>
+    <infoIcon key="infoIcon" rt-if="this.hasLabel() && (this.props.infoText || this.props.infoTitle)"
+              text="{this.props.infoText}" title="{this.props.infoTitle}" size="{18}"/>
+    <inputClass ref="input" type="{this.props.type || 'text'}"
+                class="{this.props.isMultiLine ? this.props.textAreaClass : ''}"
+                valueLink="{this.linkState('value')}"
+                onWheel="{this.handleWheel}"
+                disabled="{this.isDisabled()}"
+                placeholder="{this.translateIfNeeded(this.props.placeholder) || ''}"
+                maxlength="{this.props.maxLength}"
+                spellcheck="{false}"
+                autoFocus="{this.props.focus}"
+                onKeyDown="{this.handleKeyDown}"
+                onFocus="()=>this.setState({isFocused: true})"
+                onBlur="()=>this.setState({isFocused: false})"/>
+
+    <tooltip id="{this.getTooltipId()}"
+             value="{this.getInvalidMessage()}"
+             width="300px"
+             styleType="{uiConstants.TOOLTIP.STYLE_TYPE.SMALL}"
+             openTriggers="{[]}"
+             closeTriggers="{[]}">
+        <span class="validation-icon validation-icon-error" onClick="{this.selectContent}">
+            <symbols.symbol name="inputValidationError"/>
+        </span>
+    </tooltip>
+
+    <span class="validation-icon validation-icon-success">
+            <symbols.symbol name="inputValidationSuccess"/>
+    </span>
+</div>

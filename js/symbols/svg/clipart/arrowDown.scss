@@ -1,0 +1,33 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+$name: arrowDown;
+
+@include symbol-up($name) {
+
+  //overrides:
+  .dropdown &,
+  .dropdown-options & {
+    fill: $g-color-b1;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .dropdown-options .arrow:hover & {
+    opacity: 1;
+  }
+
+  .dropdown.disabled.select & {
+    fill: $g-color-b1x;
+  }
+
+  .font-family-dd.toolbar-mode & {
+    width: 9px;
+    padding: 0;
+  }
+
+  .font-family-dd.toolbar-mode .expand.arrow:hover & {
+    fill: $g-color-b1;
+  }
+}

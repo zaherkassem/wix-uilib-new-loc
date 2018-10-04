@@ -1,0 +1,20 @@
+<rt-require dependency="symbols" as="symbols"/>
+<rt-require dependency="baseUI/controls/infoIcon" as="infoIcon"/>
+
+<div class="control-radio-list">
+    <div class="title" rt-if="this.props.label" key="label">{this.translateIfNeeded(this.props.label)}</div>
+    <infoIcon rt-if="this.hasLabel() && (this.props.infoText || this.props.infoText)" key="tooltip" title="{this.props.infoTitle}" text="{this.props.infoText}" size="{18}"/>
+    <label rt-repeat="option in this.props.options" class="{option.className}" key="{option.value}"
+           rt-scope="this.getValueFromProps(this.props) as selectedValue">
+        <input type="radio" name="{this.getRadioGroupId()}" value="{option.value}"
+               checked="{option.value === selectedValue}" onChange="()=>this.handleChange(option.value);">
+        <span></span>
+
+        <div rt-if="option.symbolName" key="symbol" class="{option.symbolClass}">
+            <div>
+                <symbols.symbol name="{option.symbolName}" />
+            </div>
+        </div>
+        <span>{this.translateIfNeeded(option.label)}</span>
+    </label>
+</div>

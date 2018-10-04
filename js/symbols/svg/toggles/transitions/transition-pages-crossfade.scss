@@ -1,0 +1,99 @@
+@import "../../../../../baseUI/src/main/framework/framework";
+
+// regular - up
+@include toggle-regular-up(transition-pages-crossfade) {
+  .st2 {
+    fill: #9DD7FA;
+  }
+
+  .st3 {
+    fill: #B6E1FB;
+  }
+
+  .st4,
+  .st5 {
+    fill: #E0F2FF;
+  }
+
+  .st6 {
+    fill: #ADDDFB;
+  }
+
+  .st7 {
+    fill: #7DCAF9;
+  }
+
+  .st8,
+  .st9,
+  .st10 {
+    fill: #A6DAFB;
+  }
+
+  .st11 {
+    fill: #91D3F9;
+  }
+
+  .st12,
+  .st14,
+  .st15 {
+    fill: #E3F3FF;
+  }
+
+  .st13,
+  .st16 {
+    fill: #B3E0FC;
+  }
+
+  .st17 {
+    fill: #DBF0FF;
+  }
+}
+
+// selected - up
+@include toggle-selected-up(transition-pages-crossfade) {
+  .st2 {
+    fill: #86C3F7;
+  }
+
+  .st3 {
+    fill: #9CCCF7;
+  }
+
+  .st4,
+  .st5 {
+    fill: #5CB3F2;
+  }
+
+  .st6 {
+    fill: #76BBF4;
+  }
+
+  .st7 {
+    fill: #A5D4FA;
+  }
+
+  .st8,
+  .st9,
+  .st10 {
+    fill: #8CCAF8;
+  }
+
+  .st11 {
+    fill: #B6DBFA;
+  }
+
+  .st12,
+  .st14,
+  .st15 {
+    fill: #54ADF0;
+  }
+
+  .st13,
+  .st16 {
+    fill: #83C7F7;
+  }
+
+  .st17 {
+    fill: #6ABDF4;
+  }
+}

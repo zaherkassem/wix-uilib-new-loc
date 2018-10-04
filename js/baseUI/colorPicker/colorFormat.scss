@@ -1,0 +1,74 @@
+@import "../framework/framework";
+
+.color-format {
+  $color-format-input-height: 24px;
+
+  .color-values-wrapper {
+    $values-wrapper-margin-top: 18px;
+    $values-wrapper-margin-bottom: 12px;
+    $values-wrapper-margin-horizontal: 17px;
+
+    position: relative;
+    margin: $values-wrapper-margin-top $values-wrapper-margin-horizontal $values-wrapper-margin-bottom $values-wrapper-margin-horizontal;
+    max-height: 24px;
+
+    .color-value-hex {
+      width: 175px;
+      margin: 0 auto 0 auto;
+
+      .control-text-input {
+        input {
+          padding-left: 62px;
+          height: $color-format-input-height;
+          line-height: $color-format-input-height;
+          @include g-font-f04();
+        }
+
+        &::before {
+          content: "#";
+          position: absolute;
+          left: 55px;
+          top: 4px;
+          @include g-font-f04();
+        }
+
+        .validation-icon {
+          top: 0;
+        }
+      }
+
+    }
+
+    .color-value-item {
+      position: relative;
+      display: inline-block;
+      width: 33%;
+
+      &:nth-child(1) {
+        text-align: left;
+      }
+      &:nth-child(2) {
+        text-align: center;
+      }
+      &:nth-child(3) {
+        text-align: right;
+      }
+
+      .input-stepper {
+        width: 100%;
+        box-sizing: border-box;
+
+        input {
+          height: $color-format-input-height;
+          line-height: $color-format-input-height;
+          @include g-font-f04();
+        }
+
+        .units {
+          height: $color-format-input-height;
+          line-height: $color-format-input-height;
+        }
+      }
+    }
+  }
+}

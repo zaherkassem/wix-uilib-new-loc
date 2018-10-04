@@ -1,0 +1,15 @@
+@import "../../../baseUI/src/main/framework/framework";
+
+$symbol-name: zoomBarHelp;
+
+@include symbol-up($symbol-name) {
+  .c1 {
+    fill: #2D4150;
+  }
+}
+
+@include symbol-hover($symbol-name) {
+  .c1 {
+    fill: #3899EC;
+  }
+}

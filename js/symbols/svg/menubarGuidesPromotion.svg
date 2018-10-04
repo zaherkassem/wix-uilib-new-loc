@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="90px" height="92px" viewBox="0 0 90 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="gridline_illustration" sketch:type="MSArtboardGroup">
+            <g id="Imported-Layers" sketch:type="MSLayerGroup">
+                <path d="M86.5,0 L4.5,0 C2.291,0 0,1.791 0,4 L0,13 L90,13 L90,4 C90,1.791 88.709,0 86.5,0" id="Fill-1" fill="#6DD0F2" sketch:type="MSShapeGroup"></path>
+                <path d="M86.5,64 L4.5,64 C2.291,64 0,62.209 0,60 L0,13 L90,13 L90,60 C90,62.209 88.709,64 86.5,64" id="Fill-2" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M10.193,7.099 C10.193,8.305 9.216,9.282 8.011,9.282 C6.806,9.282 5.828,8.305 5.828,7.099 C5.828,5.894 6.806,4.917 8.011,4.917 C9.216,4.917 10.193,5.894 10.193,7.099" id="Fill-3" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M17.152,7.099 C17.152,8.305 16.174,9.282 14.969,9.282 C13.764,9.282 12.787,8.305 12.787,7.099 C12.787,5.894 13.764,4.917 14.969,4.917 C16.174,4.917 17.152,5.894 17.152,7.099" id="Fill-4" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M81,89.5 C81,90.881 64.659,92 44.5,92 C24.342,92 8,90.881 8,89.5 C8,88.119 24.342,87 44.5,87 C64.659,87 81,88.119 81,89.5" id="Fill-5" fill="#A2DBF4" sketch:type="MSShapeGroup"></path>
+                <path d="M13,62 L13,13 M77,62 L77,13 M74,22 L17,22 M87,22 L81,22 M9,22 L2,22" id="Stroke-6" stroke="#6DD0F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,4" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

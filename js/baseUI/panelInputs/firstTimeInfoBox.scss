@@ -1,0 +1,142 @@
+@import "../framework/framework";
+
+.first-time-info-box {
+
+  $color1: #fff;
+  $margin-left: 23px;
+
+  @mixin text-overflow() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  position: relative;
+  background-color: $color1;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 0 rgba($g-color-d1, 0.18);
+  border: 1px solid transparent;
+
+  &.in-header {
+    margin: 24px 24px 3px;
+
+    .pointer {
+      right: 16px;
+    }
+  }
+
+  &.in-section {
+    margin: 24px 0 0;
+
+    .pointer {
+      right: 10px;
+    }
+  }
+
+  &.in-settings {
+    margin: 12px 12px 0;
+
+    .pointer {
+      right: 28px;
+    }
+  }
+
+  &.in-left-panel {
+    margin: 12px 20px 0;
+
+    .pointer {
+      right: 34px;
+    }
+  }
+
+  &.in-pages-panel {
+    margin: 0 12px 4px;
+
+    .pointer {
+      display: none;
+    }
+  }
+
+  .pointer {
+    display: none;
+    top: -11px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid $color1;
+  }
+
+  .content {
+    text-align: left;
+    margin: -2px 34px 17px $margin-left;
+
+    .title {
+      @include g-font-f01();
+      @include text-overflow();
+      color: $g-color-d2;
+      margin-bottom: 12px;
+    }
+
+    .text {
+      @include g-font-f03();
+      @include text-overflow();
+      color: $g-color-d2;
+    }
+
+  }
+
+  .bottom-line {
+    text-align: right;
+    margin: 0 23px 19px $margin-left;
+    display: flex;
+    align-items: center;
+
+    .link {
+      height: 14px;
+      line-height: 14px;
+      font-size: 14px;
+      padding: 0;
+      margin: 0;
+      border-radius: 0;
+    }
+
+    .arrow {
+      cursor: pointer;
+      position: relative;
+      padding-left: 9px;
+
+      polyline {
+        stroke: $g-color-b1;
+      }
+    }
+
+    .space {
+      flex: 1;
+    }
+
+    .got-it {
+      margin: 0;
+      text-align: center;
+      padding: 0 14px;
+
+      &:hover {
+        background-color: $g-color-e5;
+      }
+    }
+  }
+
+  .top-line {
+    text-align: right;
+    margin-top: 8px;
+    margin-right: 8px;
+    height: 18px;
+
+    .close {
+      cursor: pointer;
+      display: inline-block;
+
+      polyline {
+        stroke: $g-color-b1;
+      }
+    }
+  }
+}

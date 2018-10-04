@@ -1,0 +1,5 @@
+<span class="{this.props.className}">
+    <button rt-class="{'text-effect-button': true, selected: this.props.isSelected}" onClick="{this.props.onClick}">
+        <span>{this.props.children}</span>
+    </button>
+</span>

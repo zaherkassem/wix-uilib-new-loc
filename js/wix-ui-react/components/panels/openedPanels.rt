@@ -1,0 +1,6 @@
+<rt-require dependency="wix-ui-react/components/panels/basicPanel" as="BasicPanel"/>
+<div class="opened-panels">
+    <BasicPanel rt-props="panel.props" rt-repeat="panel in this.state.openPanels">
+       {panel}
+    </BasicPanel>
+</div>

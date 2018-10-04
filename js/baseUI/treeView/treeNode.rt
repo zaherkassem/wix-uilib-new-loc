@@ -1,0 +1,16 @@
+<rt-require dependency="symbols" as="symbols"/>
+
+<li rt-scope="
+            this.getTreeViewClass() as TreeView;
+            this.props.nodeContent as TreeNodeContent;
+            this.hasChildren() as hasChildren"
+    rt-class="{ 'tree-collapsed': this.state.collapsed, 'has-children': this.hasChildren(), 'pages-tree-node': true }">
+
+    <span class="expander" onClick="{this.toggleCollapsed}">
+        <symbols.symbol rt-if="hasChildren && this.state.collapsed" key="expand" name="expand"/>
+        <symbols.symbol rt-if="!this.state.collapsed" key="collapse" name="collapse"/>
+    </span>
+
+    <TreeNodeContent rt-props="this.passNodeContentProps(this.props.dataSource)" />
+    <TreeView rt-props="this.passNodeProps()" />
+</li>

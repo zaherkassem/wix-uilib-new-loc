@@ -1,0 +1,25 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include button-up(copy-btn-bld) {
+  .st1 {
+    fill: $g-color-d1;
+  }
+}
+
+@include button-hover(copy-btn-bld) {
+  .st1 {
+    fill: $g-color-b1;
+  }
+}
+
+@include button-down(copy-btn-bld) {
+  .st1 {
+    fill: $g-color-d1;
+  }
+}
+
+@include button-disabled(copy-btn-bld) {
+  .st1 {
+    fill: $g-color-d1x;
+  }
+}

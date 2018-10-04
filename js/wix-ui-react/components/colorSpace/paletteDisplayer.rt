@@ -1,0 +1,8 @@
+<rt-require dependency="baseUI/colorPicker/paletteDisplayer" as="paletteDisplayer"/>
+<paletteDisplayer
+        isSelectable="{true}"
+        value= "color_0"
+        palette="{this.getThemeColors()}"
+        onPreview="{this.props.onPreview}"
+       />
+

@@ -1,0 +1,149 @@
+.control-border-radius {
+
+  &:hover {
+    .input-stepper, .input-stepper > * {
+      background-color: #edf7ff;
+    }
+  }
+
+  .inputLabel {
+    display: inline-block;
+    font-size: 14px;
+    left: 25px;
+    color: #2b5672;
+    position: relative;
+    margin-top: 10px;
+  }
+
+  .input-stepper {
+
+    &.has-units {
+      .input {
+        width: 56%;
+      }
+    }
+  }
+
+  $corners-container-width: 108px;
+
+  .inputContainer{
+    position: relative;
+    height: 168px;
+    width: 240px;
+
+    .input-stepper{
+      position: absolute;
+
+      &:nth-of-type(1) {
+        top: 12px;
+        left: 24px;
+      }
+
+      &:nth-of-type(2) {
+        top: 12px;
+        right: 24px;
+      }
+
+      &:nth-of-type(3) {
+        bottom: 24px;
+        right: 24px;
+      }
+
+      &:nth-of-type(4) {
+        bottom: 24px;
+        left: 24px;
+      }
+
+      &.small {
+        padding: 0px 2px 4px 0;
+        >input {
+          height: 14px;
+          line-height: 14px;
+        }
+      }
+    }
+  }
+
+
+
+  .cornersContainer {
+    left: calc(50% - #{$corners-container-width} / 2);
+    top: 42px;
+    width: $corners-container-width;
+    height: 72px;
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+
+    .link {
+      width: 28px;
+      height: 24px;
+      display: inline-block;
+      left: calc(50% - 14px);
+      top: calc(50% - 12px);
+      position: absolute;
+      border-radius: 6px;
+      border: solid 1px #d6e1e8;
+      background-color: rgba(122, 146, 165, 0);
+      cursor: pointer;
+
+      &:hover {
+        background-color: #d3edff;
+      }
+
+      &:active {
+
+      }
+    }
+
+    $horizontal-distance: -7px;
+    $vertical-distance: 16px;
+    $input-width: 54px;
+    $input-height: 24px;
+
+    $corners-padding: 24px;
+
+
+
+    div.corner {
+
+      $border-width: 2px;
+      width: 40px; //check out this dimension
+      height: 22px; //check out this dimension
+      position: absolute;
+
+      border-color: #7a92a5;
+      border-style: solid;
+      background-color: rgba(0, 153, 239, 0);
+
+      &:hover {
+        border-color: #88ccf8;
+      }
+
+      &:nth-of-type(1) {
+        top: 0;
+        left: 0;
+        border-width: $border-width 0 0 $border-width;
+      }
+
+      &:nth-of-type(2) {
+        top: 0;
+        right: 0;
+        border-width: $border-width $border-width 0 0;
+      }
+
+      &:nth-of-type(3) {
+        bottom: 0;
+        right: 0;
+        border-width: 0 $border-width $border-width 0;
+      }
+
+      &:nth-of-type(4) {
+        bottom: 0;
+        left: 0;
+        border-width: 0 0 $border-width $border-width;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,21 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(anim-turn-in) {
+  .st1 {
+    fill: $g-color-b2;
+  }
+
+  .st2 {
+    fill: $g-color-b3;
+  }
+}
+
+@include toggle-selected-up(anim-turn-in) {
+  .st1 {
+    fill: $g-color-b4;
+  }
+
+  .st2 {
+    fill: $g-color-d6;
+  }
+}

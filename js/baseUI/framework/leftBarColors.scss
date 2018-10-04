@@ -1,0 +1,12 @@
+//** Left Bar
+$g-left-bar-button-list: (
+  // className          color        top (symbol)       left (symbol)
+  bg-panel              #f8a239    12px             12px, // y1
+  add-panel             #3797ea    11px             11px, // b1
+  app-market-panel      #d0427c    12px             12px, // e10
+  my-uploads-panel      #fa7c33    13px             11px, // o1
+  blog-panel            #60bc57    13px             10px, // g1
+  wix-store-panel       #00adf5    9px              13px, // e11
+  hidden-items-panel    #d0427d    13px             11px,
+  mobile-elements-panel #3899eb    11px             16px
+);

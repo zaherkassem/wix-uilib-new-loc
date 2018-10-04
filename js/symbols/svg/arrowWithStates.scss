@@ -1,0 +1,15 @@
+@import "../../../baseUI/src/main/framework/framework";
+
+.symbol-arrowWithStates {
+  .st0 {
+    fill: transparent;
+    stroke: $g-color-b2;
+    stroke-width: 1px;
+  }
+
+  .st1 {
+    fill: transparent;
+    stroke: $g-color-b2;
+    stroke-miterlimit: 10;
+  }
+}

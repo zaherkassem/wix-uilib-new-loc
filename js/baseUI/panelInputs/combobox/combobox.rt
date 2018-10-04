@@ -1,0 +1,35 @@
+<rt-require dependency="baseUI/controls/arrowButton" as="arrowButton"/>
+<rt-require dependency="baseUI/controls/infoIcon" as="infoIcon"/>
+
+<div class="writable-drop-down {this.props.label ? '' : 'without-label'} ">
+    <div class="wdd-container">
+        <div class="wdd-header" onClick="{this.handleCancel}">
+            <label rt-if="this.props.label" key="label">{this.translateIfNeeded(this.getLabel())}</label>
+            <infoIcon rt-if="this.props.label && (this.props.infoText || this.props.infoTitle)"
+                      title="{this.props.infoTitle}" key="infoicon" text="{this.props.infoText}" size="{18}"/>
+            <div class="wdd-input">
+                <input ref="input" type="text" value="{this.state.text}" onClick="{this.show}"
+                       onChange="{this.handleChange}"
+                       onKeyDown="{this.handleKeyDown}"/>
+            </div>
+            <arrowButton withoutBorder="{this.props.hasSmallArrow}" onClickAction="(e)=>{this.toggle(e)}"/>
+        </div>
+        <div class="list-container" style="visibility: {this.state.open ? 'visible': 'hidden'}" ref="itemsListContainer">
+            <div ref="itemsList" class="wdd-list" onWheel="{this.blockOuterScroll}">
+                <ul>
+                    <li rt-repeat="group in this.props.data" rt-class="{'wdd-group': true, 'hidden': this.shouldDisplayGroupNames}">
+                        <span>{group.groupName}</span>
+                    <li rt-repeat="item in group.items"
+                        style="{item.style}"
+                        rt-class="{'wdd-item': true, 'selected': _.isEqual(this.state.selectedItem,item), 'focused': _.isEqual(this.state.focusedItem,item)}"
+                        onClick="(e)=>e.stopPropagation(); this.handleClick(item);"
+                        onMouseEnter="()=>this.handleMouseEnter(item)">
+                        <span rt-if="this.props.shouldShowOptionLabel" key="shouldshow">{item.label}</span>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+            <div rt-if="this.props.withFooter" key="withfooter" class="footer">{this.props.children}</div>
+        </div>
+    </div>
+</div>

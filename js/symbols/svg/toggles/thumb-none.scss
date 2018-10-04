@@ -1,0 +1,23 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(thumb-none) {
+  .st1 {
+    stroke: $g-color-r1;
+    stroke-width: 2;
+  }
+
+  .st2 {
+    fill: transparent;
+  }
+}
+
+@include toggle-selected-up(thumb-none) {
+  .st1 {
+    stroke: $g-color-r1;
+    stroke-width: 2;
+  }
+
+  .st2 {
+    fill: $g-color-b1;
+  }
+}

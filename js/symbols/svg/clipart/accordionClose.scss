@@ -1,0 +1,18 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+$symbol-name: accordionClose;
+
+@include symbol-up($symbol-name) {
+  //overrides:
+  .control-accordion & {
+    fill: $g-color-d1;
+    width: 5px;
+    height: 10px;
+  }
+
+  .rich-text-input-control & {
+    fill: $g-color-d2;
+    width: 4px;
+    padding: 0 9px;
+  }
+}

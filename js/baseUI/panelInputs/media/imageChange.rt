@@ -1,0 +1,10 @@
+<rt-require dependency="baseUI/panelInputs/media/imagePreview" as="imagePreview"/>
+
+<imagePreview value="{this.props.value}"
+              onChange="{this.props.onChange}"
+              valueLink="{this.props.valueLink}"
+              buttons="{this.getButtons()}"
+              getURL="{this.getURL}"
+              getStyle="{this.getStyle}"
+              rt-props="this.filteredProps()"
+              emptySymbolName="camera"/>

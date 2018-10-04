@@ -1,0 +1,45 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+$button-name: delete-circle;
+
+@include button-up($button-name) {
+  .st0 {
+    fill: $g-color-d6;
+  }
+
+  .st1 {
+    fill: $g-color-b1;
+  }
+
+  .st2 {
+    fill: transparent;
+  }
+}
+
+@include button-hover($button-name) {
+  .st0 {
+    fill: $g-color-b5;
+  }
+}
+
+@include button-down($button-name) {
+  .st0 {
+    fill: $g-color-d6;
+  }
+}
+
+@include button-disabled($button-name) {
+  .st0 {
+    fill: $g-color-b1x;
+    opacity: 0.4;
+  }
+
+  .st1 {
+    fill: $g-color-d6;
+    opacity: 0.4;
+  }
+
+  .st2 {
+    fill: transparent;
+  }
+}

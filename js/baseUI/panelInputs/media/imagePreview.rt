@@ -1,0 +1,33 @@
+<rt-require dependency="util" as="util"/>
+<rt-require dependency="baseUI/controls/button" as="UIButton"/>
+<rt-require dependency="baseUI/popovers/tooltip" as="tooltip"/>
+<rt-require dependency="symbols" as="symbols"/>
+
+
+<div class="{util.inheritClassName(this.props, 'image-preview')}{this.isEmpty() ? ' empty' : ''}" rt-scope="this.getButtons() as buttons">
+    <div rt-if="!this.isEmpty()" class="image-wrapper" key="wrapper">
+        <img src="{this.getURL()}" style="{this.getStyle()}" onLoad="{this.updateStyle}"/>
+    </div>
+
+    <span rt-if="this.getNumberOfImages() > 1" onClick="{this.showPrevImage}" class="arrow-button prev" key="prev"/>
+    <span rt-if="this.getNumberOfImages() > 1" onClick="{this.showNextImage}" class="arrow-button next" key="next"/>
+
+    <div rt-if="this.isEmpty()" rt-class="{'placeholder-wrapper': true, 'symbol-in-the-middle': this.getButtons().length === 0}" key="placeholder">
+        <symbols.symbol name="{this.props.emptySymbolName}" rt-if="this.props.emptySymbolName" key="symbol"/>
+        <div class="corner-borders top"/>
+        <div class="corner-borders bottom"/>
+    </div>
+
+    <span class="button-wrapper" rt-if="buttons.length > 0" key="buttons">
+        <tooltip rt-repeat="button in buttons"
+                 key="{this.getButtonLabel(button) || 'button' + buttonIndex}"
+                 value="{this.getButtonTooltip(button)}"
+                 disabled="{!this.getButtonTooltip(button)}">
+            <UIButton
+                      rt-class="this.getButtonClasses(button)"
+                      label="{this.getButtonLabel(button)}"
+                      icon="{this.getButtonIcon(button)}"
+                      onClick="()=>this.onClick(button)"/>
+        </tooltip>
+    </span>
+</div>

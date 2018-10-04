@@ -1,0 +1,71 @@
+@import "../framework/framework";
+
+.thumbnails-with-icons {
+  .thumbnails-with-icons-label, .option-title {
+    @include g-font-f03();
+    color: $g-color-d2;
+  }
+
+  .thumbnails-with-icons-label {
+    margin-bottom: 12px;
+  }
+
+  label {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+
+    &:first-of-type {
+      margin-right: 12px;
+    }
+
+    svg {
+      max-width: 62px;
+      max-height: 62px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+
+  input {
+    display: none;
+
+    + span {
+      display: inline-block;
+      border-radius: 8px;
+      width: 114px;
+      height: 126px;
+      box-shadow: inset 0 0 0 1px $g-color-d4;
+      font-size: 0;
+      box-sizing: border-box;
+    }
+
+    &:checked {
+      + span {
+        box-shadow: inset 0 0 0 2px $g-color-b1;
+
+        .option-title {
+          color: $g-color-b1;
+        }
+      }
+    }
+
+    &:not(:checked) {
+      + span:hover {
+        box-shadow: inset 0 0 0 2px $g-color-b4;
+      }
+    }
+  }
+
+  .image-container {
+    display: block;
+    width: 78px;
+    height: 83px;
+    border-bottom: 1px solid $g-color-d4;
+    margin: 0 auto 12px auto;
+    position: relative;
+    box-sizing: border-box;
+  }
+}

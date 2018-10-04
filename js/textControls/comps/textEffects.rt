@@ -1,0 +1,10 @@
+<rt-require dependency="textControls/comps/textEffectButton" as="textEffectButton"/>
+<rt-require dependency="symbols" as="symbols"/>
+<rt-require dependency="baseUI" as="UI"/>
+
+<div class="text-effect-container">
+    <UI.tooltip value="text_editor_effects_tooltip_no_effect" styleType="{UI.uiConstants.TOOLTIP.STYLE_TYPE.SMALL}">
+        <span  onClick="()=>this.props.onChange(2)" class="text-none-icon {this.props.value === 'EFFECT_0' ? 'selected' : ''}"></span>
+    </UI.tooltip>
+    <textEffectButton rt-repeat="effect in this.getShadowEffects()" isSelected="{this.props.value === effectIndex}" onClick="()=>this.props.onChange(effect.value)" key="{effectIndex}" className="{effectIndex}"><span class="text-shadow-effect" style="text-shadow: {effect.value}">{this.translateIfNeeded('text_editor_' + effectIndex)}</span></textEffectButton>
+</div>

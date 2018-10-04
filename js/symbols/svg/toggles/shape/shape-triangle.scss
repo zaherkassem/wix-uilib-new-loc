@@ -1,0 +1,13 @@
+@import "../../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(shape-triangle) {
+  .st1 {
+    fill: $g-color-b1;
+  }
+}
+
+@include toggle-selected-up(shape-triangle) {
+  .st1 {
+    fill: $g-color-b5;
+  }
+}

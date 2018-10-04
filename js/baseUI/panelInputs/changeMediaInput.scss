@@ -1,0 +1,47 @@
+@import "../framework/framework";
+
+.media-button {
+  .upload-button {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    &.has-file {
+      padding-left: 40px;
+    }
+
+    .symbol-with-label {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      width: 14px;
+    }
+  }
+
+  .filename-text {
+    text-align: center;
+    margin-top: 16px;
+    .wrapper {
+      span {
+        @include g-font-f04();
+        color: $g-color-d1;
+        vertical-align: middle;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: calc(100% - 48px);
+      }
+
+      svg {
+        padding-left: 4px;
+        vertical-align: middle;
+        height: 20px;
+        width: 20px;
+        fill: $g-color-g1;
+        display: inline-block;
+        background-color: $g-color-d6;
+
+      }
+    }
+  }
+}

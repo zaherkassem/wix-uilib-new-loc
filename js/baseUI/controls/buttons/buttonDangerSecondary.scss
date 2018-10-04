@@ -1,0 +1,16 @@
+@import "../../framework/framework";
+
+$button-name: btn-danger-secondary;
+
+@include button-up($button-name) {
+  background-color: $g-color-r4;
+  color: $g-color-r1;
+}
+
+@include button-hover($button-name) {
+  background-color: $g-color-r3;
+}
+
+@include button-down($button-name) {
+  background-color: $g-color-r4;
+}

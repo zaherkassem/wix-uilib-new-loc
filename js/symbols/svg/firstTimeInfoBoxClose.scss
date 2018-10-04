@@ -1,0 +1,5 @@
+@import "../../../baseUI/src/main/framework/framework";
+
+@include symbol-up(firstTimeInfoBoxClose) {
+  stroke: $g-color-b1;
+}

@@ -1,0 +1,22 @@
+<svg class="symbol-fold-clipart" width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient x1="100%" y1="100%" x2="0%" y2="0%" id="fold-gradient">
+      <stop stop-color="#FFFFFF" offset="0%"></stop>
+      <stop stop-color="#CCCCCC" offset="100%"></stop>
+    </linearGradient>
+    <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="fold-shadow">
+      <feMorphology radius="0.5" in="SourceAlpha" operator="dilate" result="shadowSpreadOuter1"></feMorphology>
+      <feOffset dx="-2.75" dy="-1.75" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+      <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+      <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.10 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+      <feMerge>
+        <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(0, 0)">
+    <path fill="#162D3D" fill-opacity="0.3" d="M43.563,3 L45,42.737 C45,46.007 42.462,48.345 39.106,47.958 L1,43.551 L43.563,3"></path>
+    <path fill="url(#fold-gradient)" filter="url(#fold-shadow)" d="M44,38.094 C44,41.407 41.626,44 38.312,44 L0,44 L44,0 L44,38.094 Z"></path>
+  </g>
+</svg>

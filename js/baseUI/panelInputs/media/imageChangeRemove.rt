@@ -1,0 +1,8 @@
+<rt-require dependency="baseUI/panelInputs/media/imageChange" as="imageChange"/>
+
+<imageChange value="{this.props.value}"
+             onChange="{this.props.onChange}"
+             valueLink="{this.props.valueLink}"
+             additionalButtons="{this.getRemoveButton()}"
+             emptySymbolName="camera"
+             rt-props="this.filteredProps()"/>

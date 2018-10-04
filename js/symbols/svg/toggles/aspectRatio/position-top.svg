@@ -1,0 +1,8 @@
+<svg width="51px" height="51px" viewBox="0 0 51 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">  
+  <g class="st1">       
+    <path d="M35,25 C35,24.448 34.552,24 34,24 L17,24 C16.448,24 16,24.448 16,25 L16,35 C16,35.552 16.448,36 17,36 L34,36 C34.552,36 35,35.552 35,35 L35,25"></path>
+    <path d="M16,17 L21,17 L21,22 L16,22 L16,17 Z"></path>
+    <path d="M23,17 L28,17 L28,22 L23,22 L23,17 Z"></path>
+    <path d="M30,17 L35,17 L35,22 L30,22 L30,17 Z"></path>   
+  </g>
+</svg>

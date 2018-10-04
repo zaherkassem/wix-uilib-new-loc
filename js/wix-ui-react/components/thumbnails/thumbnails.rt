@@ -1,0 +1,2 @@
+<rt-require dependency="baseUI/controls/thumbnails" as="thumbnails"/>
+    <thumbnails rt-props="this.getProps()"/>

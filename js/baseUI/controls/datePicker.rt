@@ -1,0 +1,37 @@
+<rt-require dependency="baseUI/controls/button" as="UIButton"/>
+<rt-require dependency="symbols" as="symbols" />
+
+<div class="input-date-picker">
+    <div class="dp-header">
+        <div class="dp-navigate dp-previous" onClick="() => this.updateMonth(-1)">
+            <symbols.symbol name="greaterThen" />
+        </div>
+        <div class="dp-title">{this.getMonthTitle()}</div>
+        <div class="dp-navigate dp-next" onClick="() => this.updateMonth(1)">
+            <symbols.symbol name="greaterThen"/>
+        </div>
+    </div>
+    <div class="dp-body">
+        <table rt-scope="this.getDatesInMonth() as dates; this.state.value.getMonth() as currentMonth">
+            <thead>
+            <tr>
+                <td rt-repeat="day in this.getDays()">
+                    <div class="dp-day-name">{day}</div>
+                </td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr rt-repeat="week in _.range(dates.length / 7)" class="dp-week" key="{dates[7 * week].getFullYear() + '_' + dates[7 * week].getMonth() + '_' + week}">
+                <td onClick="() => this.callOnChangeIfExists(dates[7 * week + day])" rt-repeat="day in _.range(7)">
+                    <div class="{this.getElementClasses(dates[7 * week + day])}">{dates[7 * week + day] ? dates[7 * week + day].getDate() : ''}</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="dp-footer{this.props.showDelete ? ' with-delete-btn' : ''}">
+        <UIButton class="delete-btn" rt-if="this.props.showDelete" key="deleteButton" icon="delete" onClick="() => this.callOnChangeIfExists(null)"/>
+        <UIButton class="goto-today" onClick="() => this.setState({value: new Date()})" label="{this.translateIfNeeded(this.props.todayLabel)}" shouldTranslate="{false}" />
+        <UIButton class="goto-selection" disabled="{!this.props.value}" onClick="() => this.getValueFromProps() && this.setState({value: this.getValueFromProps()})" shouldTranslate="{false}" label="{this.translateIfNeeded(this.props.goToSelectedLabel)}" />
+    </div>
+</div>

@@ -1,0 +1,34 @@
+//@import "";
+//control-button2 is the better button implementation.
+//will be renamed to control-button once all existing control-button will be migrated
+$button-control-class: control-button2;
+
+@mixin button-up($name, $part: null) {
+  .#{$button-control-class}.#{$name} #{if($part, '.' + $part,'')} {
+    @content;
+  }
+}
+
+@mixin button-hover($name, $part: null) {
+  .#{$button-control-class}.#{$name}:hover #{if($part, '.' + $part,'')} {
+    @content;
+  }
+}
+
+@mixin button-down($name, $part: null) {
+  .#{$button-control-class}.#{$name}:active #{if($part, '.' + $part,'')} {
+    @content;
+  }
+}
+
+@mixin button-disabled($name, $part: null) {
+  @if $part {
+    .#{$button-control-class}.#{$name} input:disabled #{if($part, '~ .' + $part,'')} {
+      @content;
+    }
+  } @else {
+    .#{$button-control-class}.#{$name}[disabled] {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>Corner</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Corner" sketch:type="MSArtboardGroup">
+            <g id="Page-1" sketch:type="MSLayerGroup">
+                <path d="M0,1.0002 L0,12.0002 L11,12.0002 L11,8.0002 L4,8.0002 L4,1.0002 L0,1.0002 Z" id="Fill-1" fill="#69FFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M0,0.0003 L0,6.9993 L0,12.0003 L5,12.0003 L12,12.0003 L12,6.9993 L5,6.9993 L5,0.0003 L0,0.0003 Z M1,6.9993 L1,1.0003 L4,1.0003 L4,6.9993 L4,8.0003 L5,8.0003 L11,8.0003 L11,11.0003 L5,11.0003 L1,11.0003 L1,6.9993 Z" id="Fill-2" fill="#3899EC" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

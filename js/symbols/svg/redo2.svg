@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="14px" height="16px" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="redo-reg-up" fill="#1D2D3C">
+            <path d="M12.004,8.893 C11.108,5.045 7.113,2.674 3.105,3.607 L0.679,4.171 L2.952,0.507 L2.135,0 L-1,5.055 L4.044,8.208 L4.552,7.394 L0.897,5.107 L3.322,4.544 C6.816,3.728 10.293,5.78 11.068,9.111 C11.623,11.499 10.886,13.796 9.098,15.255 L9.706,16 C11.784,14.303 12.644,11.646 12.004,8.893" transform="translate(6.500000, 8.000000) scale(-1, 1) translate(-6.500000, -8.000000) "></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,40 @@
+<rt-require dependency="textControls/comps/colorDrop" as="colorDrop"/>
+<rt-require dependency="textControls/comps/textColor" as="textColor"/>
+<rt-require dependency="textControls/utils/constants" as="constants"/>
+<rt-require dependency="baseUI" as="UI"/>
+
+
+<span>
+    <textColor onClick="()=>this.props.onClick()" tooltipValue="{this.props.tooltipValue}" rt-if="!this.shouldRenderDropOwn()" key="backColorButton"
+                tooltipStyleType="{this.props.tooltipStyleType}" isBackColor="{true}" value="{this.props.color}">
+    </textColor>
+
+    <UI.tooltip value="{this.props.tooltipValue}"  styleType="{this.props.tooltipStyleType}" rt-if="this.shouldRenderDropOwn()"  key="backColorDropdown">
+        <span>
+            <UI.dropDown.select
+                    ref="dropdown"
+                    autotranslate="{false}"
+                    value="{this.getDropDownValue()}"
+                    onChange="{this.handleChange}"
+                    class="back-color-dd"
+                    optionsWidth="{40}"
+                    toggleIcon="{false}"
+                    template="{this.getTemplate}"
+                    setSelectedAnyway="{true}"
+                    doNotFocus="{this.props.doNotFocus}">
+                <UI.dropDown.option rt-repeat="item in constants.TEXT_BACK_COLOR_TYPES" value="{item}" class="icons-dd-option" key="{itemIndex}">
+                    <UI.symbol name="{itemIndex}" />
+                </UI.dropDown.option>
+                <UI.dropDown.option key="colorDropOption" rt-if="this.props.colorDrop"
+                                    value="customColor"
+                                    class="icons-dd-option">
+                    <colorDrop colorDropOnly="{true}" fill="{this.props.color}"></colorDrop>
+                </UI.dropDown.option>
+            </UI.dropDown.select>
+        </span>
+    </UI.tooltip>
+
+</span>
+
+
+

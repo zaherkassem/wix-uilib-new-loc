@@ -1,0 +1,25 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include button-up(preview-btn) {
+  .st1 {
+    fill: $g-color-e4;
+  }
+}
+
+@include button-hover(preview-btn) {
+  .st1 {
+    fill: $g-color-b2;
+  }
+}
+
+@include button-down(preview-btn) {
+  .st1 {
+    fill: $g-color-e4;
+  }
+}
+
+@include button-disabled(preview-btn) {
+  .st1 {
+    fill: $g-color-e4x;
+  }
+}

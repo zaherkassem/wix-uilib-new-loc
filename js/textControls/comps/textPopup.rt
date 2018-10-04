@@ -1,0 +1,18 @@
+<rt-require dependency="textControls/comps/iconButton" as="iconButton"/>
+
+<div class="text-popup-control">
+    <span>
+        <iconButton ref="popupButton" isSelected="{this.state.popupOpen}" style="width: {this.props.width}"
+                    onClick="{this.togglePopup}"
+                    popupMode="{true}" name="{this.props.iconName}">
+            <span key="textPopupLabel" rt-if="this.props.label">{this.props.label}</span>
+        </iconButton>
+    </span>
+
+    <div class="tri with-shadow" style="visibility: {this.state.popupOpen ? 'visible': 'hidden'}"/>
+    <div class="text-popup with-shadow" ref="popupContainer"
+         style="visibility: {this.state.popupOpen ? 'visible': 'hidden'}">
+        <span>{this.props.children}</span>
+    </div>
+    <div class="tri cover-shadow"  style="visibility: {this.state.popupOpen ? 'visible': 'hidden'}"/>
+</div>

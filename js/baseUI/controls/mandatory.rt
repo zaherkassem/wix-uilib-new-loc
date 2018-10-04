@@ -1,0 +1,7 @@
+<rt-require dependency="baseUI/popovers/tooltip" as="tooltip"/>
+<tooltip disabled="{!this.props.forceDisable && !!this.props.disabled}" value="{this.state.mandatoryTooltip}">
+<label class="{this.getClassName('control-mandatory')}">
+    <input type="checkbox" checked="{this.getValueFromProps(this.props)}" disabled="{!!this.props.disabled}" onChange="(e)=>this.onMandatoryFieldChecked(e)"/>
+    <span></span>
+</label>
+</tooltip>

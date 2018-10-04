@@ -1,0 +1,25 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include button-up(duplicate-btn-bld) {
+  .st1 {
+    fill: $g-color-d1;
+  }
+}
+
+@include button-hover(duplicate-btn-bld) {
+  .st1 {
+    fill: $g-color-b1;
+  }
+}
+
+@include button-down(duplicate-btn-bld) {
+  .st1 {
+    fill: $g-color-d1;
+  }
+}
+
+@include button-disabled(duplicate-btn-bld) {
+  .st1 {
+    fill: $g-color-d1x;
+  }
+}

@@ -1,0 +1,43 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(distribute-vertical-btn-bld) {
+
+  path {
+    transition: fill 0.2s;
+  }
+
+  .st1 {
+    fill: $g-color-b3;
+  }
+}
+
+@include toggle-selected-up(distribute-vertical-btn-bld) {
+
+  .st1 {
+    fill: $g-color-b5;
+  }
+}
+
+@include button-up(distribute-vertical-btn-bld) {
+  .st1 {
+    fill: $g-color-d1;
+  }
+}
+
+@include button-hover(distribute-vertical-btn-bld) {
+  .st1 {
+    fill: $g-color-b1;
+  }
+}
+
+@include button-down(distribute-vertical-btn-bld) {
+  .st1 {
+    fill: $g-color-d1;
+  }
+}
+
+@include button-disabled(distribute-vertical-btn-bld) {
+  .st1 {
+    fill: $g-color-d1x;
+  }
+}

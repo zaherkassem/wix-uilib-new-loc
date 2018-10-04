@@ -1,0 +1,27 @@
+.selective-text-input {
+  position: relative;
+  .textInput {
+    margin-left: 16px;
+    margin-right: 80px;
+    padding: 0px;
+    width: auto;
+
+    > input {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+  .control-checkbox {
+    position: absolute;
+    right: 57px;
+    top: 50%;
+    margin-top: -7px;
+  }
+
+  .control-mandatory {
+    position: absolute;
+    right: 28px;
+    top: 50%;
+    margin-top: -7px;
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../../../../baseUI/src/main/framework/framework";
+
+// regular - up
+@include toggle-regular-up(imageScaleStretch) {
+  .st1 {
+    fill: #4EB7F6;
+  }
+
+  .st2 {
+    fill: #9ED7FB;
+  }
+
+  .st3 {
+    fill: $g-color-b4;
+  }
+}
+
+// selected - up
+@include toggle-selected-up(imageScaleStretch) {
+  .st1 {
+    fill: $g-color-b4;
+  }
+
+  .st2 {
+    fill: #A1D9FA;
+  }
+
+  .st3 {
+    fill: #7FCCF8;
+  }
+}

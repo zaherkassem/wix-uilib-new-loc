@@ -1,0 +1,23 @@
+<rt-require dependency="baseUI" as="UI"/>
+
+<div class="control-line-height">
+    <UI.infoIcon key="lineHeightInfo" rt-if="this.props.infoText || this.props.infoTitle" title="{this.props.infoTitle}"
+                 text="{this.props.infoText}"/>
+    <UI.radioButtons
+            value="{this.getSelectedOption()}"
+            label="text_editor_line_spacing_label"
+            onChange="(value)=>this.selectionChange(value)"
+            options="{this.props.options}"
+            />
+    <div style="display: {_.isNumber(this.state.value) ? 'block': 'none' }">
+        <UI.slider
+                value="{this.props.value}"
+                min="{0.5}"
+                max="{3}"
+                stepperMax="{9}"
+                step="{0.1}"
+                onChange="{this.handleSliderChange}"
+                onSlideEnd="{this.props.onSlideEnd}"
+                />
+    </div>
+</div>

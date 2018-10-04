@@ -1,0 +1,60 @@
+@import "../framework/framework";
+
+//C42: https://assets.adobe.com/link/bde56655-3e9f-4c94-a688-efc0d7154c0c?section=extract
+.control-tabs-horizontal.tabbed {
+  box-sizing: border-box;
+  //set font-size zero to get rid of the spacing which is added after inline-block elements
+  font-size: 0;
+  height: 59px;
+  background-color: $g-color-d6;
+  width: 100%;
+
+  label {
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+
+    @include distribute-width-evenly(label, 5);
+
+    &:last-child span {
+      border-right: none;
+    }
+  }
+
+  input {
+    display: none;
+
+    + span {
+      height: 47px;
+
+      //center alignment (both horizontally and vertically)
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      padding: 0 10px;
+
+      //restore the original font size
+      font-size: 14px;
+
+      //border-box in order to measure the border within the span dimensions
+      box-sizing: border-box;
+      color: $g-color-d2;
+      background-color: $g-color-b5;
+      border-right: solid 1px $g-color-b4;
+      transition-property: background-color, border-color;
+      transition-duration: .2s;
+
+      &:hover {
+        background-color: $g-color-b4;
+      }
+    }
+
+    &:checked + span {
+      background-color: $g-color-d6;
+      border-color: transparent;
+    }
+  }
+}

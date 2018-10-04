@@ -1,0 +1,35 @@
+@import "../../../../../packages/baseUI/src/main/framework/framework.scss";
+
+.text-popup-control {
+  display: inline-block;
+  position: relative;
+
+  .text-popup {
+    bottom: 32px;
+    position: absolute;
+    background: #fff;
+    z-index: $g-zindex-tooltip;
+    width: 258px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .tri {
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -25px;
+    right: 25px;
+  }
+
+  .cover-shadow {
+    background: #fff;
+    z-index: $g-zindex-tooltip + 1;
+  }
+
+  .with-shadow {
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.44);
+  }
+
+}

@@ -1,0 +1,10 @@
+<rt-require dependency="baseUI/controls/infoIcon" as="infoIcon"/>
+
+<div class="control-section-divider labeled">{this.translateIfNeeded(this.props.label)}
+    <infoIcon rt-if="this.props.infoText" key="icon"
+                     size="{18}"
+                     text="{this.props.infoText}"
+                     title="{this.props.infoTitle}"
+                     fitToBoundsWidth="{false}"
+            />
+</div>

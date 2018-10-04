@@ -1,0 +1,11 @@
+<rt-require dependency="baseUI/popovers/bubble" as="bubble"/>
+<rt-require dependency="baseUI/popovers/tooltipPresenter" as="tooltipPresenter"/>
+<!--<rt-require dependency="uiAnimations" as="UA"/>-->
+
+<div class="tooltips-layer">
+    <!--<UA.tooltipAnimation>-->
+        <tooltipPresenter rt-repeat="tooltipData in this.state.presentedTooltips"
+                          rt-props="tooltipData"
+                          key="{tooltipData.id}" />
+    <!--</UA.tooltipAnimation>-->
+</div>

@@ -1,0 +1,31 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+$button-name: slideShow-btn;
+
+@include button-up($button-name) {
+  .st0 {
+    fill: $g-color-b1;
+  }
+
+  .st1 {
+    fill: $g-color-d6;
+  }
+}
+
+@include button-hover($button-name) {
+  .st0 {
+    fill: $g-color-b2;
+  }
+}
+
+@include button-down($button-name) {
+  .st0 {
+    fill: $g-color-b1;
+  }
+}
+
+@include button-disabled($button-name) {
+  .st0 {
+    fill: $g-color-b1x;
+  }
+}

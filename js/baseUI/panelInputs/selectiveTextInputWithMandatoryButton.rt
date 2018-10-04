@@ -1,0 +1,11 @@
+<rt-require dependency="baseUI/panelInputs/textInput" as="textInput"/>
+<rt-require dependency="baseUI/controls/mandatory" as="mandatory"/>
+<rt-require dependency="baseUI/controls/toggle" as="toggle"/>
+
+<div rt-scope="!this.state.enabled as disableUI" class="selective-text-input">
+    <textInput disabled="{disableUI}" onChange="(evt)=>this.fieldNameChanged(evt)" class="textInput"
+               maxLength="{this.props.maxLength}" placeholder="{this.props.placeholder}"
+               value="{this.state.fieldName}"></textInput>
+    <toggle name="checkbox" disabled="{this.props.forceDisable}" onChange="()=>this.enabledChanged()" value="{this.state.enabled}"/>
+    <mandatory displayName="{this.props.displayName}" hoverToolTipsKeys="{this.props.hoverToolTipsKeys}" disabled="{disableUI || this.props.forceDisable}" forceDisable="{this.props.forceDisable}" onChange="()=>this.requiredChanged()" value="{this.state.required}"></mandatory>
+</div>

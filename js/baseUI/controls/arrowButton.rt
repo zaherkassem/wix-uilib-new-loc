@@ -1,0 +1,5 @@
+<rt-require dependency="symbols" as="symbols"></rt-require>
+
+<i class="arrow-button {this.getClassName()}" onClick="{this.props.onClickAction}">
+    <symbols.symbol name="arrowDown"></symbols.symbol>
+</i>

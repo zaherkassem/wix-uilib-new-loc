@@ -1,0 +1,46 @@
+@import "../framework/framework";
+
+.control-checkbox-with-button {
+  white-space: nowrap;
+
+  &:hover {
+    background-color: $g-color-b5;
+  }
+
+  .controls-wrapper {
+    height: 24px;
+    display: flex;
+    align-items: center;
+
+    .control-checkbox {
+      display: inline-flex;
+      flex: 1;
+    }
+
+    .symbol-checkbox {
+      min-width: 16px;
+    }
+
+    .checkbox-button {
+      height: 24px;
+      line-height: 24px;
+      @include g-font-f03();
+      display: none;
+      border-radius: 12px;
+      margin-left: auto;
+      overflow: visible;
+    }
+  }
+
+  &:not(:hover) .checkbox-button {
+    opacity: 0;
+    width: 0;
+    padding: 0;
+  }
+
+  &:hover .checkbox-button {
+    display: inline-block;
+    opacity: 1;
+    transition: .2s opacity;
+  }
+}

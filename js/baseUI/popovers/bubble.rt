@@ -1,0 +1,7 @@
+<div rt-class="this.getClasses()"
+     style="max-width: {this.props.width}"
+     onMouseLeave="{this.onMouseLeave}"
+     onMouseEnter="{this.onMouseEnter}">
+    <div class="arrow" style="{this.getArrowStyle()}"></div>
+    <div class="content-wrapper">{this.getContent()}</div>
+</div>

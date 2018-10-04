@@ -1,0 +1,52 @@
+@import "../framework/framework";
+
+.control-text-input-with-fixed-button{
+
+  $default-color-disabled: #bdbdbd;
+
+  display: flex;
+  align-items: center;
+
+  > .control-text {
+    flex-grow: 1;
+
+    @include g-font-f04();
+    color: $g-color-d2;
+
+    outline: none;
+    text-align: left;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #88ccf8;
+    border-style: solid;
+    background-color: $g-color-d6;;
+    height: 23px;
+    padding-left: 15px;
+    width: 0; /* firefox spike */
+  }
+
+  > .control-button {
+    @include g-font-f04();
+    flex-shrink: 0;
+    margin-left: 6px;
+    height: 20px;
+    border-radius: 12px;
+    border-width: 2px;
+    line-height: 20px;
+    padding-left: 10px;
+    padding-right: 9px;
+
+    &.disabled {
+      background-color: $default-color-disabled;
+    }
+  }
+
+  &.invalid {
+    > .control-text {
+      border-color: #d82646;
+    }
+  }
+}

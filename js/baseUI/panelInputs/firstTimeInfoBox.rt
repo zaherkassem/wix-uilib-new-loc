@@ -1,0 +1,22 @@
+<rt-require dependency="util" as="util"/>
+<rt-require dependency="baseUI/controls/button" as="UIButton"/>
+<rt-require dependency="symbols" as="symbols"/>
+
+<div class="{util.inheritClassName(this.props, 'first-time-info-box')} in-{this.props.context}"
+     rt-if="this.shouldShowTeaser()" key="{this.props.id}">
+    <div class="pointer"></div>
+    <div class="top-line">
+        <div class="close" onClick="{this.close.bind(this, 'x')}"><symbols.symbol name="firstTimeInfoBoxClose"></symbols.symbol></div>
+    </div>
+    <div class="content {!!this.props.linkText ? 'has-link' : 'no-link'}">
+        <div class="title" rt-if="!!this.props.title" key="title">{util.translate(this.props.title)}</div>
+        <div class="text">{util.translate(this.props.text)}</div>
+    </div>
+    <div class="bottom-line">
+        <UIButton label="{this.props.linkText}" class="link no-margin btn-sm btn-text" onClick="{this.link}" rt-if="!!this.props.linkText" key="learnMoreButton"></UIButton>
+        <symbols.symbol class="arrow" name="firstTimeInfoBoxArrowRight" rt-if="!!this.props.linkText" onClick="{this.link}" key="learnMoreSymbol"></symbols.symbol>
+        <div class="space"></div>
+        <UIButton label="{this.props.gotItText}" class="got-it btn-back" onClick="{this.close.bind(this, 'gotit')}"></UIButton>
+    </div>
+
+</div>

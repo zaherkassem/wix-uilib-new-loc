@@ -1,0 +1,7 @@
+<rt-require dependency="baseUI/panelInputs/autoCompleteTextInput" as="autoCompleteTextInput" />
+<!--<autoCompleteTextInput value="hhh"/>-->
+<div class="selected">
+    <span key="selectedContent">{this.getCached('selectedContent')}</span>
+    <!--<span rt-if="!this.state.expanded" key="selectedContent">{this.getCached('selectedContent')}</span>-->
+    <!--<input rt-if="this.state.expanded" key="selectedInput" ref="focusElement" type="text" value="{this.getCached('selectedContent')}" onChange="{this.onInputChange}"/>-->
+</div>

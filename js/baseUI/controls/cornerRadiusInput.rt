@@ -1,0 +1,21 @@
+<rt-require dependency="baseUI/panelInputs/stepper" as="stepper" />
+<rt-require dependency="baseUI/controls/linkToggle" as="linkToggle" />
+
+<div class="control-border-radius">
+    <label class="inputLabel">{this.translateIfNeeded(this.props.label)}</label>
+    <div class="inputContainer">
+        <stepper class="small" name="top_left" ref="top_left" value="{this.getCornerValue('top_left')}" onChange="{this.onCornerChange.bind(this, 'top_left')}" min="{this.props.minBorderValue}" max="{this.props.maxBorderValue}" step="{this.props.borderStep}" />
+        <stepper class="small" name="top_right" ref="top_right" value="{this.getCornerValue('top_right')}" onChange="{this.onCornerChange.bind(this, 'top_right')}" min="{this.props.minBorderValue}" max="{this.props.maxBorderValue}" step="{this.props.borderStep}" />
+        <stepper class="small" name="bottom_right" ref="bottom_right" value="{this.getCornerValue('bottom_right')}" onChange="{this.onCornerChange.bind(this, 'bottom_right')}" min="{this.props.minBorderValue}" max="{this.props.maxBorderValue}" step="{this.props.borderStep}" />
+        <stepper class="small" name="bottom_left" ref="bottom_left" value="{this.getCornerValue('bottom_left')}" onChange="{this.onCornerChange.bind(this, 'bottom_left')}" min="{this.props.minBorderValue}" max="{this.props.maxBorderValue}" step="{this.props.borderStep}" />
+        <div class="cornersContainer">
+            <div class="corner" style="border-top-left-radius: {this.getCornerValue('top_left')}px;"></div>
+            <div class="corner" style="border-top-right-radius: {this.getCornerValue('top_right')}px;"></div>
+            <div class="corner" style="border-bottom-right-radius: {this.getCornerValue('bottom_right')}px;"></div>
+            <div class="corner" style="border-bottom-left-radius: {this.getCornerValue('bottom_left')}px;"></div>
+            <span class="link">
+                <linkToggle name="link" onClick="{this.toggleLink}" value="{this.getLinkedToggleValue()}" />
+            </span>
+        </div>
+    </div>
+</div>

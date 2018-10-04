@@ -1,0 +1,88 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(settings-circle) {
+  .st0 {
+    fill: $g-color-d1;
+    fill-opacity: 0.5;
+    stroke: $g-color-d6;
+    stroke-width: 1;
+  }
+
+  .st1 {
+    fill: $g-color-d6;
+  }
+
+  .st2 {
+    fill: transparent;
+  }
+}
+
+@include toggle-regular-hover(settings-circle) {
+  .st0 {
+    fill: $g-color-b5;
+  }
+}
+
+@include toggle-regular-down(settings-circle) {
+  .st0 {
+    fill: $g-color-d6;
+  }
+}
+
+@include toggle-regular-disabled(settings-circle) {
+  .st0 {
+    fill: $g-color-b1x;
+    opacity: 0.4;
+  }
+
+  .st1 {
+    fill: $g-color-d6;
+    opacity: 0.4;
+  }
+
+  .st2 {
+    fill: transparent;
+  }
+}
+
+@include toggle-selected-up(settings-circle) {
+  .st0 {
+    fill: $g-color-b1;
+  }
+
+  .st1 {
+    fill: transparent;
+  }
+
+  .st2 {
+    fill: $g-color-d6;
+  }
+}
+
+@include toggle-selected-hover(settings-circle) {
+  .st0 {
+    fill: $g-color-b2;
+  }
+}
+
+@include toggle-selected-down(settings-circle) {
+  .st0 {
+    fill: $g-color-b1;
+  }
+}
+
+@include toggle-selected-disabled(settings-circle) {
+  .st0 {
+    fill: $g-color-b1x;
+    opacity: 0.4;
+  }
+
+  .st1 {
+    fill: transparent;
+  }
+
+  .st2 {
+    fill: $g-color-d6;
+    opacity: 0.4;
+  }
+}

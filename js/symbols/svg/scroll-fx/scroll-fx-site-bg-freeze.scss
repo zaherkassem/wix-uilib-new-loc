@@ -1,0 +1,59 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(scroll-fx-site-bg-freeze) {
+  .st1 {
+    fill: $g-color-b2;
+  }
+
+  .st2 {
+    fill: $g-color-b4;
+  }
+
+  .st3 {
+    fill: $g-color-b5;
+  }
+
+  .st4 {
+    fill: $g-color-b3;
+    opacity: 0.9;
+  }
+
+  .st5 {
+    fill: $g-color-b4;
+  }
+
+  .st6 {
+    fill: none;
+    stroke: $g-color-b3;
+  }
+}
+
+@include toggle-selected-up(scroll-fx-site-bg-freeze) {
+  .st1 {
+    fill: $g-color-b4;
+  }
+
+  .st2 {
+    fill: $g-color-b3;
+  }
+
+  .st3 {
+    fill: $g-color-b2;
+  }
+
+  .st4 {
+    fill: $g-color-b5;
+    opacity: 0.9;
+  }
+
+  .st5 {
+    fill: $g-color-b3;
+  }
+
+  .st6 {
+    fill: none;
+    stroke: $g-color-b3;
+  }
+}
+
+

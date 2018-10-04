@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="28px" height="29px" viewBox="0 0 28 29">
+<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+	<g id="Add-related-apps-BTN" transform="translate(0.500000, 1.000000)">
+		<circle id="Oval-1" stroke="#3899EC" cx="13.5" cy="13.5" r="13.5"></circle>
+		<path d="M13,12.9377422 L13,9.46887112 L13,8.96887112 L14,8.96887112 L14,9.46887112 L14,12.9377422 L17.5311289,12.9377422 L18.0311289,12.9377422 L18.0311289,13.9377422 L17.5311289,13.9377422 L14,13.9377422 L14,17.5311289 L14,18.0311289 L13,18.0311289 L13,17.5311289 L13,13.9377422 L9.46887112,13.9377422 L8.96887112,13.9377422 L8.96887112,12.9377422 L9.46887112,12.9377422 L13,12.9377422 Z" id="Line" fill="#3899EC"></path>
+	</g>
+</g>
+</svg>

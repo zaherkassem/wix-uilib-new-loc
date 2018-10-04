@@ -1,0 +1,28 @@
+@import "../framework/framework";
+
+.info-icon {
+  cursor: pointer;
+  border-radius: 50%;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+
+  svg {
+    circle {
+      fill: transparent;
+    }
+
+    path {
+      fill: $g-color-d3;
+    }
+
+    &:hover {
+      path {
+        fill: $g-color-b1;
+      }
+    }
+  }
+}
+
+
+

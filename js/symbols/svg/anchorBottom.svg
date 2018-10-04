@@ -1,0 +1,9 @@
+<svg width="62px" height="46px" viewBox="0 0 62 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path class="background" d="M60,44 L2,44 C0.895,44 0,43.1098105 0,42.0107498 L0,4.21499598 L62,4.21499598 L62,42.0107498 C62,43.1098105 61.104,44 60,44 L60,44 Z" transform="translate(30.500000, 22.000000) scale(1, -1) translate(-30.500000, -22.000000)"></path>
+    <path class="bottom-line" d="M2,42 L60,42 C61.104,42 62,42.895 62,44 L62,46 L0,46 L0,44 C0,42.895 0.895,42 2,42 Z" transform="translate(31.000000, 44.000000) scale(-1, -1) translate(-31.000000, -44.000000)"></path>
+    <g class="arrow" transform="translate(27.000000, 16.000000)">
+        <path d="M4,0 L4,11"></path>
+        <path d="M8,8 L4,12"></path>
+        <path d="M4,8 L7.10542736e-15,12" transform="translate(2.000000, 10.000000) scale(-1, 1) translate(-2.000000, -10.000000)"></path>
+    </g>
+</svg>

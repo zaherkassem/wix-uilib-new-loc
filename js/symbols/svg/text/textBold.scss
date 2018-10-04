@@ -1,0 +1,13 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(textBold) {
+  fill: $g-color-d2;
+}
+
+@include toggle-regular-down(textBold) {
+  fill: $g-color-d6;
+}
+
+@include toggle-selected-up(textBold) {
+  fill: $g-color-d6;
+}

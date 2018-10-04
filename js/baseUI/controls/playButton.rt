@@ -1,0 +1,3 @@
+<div onClick="{this.onPlayButtonClick}" rt-class="{playButton:true,isPlaying:this.state.isPlaying}">
+    <div class="playIcon"></div>
+</div>

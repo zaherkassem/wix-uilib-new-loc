@@ -1,0 +1,21 @@
+@import "../../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(align-center) {
+  .st1 {
+    fill: $g-color-b1;
+  }
+
+  .st2 {
+    fill: $g-color-b3;
+  }
+}
+
+@include toggle-selected-up(align-center) {
+  .st1 {
+    fill: $g-color-b3;
+  }
+
+  .st2 {
+    fill: $g-color-b4;
+  }
+}

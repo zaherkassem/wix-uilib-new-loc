@@ -1,0 +1,21 @@
+@import "../../../baseUI/src/main/framework/framework";
+
+.symbol-anchorTop {
+  stroke: none;
+  stroke-width: 1;
+  fill: none;
+  fill-rule: evenodd;
+
+  .background {
+    fill: $g-color-b4;
+  }
+
+  .top-line {
+    fill: $g-color-b3;
+  }
+
+  .arrow {
+    stroke: $g-color-b1;
+    stroke-linecap: square;
+  }
+}

@@ -1,0 +1,9 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include symbol-up(headerCloseButton) {
+
+  //overrides
+  .category-view-wrapper & {
+    fill: $g-color-b1;
+  }
+}

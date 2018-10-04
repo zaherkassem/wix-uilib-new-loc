@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="154px" height="97px" viewBox="0 0 154 97" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Concurrent_users_popups_blue</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Concurrent_users_popups_blue" sketch:type="MSArtboardGroup">
+            <path d="M135,93.501 C135,95.434 98.702906,97 70.3453675,97 C41.9878291,97 19,95.434 19,93.501 C19,91.567 41.9878291,90 70.3453675,90 C98.702906,90 135,91.567 135,93.501" id="Fill-1" fill="#E6EBED" sketch:type="MSShapeGroup"></path>
+            <path d="M94.323,39.599 C93.059,38.419 91.363,37.698 89.498,37.698 C85.59,37.698 82.423,39.866 82.423,43.773 C82.423,47.013 84.6,49.744 87.572,50.582 C88.184,50.755 98,53 98,53 L90,64 L95,72 L95,68 L106,52 C106,52 95.707,40.89 94.323,39.599" id="Fill-2" fill="#81CCF7" sketch:type="MSShapeGroup"></path>
+            <path d="M61.1,39.599 C62.364,38.419 64.06,37.698 65.925,37.698 C69.833,37.698 73,39.866 73,43.773 C73,47.013 70.823,49.744 67.852,50.582 C67.239,50.755 57.423,53 57.423,53 L65.211,64 L60,72 L60,68 L49.211,52 C49.211,52 59.716,40.89 61.1,39.599" id="Fill-3" fill="#2B5672" sketch:type="MSShapeGroup"></path>
+            <path d="M43.856,56 L109.677,56" id="Stroke-4" stroke="#7992A5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M105,77 C105,68.715732 111.71585,62 120,62 C128.28415,62 135,68.715732 135,77 C135,85.284268 128.28415,92 120,92 C111.71585,92 105,85.284268 105,77 L105,77 Z" id="Stroke-5" stroke="#2B5672" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M116.732,77.052 C116.732,75.403 118.065,74.066 119.71,74.066 C121.355,74.066 122.688,75.403 122.688,77.052 C122.688,78.701 121.355,80.038 119.71,80.038 C118.065,80.038 116.732,78.701 116.732,77.052" id="Fill-6" fill="#7992A5" sketch:type="MSShapeGroup"></path>
+            <path d="M19,77 C19,68.715732 25.7158499,62 34,62 C42.2841501,62 49,68.715732 49,77 C49,85.284268 42.2841501,92 34,92 C25.7158499,92 19,85.284268 19,77 L19,77 Z" id="Stroke-7" stroke="#2B5672" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M31.732,77.052 C31.732,75.403 33.065,74.066 34.71,74.066 C36.355,74.066 37.688,75.403 37.688,77.052 C37.688,78.701 36.355,80.038 34.71,80.038 C33.065,80.038 31.732,78.701 31.732,77.052" id="Fill-8" fill="#7992A5" sketch:type="MSShapeGroup"></path>
+            <path d="M108,49 L120.468,77" id="Stroke-9" stroke="#7992A5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M115.8,55.4 C117.567,55.4 119,53.967 119,52.2 C119,50.432 117.567,49 115.8,49 L108,49" id="Stroke-10" stroke="#2B5672" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M82,49 L91,49" id="Stroke-11" stroke="#2B5672" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M121,22.3968719 C121,25.4907136 118.666,28 115.5,28 C112.334,28 110,25.4907136 110,22.3968719 L110,19 L121,19 L121,22.3968719" id="Fill-12" fill="#B1DDF8" sketch:type="MSShapeGroup"></path>
+            <path d="M110,19 C110,16.0833333 113.134444,12 117,12 C120.866528,12 124.000972,16.0833333 124,19 L110,19" id="Fill-13" fill="#81CCF7" sketch:type="MSShapeGroup"></path>
+            <path d="M65.504,56 L78,77 L89.468,56 M46.945,49 L34.477,77" id="Stroke-14" stroke="#7992A5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M39.172,55.4 C37.405,55.4 35.959,53.967 35.959,52.2 C35.959,50.432 37.378,49 39.145,49 L47,49" id="Stroke-15" stroke="#2B5672" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M73,49 L64,49" id="Stroke-16" stroke="#2B5672" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M110.5,56.038 C105.182,68.358 92.41,77.037 77.5,77.037 C62.589,77.037 49.817,68.357 44.5,56.037" id="Stroke-17" stroke="#7992A5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M119,54 C118.265,53.152 110.02,44.195 110.02,44.195 L110.02,30.223 C110.02,26.334 107.792,24.76 104.611,24.76 C94,24.76 81.725,31.625 81.725,43.217 C81.725,45.417 82.689,47.394 84.217,48.745 C84.728,49.197 94,60.365 94,60.365 L90,81 L97,84 L94,80 L101,59 C101,59 96.687,43.024 96.687,43.007 C96.687,39.25 101,37 104.304,37 C104.605,41.584 105.02,45.57 105.02,45.57 C105.02,45.57 115.688,54.687 117,56 C117.417,56.417 118.5,56.5 119,56 C119.625,55.375 119.542,54.625 119,54" id="Fill-18" fill="#B1DDF8" sketch:type="MSShapeGroup"></path>
+            <path d="M36.126,54 C36.861,53.152 45.105,44.195 45.105,44.195 L45.105,30.223 C45.105,26.334 47.334,24.76 50.515,24.76 C61.126,24.76 73.4,31.625 73.4,43.217 C73.4,45.417 72.437,47.394 70.909,48.745 C70.398,49.197 61.126,60.365 61.126,60.365 L65.126,81 L58.126,84 L61.126,80 L54.126,59 C54.126,59 58.439,43.024 58.439,43.007 C58.439,39.25 54.126,37 50.821,37 C50.52,41.584 50.105,45.57 50.105,45.57 C50.105,45.57 39.438,54.687 38.126,56 C37.709,56.417 36.626,56.5 36.126,56 C35.501,55.375 35.584,54.625 36.126,54" id="Fill-19" fill="#7992A5" sketch:type="MSShapeGroup"></path>
+            <path d="M34,22.3968719 C34,25.4907136 36.334,28 39.5,28 C42.666,28 45,25.4907136 45,22.3968719 L45,19 L34,19 L34,22.3968719" id="Fill-20" fill="#7992A5" sketch:type="MSShapeGroup"></path>
+            <path d="M45,19 C45,16.0833333 41.8657732,12 37.9995139,12 C34.1342268,12 31,16.0833333 31,19 L45,19" id="Fill-21" fill="#2B5672" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

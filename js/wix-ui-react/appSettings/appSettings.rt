@@ -1,0 +1,6 @@
+<rt-require dependency="wix-ui-react/appSettings/manager" as="manager"/>
+
+<div style="height: 100%">
+    {this.props.children}
+    <manager/>
+</div>

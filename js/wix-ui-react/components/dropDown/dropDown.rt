@@ -1,0 +1,14 @@
+<rt-require dependency="baseUI/panelInputs/dropDown/select" as="dropDownSelect"/>
+<rt-require dependency="baseUI/panelInputs/dropDown/option" as="dropDownOption"/>
+
+<dropDownSelect
+        infoTitle="{this.props.infoTitle}"
+        style="{this.props.style}"
+        infoText="{this.props.infoText}"
+        label="{this.props.title}"
+        valueLink="{this.getValueLink('value')}"
+        >
+    <dropDownOption
+            rt-repeat="option in this.props.options" key="{'option' + optionIndex}"
+            value="{option.value}" class="{option.className}">{option.label}</dropDownOption>
+</dropDownSelect>

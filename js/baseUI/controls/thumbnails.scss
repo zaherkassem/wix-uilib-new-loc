@@ -1,0 +1,161 @@
+@import "../framework/framework";
+
+.control-thumbnails {
+  $total-panel-width: 288px;
+  $spacing-on-the-control-sides: 24px;
+  $spacing-between-items: 12px;
+
+  position: relative;
+  padding: 13px 24px 16px;
+  white-space: initial; //reset any previously set white-space (We want wrapping)
+
+  &,
+  & * {
+    //reset font size to avoid inline-block additional spacing
+    box-sizing: border-box;
+    font-size: 0;
+  }
+
+  //set the style of each radio-control which is included within thumbnails:
+  .radio-control {
+    //width is dynamically set below according to the number of items per row
+    position: relative;
+    display: inline-block;
+    margin: 0 $spacing-between-items $spacing-between-items 0;
+    vertical-align: top;
+
+    .svg-radio {
+      position: relative;
+      width: 100%;
+      background-color: $g-color-b5;
+      display: inline-block;
+      border-radius: 8px;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: $g-color-b4;
+      }
+    }
+
+    .image-radio {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      border: 1px solid $g-color-d4;
+      //box-shadow: 0 0 0 1px $g-color-d4;
+      display: inline-block;
+      border-radius: 8px;
+
+      .image-radio-src {
+        position: relative;
+        display: block;
+        top: -1px;
+        left: -1px;
+      }
+
+      &:hover {
+        border: 2px solid $g-color-b3;
+
+        .image-radio-src {
+          top: -2px;
+          left: -2px;
+        }
+      }
+    }
+
+    input:checked {
+      + .svg-radio {
+        background-color: $g-color-b1;
+
+        &.symbol-thumb-none,
+        &.symbol-transition-none {
+          background-color: $g-color-b5;
+        }
+      }
+
+      + .image-radio {
+        border: 2px solid $g-color-b1;
+
+        .image-radio-src {
+          top: -2px;
+          left: -2px;
+        }
+      }
+    }
+
+    .label {
+      @include g-font-f10();
+      display: block;
+      text-align: center;
+      color: $g-color-b1;
+      padding-top: 9px;
+    }
+  }
+
+  //dynamically determine the width of every thumbnail box, and set where relevant, with only css.
+  //this is done according to the max thumbnails allowed in each row.
+  @for $items-in-a-row from 1 through 5 {
+    $box-width: ($total-panel-width - ($spacing-on-the-control-sides * 2) - ($spacing-between-items * ($items-in-a-row - 1))) / $items-in-a-row;
+    @for $items-to-skip from 0 through 2 {
+
+      &[data-max-thumbs-per-row="#{$items-in-a-row}"][data-items-to-skip="#{$items-to-skip}"] {
+        .radio-control {
+          width: $box-width;
+
+          ////cancel the margin on the last item in each row or leave enough margin to push remaining thumbs to a new line
+          &:nth-of-type(#{$items-in-a-row - $items-to-skip}n) {
+            margin-right: $items-to-skip * ($box-width + $spacing-between-items);
+          }
+        }
+
+        //the thumb is a square, hence the height matches the width.
+        input + .svg-radio,
+        input + .image-radio {
+
+          @include when-root-has-class(square) {
+            height: $box-width;
+          }
+
+          //normally border-radius is 8px, but when there are 5 in a row, it is 6px
+          @if ($items-in-a-row == 5) {
+            border-radius: 6px;
+          }
+        }
+
+        &.with-title {
+          span:last-of-type {
+            max-width: $box-width;
+          }
+        }
+      }
+    }
+
+  }
+
+  &.with-title {
+    div {
+      @include g-font-f03();
+      display: block;
+      color: $g-color-d2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 15px;
+    }
+  }
+
+  .info-icon {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.15s;
+  }
+
+  &:hover {
+    .info-icon {
+      opacity: 1;
+    }
+  }
+}

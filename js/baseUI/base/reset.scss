@@ -1,0 +1,29 @@
+@import "../framework/framework";
+
+body {
+  @include g-font-f04();
+  @include font-smoothing(on);
+  text-rendering: optimizeLegibility;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Nothing should be selectable
+*:not(input):not(textarea) {
+  @include user-select(none);
+}
+
+// Animations 3D Safari Hack
+// Keep this line BEFORE other z-index lines so they override it.
+[data-z-counter] {
+  z-index: 0;
+}
+
+[data-z-counter='0'] {
+  z-index: auto;
+}

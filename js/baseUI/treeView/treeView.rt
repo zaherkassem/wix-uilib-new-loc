@@ -1,0 +1,6 @@
+<ul class="{this.props.className + (this.props.isRoot ? 'tree-root' : '')}"
+    rt-scope="this.getTreeNodeClass() as TreeNode; this.getChildren() as children">
+
+    <TreeNode rt-repeat="child in children"
+              rt-props="this.passNodeProps(child, childIndex)" />
+</ul>

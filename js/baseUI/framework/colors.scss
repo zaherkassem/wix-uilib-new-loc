@@ -1,0 +1,129 @@
+// ** Editor styling globals **
+
+// Please *DO NOT* add anything which isnt in:
+// https://assets.adobe.com/link/9ed10e8a-8c78-489c-b248-dd65bcf121e1?section=extract
+
+//Main Colors (B for Blue)
+$g-color-b1: #3899ec;
+//Main Action Color, Active, Buttons
+$g-color-b2: #4eb7f5;
+//Hover for elements with color B1
+$g-color-b3: #7fccf7;
+//Hover for elements with color B4
+$g-color-b4: #d3edff;
+//Rollover color for elements with fill color D5
+$g-color-b5: #eaf7ff;
+//BG for less priority buttons, skins
+
+//Dark Colors (D for Dark)
+$g-color-d1: #162d3d;
+//Main Input Text, Titles
+$g-color-d2: #2b5672;
+//Titles
+$g-color-d3: #7a92a5;
+//Default Text, Less Important text
+$g-color-d4: #d9e1e8;
+//Dividers, Dummy text
+$g-color-d5: #f0f3f5;
+//Section Dividers BG
+$g-color-d6: #fff;
+//White
+
+//Disabled Colors
+//for D colors (X for disabled)
+$g-color-d1x: #7a7a7a;
+$g-color-d2x: #939393;
+$g-color-d3x: #bcbcbc;
+$g-color-d4x: #ececec;
+$g-color-d5x: #ececec;
+
+//for B colors (X for disabled)
+$g-color-b1x: #bcbcbc;
+$g-color-b2x: #c8c8c8;
+$g-color-b3x: #d5d5d5;
+$g-color-b4x: #e2e2e2;
+$g-color-b5x: #f0f0f0;
+
+//Extra colors (E for Extra)
+$g-color-e1: #2b81cb;
+//Blue Header fill color BT(?, X)
+$g-color-e2: #0d487f;
+//Blue header BT hover (?, X)
+$g-color-e3: rgba(255, 255, 255, .96);
+//Tooltips BG
+$g-color-e4: #2d4150;
+//Main Editor icons
+$g-color-e5: #b1ddf8;
+//Toggle off color and search bg
+$g-color-e6: #b6c1cd;
+//placeholder text
+$g-color-e7: #5effff;
+//boundering box, guides, anchor
+$g-color-e8: #18d2de;
+//attached to content
+$g-color-e9: #0a6363;
+//content inside anchors
+$g-color-e10: #42c5bf;
+//Ecommerce Color
+$g-color-e11: #d0427d;
+//App Market Color
+
+//Disabled colors for E (X for disabled)
+$g-color-e1x: #a7a7a7;
+$g-color-e2x: #898989;
+$g-color-e3x: rgba(255, 255, 255, .96);
+$g-color-e4x: #8a8a8a;
+$g-color-e5x: #e3e3e3;
+$g-color-e6x: #cacaca;
+$g-color-e7x: #e0e0e0;
+$g-color-e8x: #c9c9c9;
+$g-color-e9x: #ababab;
+$g-color-e10x: #cecece;
+$g-color-e11x: #cfcfcf;
+
+//** Wix primary colors (buttons) **
+
+//Wix Premium (P for Purple / Premium)
+$g-color-p1: #aa4dc8;
+// Default/Active color
+$g-color-p2: #bb71d3;
+// Hover Color
+$g-color-p3: #e5c9ee;
+$g-color-p4: #eedbf4;
+
+//Approval (G for green)
+$g-color-g1: #60bc57;
+// Default/Active color
+$g-color-g2: #80c979;
+// Hover Color
+$g-color-g3: #cfebcc;
+$g-color-g4: #dff2dd;
+
+//O for orange
+$g-color-o1: #fb7d33;
+// Default/Active color
+$g-color-o2: #fc975c;
+// Hover Color
+$g-color-o3: #fed8c1;
+$g-color-o4: #fee5d6;
+
+//Y for Yellow
+$g-color-y1: #ffc233;
+// Default/Active color
+$g-color-y2: #ffce5c;
+// Hover Color
+$g-color-y3: #ffedc1;
+$g-color-y4: #fff3d6;
+
+//Errors (R for Red)
+$g-color-r1: #ee5951;
+// Default/Active color
+$g-color-r2: #f1726b;
+// Hover Color
+$g-color-r3: #facdca;
+$g-color-r4: #fce6e5;
+
+// Please *DO NOT* add anything which isnt in:
+// https://assets.adobe.com/link/9ed10e8a-8c78-489c-b248-dd65bcf121e1?section=extract
+//otherwise it is not part of the palette
+

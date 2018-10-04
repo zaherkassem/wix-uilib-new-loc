@@ -1,0 +1,18 @@
+<rt-require dependency="baseUI" as="UI"/>
+<UI.tooltip value="{this.props.tooltipValue}" disabled="{!this.props.tooltipValue}" styleType="{this.props.tooltipStyleType}">
+    <div style="display: inline-block; vertical-align: middle;">
+    <UI.dropDown.select
+            ref="dropdown"
+            autotranslate="{false}"
+            value="{this.props.value}"
+            onChange="{this.props.onChange}"
+            class="icons-dd {this.props.className}"
+            optionsWidth="{56}"
+            template="{(this.props.fixedIconName) ? this.getFixedIcon : undefined}"
+            doNotFocus="{this.props.doNotFocus}">
+        <UI.dropDown.option rt-repeat="item in this.props.items" value="{item}" class="icons-dd-option" key="{itemIndex}">
+            <UI.symbol name="{itemIndex}" />
+        </UI.dropDown.option>
+    </UI.dropDown.select>
+    </div>
+</UI.tooltip>

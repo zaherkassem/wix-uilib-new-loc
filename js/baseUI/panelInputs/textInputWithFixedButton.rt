@@ -1,0 +1,33 @@
+<!--suppress CheckEmptyScriptTag -->
+<rt-require dependency="baseUI/controls/button" as="UIButton"/>
+<rt-require dependency="baseUI/popovers/tooltip" as="tooltip"/>
+<rt-require dependency="baseUI/framework/uiConstants" as="uiConstants"/>
+<rt-require dependency="symbols" as="symbols"/>
+
+<div rt-props="this.filteredProps()"
+        rt-scope="this.isValid() as isValidResult"
+        rt-class="{'control-text-input-with-fixed-button': true, 'invalid': !this.isValid(), 'success': this.isValid(), 'focused': this.state.isFocused}">
+
+    <tooltip id="{this.getTooltipId()}"
+             value="{this.getInvalidMessage()}"
+             disabled="{this.isValid()}"
+             ref="tooltip">
+        <input
+               class="control-text"
+               value="{this.state.value}"
+               onChange="{this.handleChange}"
+               maxLength="{this.props.maxLength}"
+               onFocus="()=>this.setFocusState(true)"
+               onKeyPress="{this.onKeyPress}"
+               type="text"
+               autoFocus="true"
+               >
+    </tooltip>
+
+    <UIButton ref="actionButton"
+              onClick="{this.handleClick}"
+              label="{this.props.buttonLabel}"
+              rt-class="{'disabled': !this.isValid()}"
+            />
+
+</div>

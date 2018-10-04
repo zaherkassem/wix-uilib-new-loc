@@ -1,0 +1,16 @@
+@import "../../../baseUI/src/main/framework/framework";
+
+.symbol-welcomeVideoCloseButton {
+  .cls-1 {
+    fill: $g-color-d2;
+    stroke: $g-color-d6;
+    stroke-linejoin: round;
+    stroke-width: 1px;
+    fill-opacity: 0.2;
+  }
+
+  .cls-2 {
+    fill: $g-color-d6;
+    fill-rule: evenodd;
+  }
+}

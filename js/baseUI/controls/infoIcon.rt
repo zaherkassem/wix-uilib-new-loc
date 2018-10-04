@@ -1,0 +1,10 @@
+<rt-require dependency="baseUI/popovers/tooltip" as="tooltip"/>
+<rt-require dependency="symbols" as="symbols"/>
+<rt-require dependency="baseUI/framework/uiConstants" as="uiConstants"/>
+
+<tooltip
+        value="{this.getTooltipValue()}"
+        alignment="{this.props.alignment}"
+        width="{this.props.tooltipWidth}">
+    <span class="{this.generateClassName('info-icon')}" onMouseEnter="{this.handleMouseEnter}" onMouseLeave="{this.handleMouseLeave}"><symbols.symbol name="{this.props.symbolName}" onClick="(e)=>this.onClick(e)"></symbols.symbol></span>
+</tooltip>

@@ -1,0 +1,10 @@
+<!--suppress CheckEmptyScriptTag -->
+<rt-require dependency="baseUI/panelInputs/textInput" as="textInput"/>
+
+<div class="prefixed-text-input-container" rt-props="this.filteredProps()">
+    <label rt-if="this.hasLabel()" key="title" class="label">{this.translateIfNeeded(this.getLabel())}</label>
+    <div>
+        <label class="prefixed-text-input-label">{this.translateIfNeeded(this.getInputPrefix())}</label>
+        <textInput rt-props="this.getInputProps()"></textInput>
+    </div>
+</div>

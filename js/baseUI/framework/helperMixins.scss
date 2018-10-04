@@ -1,0 +1,44 @@
+@mixin distribute-width-evenly($sibling-selector, $max-columns-number) {
+  @for $i from 1 through $max-columns-number {
+    //given there are between 1 to n labels, auto-set width accordingly
+    &:first-child:nth-last-child(#{$i}),
+    &:first-child:nth-last-child(#{$i}) ~ #{$sibling-selector} {
+      width: 100% / $i;
+    }
+  }
+}
+
+@mixin ellipsis() {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@function contains($haystack, $needle) {
+  @return not not index($haystack, $needle);
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+
+
+@mixin with-parent-class($class-name) {
+  //resources:
+  //https://github.com/sass/sass/issues/286#issuecomment-24961146
+  //https://gist.github.com/nex3/8050187
+  //http://hugogiraudel.com/2013/07/15/understanding-sass-lists/
+  //example: http://codepen.io/eitaneitan/pen/VLeYKE?editors=110
+  @at-root {
+    $compound-selector: ();
+    @each $selector in selector-parse(#{&}) {
+      $compound-selector: append($compound-selector, unquote(".#{$class-name}#{$selector}"), comma);
+    }
+
+    #{$compound-selector} {
+      @content;
+    }
+  }
+}

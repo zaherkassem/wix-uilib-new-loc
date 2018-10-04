@@ -1,0 +1,7 @@
+<rt-require dependency="baseUI/controls/playButton" as="playButton"/>
+<rt-require dependency="symbols" as="symbols"/>
+<div class="thumbnail-preview-play">
+    <symbols.symbol name="{this.props.iconSymbolName}"></symbols.symbol>
+    <div class="label">{this.props.label}</div>
+    <playButton onClickAction="{this.props.onClickAction}"></playButton>
+</div>

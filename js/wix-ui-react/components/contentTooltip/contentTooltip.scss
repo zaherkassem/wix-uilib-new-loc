@@ -1,0 +1,31 @@
+.tab-wrapper {
+  max-width: 100%;
+  position: relative;
+  display: inline-block;
+
+  .my-tooltip {
+    position: absolute;
+    right: -5px;
+    top: 7px;
+  }
+
+  .content-tooltip {
+    max-width: 100%;
+
+    .tab-label {
+      max-width: 100%;
+
+      .label-text {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        display: inline-block;
+        max-width: 100%;
+      }
+      &.hidden {
+        visibility: hidden;
+        position: absolute;
+      }
+    }
+  }
+}

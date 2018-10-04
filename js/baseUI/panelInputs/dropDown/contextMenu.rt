@@ -1,0 +1,2 @@
+<rt-require dependency="symbols" as="symbols" />
+<div class="symbol-more"><symbols.symbol name="{this.props.icon || 'more'}" /></div>

@@ -1,0 +1,97 @@
+@charset "UTF-8";
+// ** Editor styling globals **
+
+//https://assets.adobe.com/link/f632879a-2329-4f27-883a-95871199d761?section=activity_public
+//use with font-family css property.
+$fonts-fallback: Helvetica Neue, Helvetica, Arial, メイリオ, meiryo, ヒラギノ角ゴ pro w3, hiragino kaku gothic pro, sans-serif;
+
+$g-font75: HelveticaNeueW01-75Bold, HelveticaNeueW02-75Bold, HelveticaNeueW10-75Bold, $fonts-fallback;
+$g-font65: HelveticaNeueW01-65Medi, HelveticaNeueW02-65Medi, HelveticaNeueW10-65Medi, $fonts-fallback;
+$g-font55: HelveticaNeueW01-55Roma, HelveticaNeueW02-55Roma, HelveticaNeueW10-55Roma, $fonts-fallback;
+$g-font45: HelveticaNeueW01-45Ligh, HelveticaNeueW02-45Ligh, HelveticaNeueW10-45Ligh, $fonts-fallback;
+
+
+@mixin g-font-f01() {
+  font-family: $g-font55;
+  font-size: 18px;
+}
+
+@mixin g-font-f02() {
+  font-family: $g-font45;
+  font-size: 16px;
+}
+
+@mixin g-font-f03() {
+  font-family: $g-font45;
+  font-size: 14px;
+}
+
+@mixin g-font-f04() {
+  font-family: $g-font55;
+  font-size: 14px;
+}
+
+//g-font-f05 is identical to g-font-f04
+
+@mixin g-font-f06() {
+  font-family: $g-font45;
+  font-size: 13px;
+}
+
+@mixin g-font-f07() {
+  font-family: $g-font55;
+  font-size: 12px;
+}
+
+@mixin g-font-f08() {
+  font-family: $g-font55;
+  font-size: 13px;
+}
+
+//g-font-f09 is identical to g-font-f07
+
+@mixin g-font-f10() {
+  font-family: $g-font45;
+  font-size: 12px;
+}
+
+@mixin g-font-f11() {
+  font-family: $g-font65;
+  font-size: 15px;
+}
+
+@mixin g-font-f12() {
+  font-family: $g-font55;
+  font-size: 16px;
+}
+
+@mixin g-font-f13() {
+  font-family: $g-font45;
+  font-size: 30px;
+}
+
+@mixin g-font-f14() {
+  font-family: $g-font45;
+  font-size: 18px;
+}
+
+@mixin g-font-f15() {
+  font-family: $g-font45;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+@mixin g-font-f16() {
+  font-family: $g-font55;
+  font-size: 15px;
+}
+
+@mixin g-font-f17() {
+  font-family: $g-font65;
+  font-size: 16px;
+}
+
+@mixin g-font-f18() {
+  font-family: $g-font65;
+  font-size: 20px;
+}

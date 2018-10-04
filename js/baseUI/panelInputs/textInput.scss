@@ -1,0 +1,189 @@
+@import "../framework/framework.scss";
+
+.control-text-input {
+  $textinput-multiline-collapsed-height: 100px;
+  $textinput-multiline-expanded-height: $textinput-multiline-collapsed-height + 32px;
+  $textinput-multiline-firefox-padding-fix: 10px;
+
+  position: relative;
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+
+  > label {
+    font-weight: 300;
+    color: $g-color-d2;
+    @include g-font-f03();
+    text-align: left;
+    display: block;
+    overflow: hidden;
+    line-height: 18px;
+    max-height: 34px;
+    padding: 7px 30px 6px 12px;
+  }
+
+  .info-icon {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0px;
+  }
+
+  &:hover {
+    .info-icon {
+      display: inline-block;
+    }
+  }
+
+  input, textarea {
+    @include g-font-f12;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 36px;
+    padding: 0px 11px 0px;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 8px;
+    color: $g-color-d1;
+    text-align: left;
+    text-overflow: ellipsis;
+
+    &::placeholder {
+      color: $g-color-e6;
+    }
+  }
+
+  textarea {
+    height: $textinput-multiline-collapsed-height;
+    resize: none;
+    overflow: hidden;
+    padding: 10px 24px 10px 10px;
+    transition: height 200ms ease;
+  }
+
+  &:not(.is-disabled) {
+
+    &:hover > input, &:hover > textarea {
+      background-color: $g-color-b5;
+      color: $g-color-d2;
+      cursor: pointer;
+    }
+
+    input, textarea {
+      &:hover {
+        background-color: $g-color-b4;
+        color: $g-color-d2;
+
+        &::placeholder {
+          color: $g-color-d2;
+        }
+      }
+
+      &:focus {
+        background-color: transparent;
+        border: 1px solid $g-color-b2;
+        box-shadow: inset 0px 0px 3px 0px rgba(0, 90, 132, 0.25);
+
+        &::placeholder {
+          color: $g-color-e6;
+        }
+
+        &::selection {
+          background-color: $g-color-b5;
+        }
+
+        &:hover {
+          cursor: text;
+        }
+      }
+    }
+
+    textarea {
+      &:focus {
+        overflow: auto;
+        height: $textinput-multiline-expanded-height;
+      }
+
+      &.textarea-firefox {
+        height: $textinput-multiline-collapsed-height + $textinput-multiline-firefox-padding-fix;
+
+        &:focus {
+          height: $textinput-multiline-expanded-height + $textinput-multiline-firefox-padding-fix;
+        }
+      }
+    }
+  }
+
+  &.error:not(.focused) {
+    .validation-icon-error {
+      visibility: visible;
+    }
+
+    input, textarea {
+      width: calc(100% - 43px);
+      padding-right: 0;
+    }
+  }
+
+  &.success:not(.focused) {
+    .validation-icon-success {
+      visibility: visible;
+    }
+
+    input, textarea {
+      width: calc(100% - 43px);
+      padding-right: 0;
+    }
+  }
+
+  &.instant-error {
+    &.validation-icon-error {
+      visibility: visible;
+    }
+
+    input:focus, textarea:focus {
+      border: 1px solid $g-color-r1;
+    }
+  }
+
+  &.instant-error:not(.focused) {
+    &.validation-icon-error {
+      visibility: hidden;
+    }
+  }
+
+  &.is-disabled {
+    > label {
+      color: $g-color-d2x;
+    }
+
+    input, textarea {
+      color: $g-color-e6;
+      background-color: transparent;
+    }
+  }
+
+  &.has-label {
+    .validation-icon {
+      top: 37px;
+    }
+  }
+
+  .validation-icon {
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    cursor: pointer;
+    visibility: hidden;
+    font-size: 0;
+
+    .symbol-inputValidationError {
+      fill: $g-color-r1;
+    }
+
+    .symbol-inputValidationSuccess {
+      fill: $g-color-g1;
+    }
+  }
+}

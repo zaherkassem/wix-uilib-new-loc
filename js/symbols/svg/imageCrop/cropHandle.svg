@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="5px" height="12px" viewBox="0 0 5 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>Handle</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Handle" sketch:type="MSArtboardGroup">
+            <g id="Page-1" sketch:type="MSLayerGroup">
+                <path d="M0.5,11.5 L4.5,11.5 L4.5,0.5 L0.5,0.5 L0.5,11.5 Z" id="Fill-1" fill="#69FFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M0,12 L5,12 L5,0 L0,0 L0,12 Z M1,1 L4,1 L4,11 L1,11 L1,1 Z" id="Fill-2" fill="#3899EC" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,16 @@
+<rt-require dependency="baseUI/panelInputs/slider" as="slider" />
+<rt-require dependency="baseUI/colorPicker/colorPickerInputWithOpacity" as="colorPickerInputWithOpacity" />
+<rt-require dependency="baseUI/controls/angle" as="angle" />
+
+<div class="shadow-control">
+    <angle disabled="{this.props.disabled}" label="CustomDesign_Shadow_Angle" onChange="{this.changeAngle}" value="{this.getAngleValue()}" step="{1}" />
+    <hr class="divider-short" />
+    <slider disabled="{this.props.disabled}" label="CustomDesign_Shadow_Distance" onChange="{this.distanceChanged}" value="{this.getDistanceValue()}" min="{0}" max="{50}"/>
+    <hr class="divider-short" />
+    <slider disabled="{this.props.disabled}" label="CustomDesign_Shadow_Size" onChange="{this.sizeChanged}" value="{this.getSizeValue()}" min="{0}" max="{50}"/>
+    <hr class="divider-short" />
+    <slider disabled="{this.props.disabled}" label="CustomDesign_Shadow_Blur" onChange="{this.blurChanged}" value="{this.getBlurValue()}" min="{0}" max="{50}"/>
+    <hr class="divider-short" />
+    <colorPickerInputWithOpacity disabled="{this.props.disabled}" label="CustomDesign_Shadow_Color&Opacity" valueLink="{this.linkColorWithOpacity()}" rt-props="this.getColorPickerProps()"/>
+    <div rt-if="this.props.disabled" class="blocking-layer" key="blockingLayer" />
+</div>

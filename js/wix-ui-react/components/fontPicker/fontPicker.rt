@@ -1,0 +1,6 @@
+<rt-require dependency="wix-ui-react/components/dropDown/dropDown" as="dropDown"/>
+
+<dropDown.select label="{this.props.title}" wix-param="myBodyFont" infoTitle="{this.props.infoTitle}" infoText="{this.props.infoText}" onClick="{this.onFontClick}">
+    <dropDown.option value="show">{this.state.displayName}</dropDown.option>
+    <dropDown.option value="dummy">Dummy</dropDown.option>
+</dropDown.select>

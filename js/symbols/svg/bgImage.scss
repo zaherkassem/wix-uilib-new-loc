@@ -1,0 +1,29 @@
+@import "../../../baseUI/src/main/framework/framework";
+
+.symbol-bgImage {
+  g.image-icon .st2 {
+    fill: $g-color-b1;
+  }
+
+  g.image-icon .st6 {
+    fill: #E9F1F4;
+  }
+
+  g.image-icon:hover .st2 {
+    fill: $g-color-b2;
+  }
+
+  g.image-icon:hover .st6 {
+    fill: #E9F1F4;
+  }
+
+  .disabled g.image-icon .st2,
+  .disabled:hover g.image-icon .st2 {
+    fill: #A7A7A7;
+  }
+
+  .disabled g.image-icon .st6
+  .disabled:hover g.image-icon .st6 {
+    fill: #E9F1F4;
+  }
+}

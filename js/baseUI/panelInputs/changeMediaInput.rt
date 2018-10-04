@@ -1,0 +1,10 @@
+<!--suppress CheckEmptyScriptTag -->
+<rt-require dependency="symbols" as="symbols"/>
+<rt-require dependency="baseUI/controls/button" as="uiButton"/>
+
+<div class="media-button">
+    <uiButton rt-props="this.getButtonProps()"></uiButton>
+    <div rt-if="this.hasFile()" key="hasfile" class="filename-text">
+        <span class="wrapper">{this.props.value}<symbols.symbol name="inputValidationSuccess"/></span>
+    </div>
+</div>

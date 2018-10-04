@@ -1,0 +1,31 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include symbol-up(switchToOldEditorPanel) {
+  stroke: none;
+  stroke-width: 1px;
+  fill: none;
+
+  > .c1 {
+    fill: #d9e1e8;
+  }
+
+  > .c2 {
+    fill: #7992a5;
+  }
+
+  > .c3 {
+    fill: #a7e3fa;
+  }
+
+  > .c4 {
+    fill: #d3edff;
+  }
+
+  > .c5 {
+    fill: #fff;
+  }
+
+  > .c9 {
+    fill: #2b5672;
+  }
+}

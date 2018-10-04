@@ -1,0 +1,16 @@
+<rt-require dependency="symbols" as="symbols"/>
+
+<div class="thumbnails-vertical">
+    <label rt-repeat="option in this.props.options" key="option_{optionIndex}">
+        <input type="radio"
+               name="{this.getRadioGroupId()}"
+               value="{option.value}"
+               checked="{this.isCurrentValue(option.value)}"
+               onChange="()=> this.handleChange(option.value);">
+        <div class="thumbnail-container {this.props.align}">
+            <img rt-if="option.imgSrc" key="imgsrc" rt-class="{withoutLabel: !option.title}" src="{option.imgSrc}" width="{option.width || ''}" height="{option.height || ''}">
+            <symbols.symbol rt-if="option.symbolName" key="thumbnailContainerSymbol" name="{option.symbolName}"></symbols.symbol>
+            <span rt-if="option.title" key="title" class="thumbnail-title">{this.translateIfNeeded(option.title)}</span>
+        </div>
+    </label>
+</div>

@@ -1,0 +1,14 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="14px" height="6px" viewBox="0 0 14 6">
+<circle fill="rgb(43,85,113)" cx="1.00" cy="1.00" r="1.00"/>
+<circle fill="rgb(43,85,113)" cx="5.00" cy="1.00" r="1.00"/>
+<circle fill="rgb(43,85,113)" cx="9.00" cy="1.00" r="1.00"/>
+<circle fill="rgb(43,85,113)" cx="13.00" cy="1.00" r="1.00"/>
+<circle fill="rgb(43,85,113)" cx="1.00" cy="5.00" r="1.00"/>
+<circle fill="rgb(43,85,113)" cx="5.00" cy="5.00" r="1.00"/>
+<circle fill="rgb(43,85,113)" cx="9.00" cy="5.00" r="1.00"/>
+<circle fill="rgb(43,85,113)" cx="13.00" cy="5.00" r="1.00"/>
+</svg>

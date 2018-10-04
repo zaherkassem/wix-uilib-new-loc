@@ -1,0 +1,9 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include symbol-up(textEffectsIndicator) {
+
+  //overrides:
+  .control-accordion & {
+    fill: #80abe4;
+  }
+}

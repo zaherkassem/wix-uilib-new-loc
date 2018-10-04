@@ -1,0 +1,10 @@
+<div class="palette-displayer" rt-props="this.filteredProps()"
+        onMouseOut="()=>this.previewColor(this.getValueFromProps())">
+    <div rt-repeat="colorObj in this.getColors()" key="{'paletteColor-' + colorObjIndex}"
+           rt-class="this.getOptionClasses(colorObj)"
+           onClick="()=>this.selectColor(colorObj.symbol, colorObjIndex)"
+           onDoubleClick="{this.selectColorAndClose.bind(this, colorObj.symbol)}"
+           onMouseEnter="()=>this.previewColor(colorObj.symbol)"
+           style="background-color:{colorObj.value};">
+    </div>
+</div>

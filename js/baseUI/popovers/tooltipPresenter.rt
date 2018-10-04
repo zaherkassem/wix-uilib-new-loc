@@ -1,0 +1,3 @@
+<rt-require dependency="baseUI/popovers/bubble" as="bubble"/>
+
+<bubble rt-props="this.getBubbleProps()"></bubble>

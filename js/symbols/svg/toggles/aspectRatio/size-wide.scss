@@ -1,0 +1,17 @@
+@import "../../../../../baseUI/src/main/framework/framework";
+
+// regular - up
+@include toggle-regular-up(size-wide) {
+  .st1 {
+    fill: $g-color-b3;
+    transition: fill 0.2s;
+  }
+}
+
+// selected - up
+@include toggle-selected-up(size-wide) {
+  .st1 {
+    fill: $g-color-b5;
+  }
+}
+

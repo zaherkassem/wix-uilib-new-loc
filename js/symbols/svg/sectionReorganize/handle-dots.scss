@@ -1,0 +1,26 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+.symbol-handle-dots {
+
+  margin: 4px 0;
+
+  &.dark {
+    .regular {
+      fill: $g-color-d3;
+    }
+
+    .offset {
+      fill: #fff;
+    }
+  }
+
+  &.light {
+    .regular {
+      fill: #fff;
+    }
+
+    .offset {
+      display: none;
+    }
+  }
+}

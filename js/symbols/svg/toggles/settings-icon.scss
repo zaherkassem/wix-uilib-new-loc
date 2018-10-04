@@ -1,0 +1,49 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(settings) {
+  .st0 {
+    fill: $g-color-d6;
+  }
+}
+
+@include toggle-regular-hover(settings) {
+  .st0 {
+    fill: $g-color-b1;
+  }
+}
+
+@include toggle-regular-down(settings) {
+  .st0 {
+    fill: $g-color-d6;
+  }
+}
+
+@include toggle-regular-disabled(settings) {
+  .st0 {
+    fill: $g-color-b1x;
+  }
+}
+
+@include toggle-selected-up(settings) {
+  .st0 {
+    fill: $g-color-d6;
+  }
+}
+
+@include toggle-selected-hover(settings) {
+  .st0 {
+    fill: $g-color-b1;
+  }
+}
+
+@include toggle-selected-down(settings) {
+  .st0 {
+    fill: $g-color-d6;
+  }
+}
+
+@include toggle-selected-disabled(settings) {
+  .st0 {
+    fill: $g-color-b1x;
+  }
+}

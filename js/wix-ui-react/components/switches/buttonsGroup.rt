@@ -1,0 +1,10 @@
+<rt-require dependency="baseUI/controls/buttonsGroup" as="buttonsGroup"/>
+<buttonsGroup name="buttonsGroup"
+            options="{this.props.options}"
+            class="{this.props.className}"
+            value="{this.state.checked}"
+            onChange="{this.handleChange}"
+            title="{this.props.title}"
+            infoText="{this.props.infoText}"
+            infoTitle="{this.props.infoTitle}">
+</buttonsGroup>

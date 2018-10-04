@@ -1,0 +1,74 @@
+<svg class="symbol-mobile-to-editor-clipart" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="204px" height="142px" viewBox="0 0 204 142">
+  <ellipse style="fill:#D3EDFF;" cx="58.484" cy="105.355" rx="47.5" ry="3.5"/>
+  <g>
+    <defs>
+      <path id="SVGID_100_" d="M112,88H4c-2.209,0-4-1.791-4-4V4c0-2.209,1.791-4,4-4h108c2.209,0,4,1.791,4,4v80
+                               C116,86.209,114.209,88,112,88z"/>
+    </defs>
+    <use xlink:href="#SVGID_100_"  style="overflow:visible;fill:#D3EDFF;"/>
+    <clipPath id="SVGID_2_">
+      <use xlink:href="#SVGID_100_"  style="overflow:visible;"/>
+    </clipPath>
+    <rect x="-4" y="-5" style="clip-path:url(#SVGID_2_);fill:#D3EDFF;" width="131" height="21"/>
+    <rect x="-10" y="16" style="clip-path:url(#SVGID_2_);fill:#A7E3FA;" width="146" height="7"/>
+  </g>
+  <ellipse style="fill:#A7E3FA;" cx="12.193" cy="32.153" rx="3.5" ry="3.494"/>
+  <ellipse style="fill:#A7E3FA;" cx="12.193" cy="42.343" rx="3.5" ry="3.494"/>
+  <ellipse style="fill:#A7E3FA;" cx="12.193" cy="52.533" rx="3.5" ry="3.494"/>
+  <ellipse style="fill:#A7E3FA;" cx="12.193" cy="62.723" rx="3.5" ry="3.494"/>
+  <circle style="fill:#FFFFFF;" cx="8.374" cy="7.973" r="2"/>
+  <circle style="fill:#FFFFFF;" cx="15" cy="8" r="2"/>
+  <path style="fill:#FFFFFF;" d="M110,8.02c0,1.094-0.886,1.98-1.98,1.98H21.98C20.891,10,20,9.109,20,8.02V7.98
+                                 C20,6.891,20.891,6,21.98,6h86.04c1.089,0,1.98,0.891,1.98,1.98V8.02z"/>
+  <g>
+    <defs>
+      <path id="SVGID_102_" d="M72,74.739C72,77.631,70.149,80,67.25,80h-17.5C46.851,80,44,77.631,44,74.739V35.345
+                               C44,32.453,46.851,30,49.75,30h17.5c2.899,0,4.75,2.453,4.75,5.345V74.739z"/>
+    </defs>
+    <use xlink:href="#SVGID_102_"  style="overflow:visible;fill:#FFFFFF;"/>
+    <clipPath id="SVGID_3_">
+      <use xlink:href="#SVGID_102_"  style="overflow:visible;"/>
+    </clipPath>
+    <path style="clip-path:url(#SVGID_3_);fill:#FFFFFF;stroke:#D3EDFF;stroke-miterlimit:10;" d="M81.5,82.493
+                                                                                                c0,2.892-2.018,5.007-5.505,5.007H44.433c-3.486,0-6.933-2.115-6.933-5.007v-6.981c0-2.892,3.447-5.012,6.933-5.012h31.562
+                                                                                                c3.486,0,5.505,2.12,5.505,5.012V82.493z"/>
+  </g>
+  <ellipse style="fill:#D3EDFF;" cx="58.449" cy="74.573" rx="2.053" ry="2.047"/>
+  <path style="fill:#D3EDFF;" d="M66.415,48.798c-0.822-3.584-4.031-6.26-7.873-6.26c-3.842,0-7.052,2.676-7.873,6.26
+                                 c-0.133,0.58-0.21,1.181-0.21,1.802c0,0.62,0.077,1.222,0.21,1.802c0.822,3.584,4.031,6.26,7.873,6.26
+                                 c3.842,0,7.052-2.676,7.873-6.26c0.133-0.58,0.21-1.181,0.21-1.802C66.625,49.979,66.548,49.378,66.415,48.798z"/>
+  <rect x="53" y="49" style="fill:#FFFFFF;" width="10" height="3"/>
+  <g>
+    <defs>
+      <path id="SVGID_104_" d="M199,122H91c-2.209,0-4-1.791-4-4V38c0-2.209,1.791-4,4-4h108c2.209,0,4,1.791,4,4v80
+                               C203,120.209,201.209,122,199,122z"/>
+    </defs>
+    <use xlink:href="#SVGID_104_"  style="overflow:visible;fill:#EAF7FF;"/>
+    <clipPath id="SVGID_5_">
+      <use xlink:href="#SVGID_104_"  style="overflow:visible;"/>
+    </clipPath>
+    <rect x="83" y="29" style="clip-path:url(#SVGID_5_);fill:#5FCEF5;" width="131" height="21"/>
+    <rect x="78" y="50" style="clip-path:url(#SVGID_5_);fill:#A7E3FA;" width="145" height="7"/>
+  </g>
+  <ellipse style="fill:#A7E3FA;" cx="99.693" cy="67.72" rx="3.5" ry="3.491"/>
+  <ellipse style="fill:#A7E3FA;" cx="99.693" cy="77.901" rx="3.5" ry="3.491"/>
+  <ellipse style="fill:#A7E3FA;" cx="99.693" cy="88.082" rx="3.5" ry="3.491"/>
+  <ellipse style="fill:#A7E3FA;" cx="99.693" cy="98.263" rx="3.5" ry="3.491"/>
+  <circle style="fill:#FFFFFF;" cx="95" cy="42" r="2"/>
+  <circle style="fill:#FFFFFF;" cx="102" cy="42" r="2"/>
+  <path style="fill:#FFFFFF;" d="M197,42.02c0,1.094-0.886,1.98-1.98,1.98h-86.04c-1.089,0-1.98-0.891-1.98-1.98v-0.04
+                                 c0-1.089,0.891-1.98,1.98-1.98h86.04c1.089,0,1.98,0.891,1.98,1.98V42.02z"/>
+  <path style="fill:none;stroke:#4EB7F5;stroke-miterlimit:10;" d="M144.5,29v-5.493c0-6.905-4.903-13.007-11.827-13.007H122"/>
+  <path style="fill:none;stroke:#4EB7F5;stroke-miterlimit:10;" d="M150.857,24.01l-4.629,4.616c-0.562,0.561-1.473,0.561-2.036,0
+                                                                  l-4.629-4.617"/>
+  <rect x="123.5" y="72.5" style="fill:none;stroke:#4EB7F5;stroke-miterlimit:10;" width="44" height="33"/>
+  <ellipse style="fill:#4EB7F5;" cx="124.5" cy="72.956" rx="2" ry="1.995"/>
+  <ellipse style="fill:#4EB7F5;" cx="124.5" cy="104.871" rx="2" ry="1.995"/>
+  <ellipse style="fill:#4EB7F5;" cx="167.5" cy="72.956" rx="2" ry="1.995"/>
+  <ellipse style="fill:#4EB7F5;" cx="167.5" cy="104.871" rx="2" ry="1.995"/>
+  <path style="fill:#4EB7F5;" d="M155.57,92.578l-5.255,4.143l-8.601-7.994c-0.33-0.306-0.84-0.309-1.173-0.006l-12.511,11.584
+                                 c-0.583,0.531-0.207,1.695,0.583,1.695h16.745h10.843h6.754c0.751,0,1.145-1.085,0.639-1.639l-6.85-7.59
+                                 C156.44,92.437,155.926,92.297,155.57,92.578z"/>
+  <ellipse style="fill:#4EB7F5;" cx="158.167" cy="81.392" rx="3.5" ry="3.491"/>
+  <ellipse style="fill:#D3EDFF;" cx="146.484" cy="138.355" rx="47.5" ry="3.5"/>
+</svg>

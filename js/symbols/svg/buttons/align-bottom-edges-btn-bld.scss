@@ -1,0 +1,41 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include button-up(align-bottom-edges-btn-bld) {
+  .st1 {
+    fill: $g-color-e4;
+  }
+
+  .st2 {
+    fill: $g-color-d3;
+  }
+}
+
+@include button-hover(align-bottom-edges-btn-bld) {
+  .st1 {
+    fill: $g-color-b1;
+  }
+
+  .st2 {
+    fill: $g-color-b3;
+  }
+}
+
+@include button-down(align-bottom-edges-btn-bld) {
+  .st1 {
+    fill: $g-color-e4;
+  }
+
+  .st2 {
+    fill: $g-color-d3;
+  }
+}
+
+@include button-disabled(align-bottom-edges-btn-bld) {
+  .st1 {
+    fill: $g-color-e4x;
+  }
+
+  .st2 {
+    fill: $g-color-d3x;
+  }
+}

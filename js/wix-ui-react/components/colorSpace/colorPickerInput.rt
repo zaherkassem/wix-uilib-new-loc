@@ -1,0 +1,8 @@
+<rt-require dependency="baseUI/colorPicker/colorPickerInput" as="colorPickerInput"/>
+<colorPickerInput
+        label="{this.props.title}"
+        openColorPicker="{this.openColorPicker}"
+        valueLink="{this.getValueLinkWithoutOpacity()}"
+        useMouseEvent="{true}"
+        handleStepperChange="{this.handleSlideEnd}"
+        />

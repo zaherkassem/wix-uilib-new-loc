@@ -1,0 +1,153 @@
+<rt-require dependency="wix-ui-react/ui" as="UI"/>
+<rt-require dependency="baseUI/customScroll/customScroll" as="customScroll"/>
+
+
+<UI.appSettings>
+    <UI.appTabs defaultTabIndex="{0}" onChange="{function(index){console.log('tab was changed to: ' + index);}}">
+
+        <div tab="settings">
+            <UI.dropDownSelect
+                    defaultValue="expand"
+                    title="When image is clicked"
+                    options="{[
+                { value: 'expand', label: 'Enter expand mode'},
+                { value: 'fullscreen', label: 'Show on full screen'},
+                { value: 'nothing', label: 'Do nothing'}
+            ]}"
+                    onChange="(newVal)=>this.props.onUpdate('settings_onImageClick', newVal)">
+            </UI.dropDownSelect>
+
+            <UI.sectionDividerLabeled label="Enable functionality"/>
+
+            <div>
+                <UI.toggle label="Allow editing"
+                           defaultValue="{true}"
+                           onChange="(newVal)=>this.props.onUpdate('settings_allowEditing', newVal)">
+                </UI.toggle>
+            </div>
+            <hr class="divider-long">
+            <div>
+                <UI.toggle label="Allow deleting"
+                           defaultValue="{true}"
+                           onChange="(newVal)=>this.props.onUpdate('settings_allowDeleting', newVal)">
+                </UI.toggle>
+            </div>
+
+            <UI.sectionDividerLabeled label="Display info"/>
+
+            <div>
+                <UI.checkbox label="Name"
+                             defaultValue="{false}"
+                             onChange="(newVal)=>this.props.onUpdate('settings_displayName', newVal)">
+                </UI.checkbox>
+            </div>
+            <div>
+                <UI.checkbox label="Title"
+                             defaultValue="{true}"
+                             onChange="(newVal)=>this.props.onUpdate('settings_displayTitle', newVal)">
+                </UI.checkbox>
+            </div>
+            <div>
+                <UI.checkbox label="Description"
+                             defaultValue="{true}"
+                             onChange="(newVal)=>this.props.onUpdate('settings_displayDescription', newVal)">
+                </UI.checkbox>
+            </div>
+
+            <hr class="divider-long">
+
+            <UI.radioButtons
+                    title="Do images show text?"
+                    defaultValue="both"
+                    options="{[
+                { value: 'both', label: 'A title and a description'},
+                { value: 'title', label: 'Just a title'},
+                { value: 'description', label: 'Just a description'}
+            ]}"
+                    onClickPreview="(newVal)=>this.props.onUpdate('settings_textOnImages', newVal)">
+            </UI.radioButtons>
+
+            <hr class="divider-long">
+
+            <UI.textInput
+                    title="Text field"
+                    defaultText="Title"
+                    onChange="(newVal)=>this.props.onUpdate('settings_textFieldContent', newVal)"/>
+
+            <hr class="divider-long">
+
+            <UI.textInput
+                    isMultiLine="{true}"
+                    title="Text area"
+                    defaultText="Paragraph"
+                    onChange="(newVal)=>this.props.onUpdate('settings_textAreaContent', newVal)"/>
+        </div>
+        <div tab="layout">
+            <UI.sectionDividerLabeled label="How does this gallery look?" />
+
+            <UI.slider
+                    title="Columns"
+                    min="{1}"
+                    max="{36}"
+                    defaultValue="{7}"
+                    onChange="(newVal)=>this.props.onUpdate('layout_columns', newVal)">
+            </UI.slider>
+
+            <UI.slider
+                    title="Spacing (px)"
+                    min="{0}"
+                    max="{50}"
+                    defaultValue="{10}"
+                    onChange="(newVal)=>this.props.onUpdate('layout_spacing', newVal)">
+            </UI.slider>
+
+            <UI.toggleButtons
+                    defaultValue='2'
+                    wix-param="toggle_buttons_number"
+                    title="title"
+                    infoText="fooo"
+                    infoTitle="bllaaa"
+                    options="{[{ value: '1', label: 'first'},
+               { value: '2', label: 'second'}
+    ]}"
+                    onChange="(newVal)=>console.log(newVal)">
+            </UI.toggleButtons>
+        </div>
+        <div tab="tab5" class="my-custom-tab">
+            <div>
+                <UI.tabs.holder defaultTab="tab1">
+                    <UI.tabs.header>
+                        <UI.tabs.label for="tab1" class="first">Normal</UI.tabs.label>
+                        <UI.tabs.label for="tab2" class="second">Very long tab</UI.tabs.label>
+                    </UI.tabs.header>
+                    <UI.tabs.content>
+                        <UI.tabs.tab name="tab1" class="my-custom-tab">
+                            <UI.teaserPopup
+                                    text="some text",
+                                    title="some title",
+                                    gotItText="Got it",
+                                    linkText="Learn more",
+                                    learnMore="{this.learnMore}"
+                                    />
+                        </UI.tabs.tab>
+                        <UI.tabs.tab name="tab2" class="my-custom-tab">
+                            <UI.radioButtons
+                                    label="How many images to sync?"
+                                    wix-param="myRadioButtonsValue"
+                                    defaultValue="3"
+                                    onClickPreview="(newVal)=>console.log(newVal, 'clicked')"
+                                    onMouseOverPreview="(newVal)=>console.log(newVal, 'over')"
+                                    options="{[
+                            { value: '1', label: 'Sync 10 images', className: 'firstOne'},
+                            { value: '2', label: 'Sync 25 images', className: 'differentOne'},
+                            { value: '3', label: 'Sync 50 images'}
+                        ]}"
+                                    />
+                        </UI.tabs.tab>
+                    </UI.tabs.content>
+                </UI.tabs.holder>
+            </div>
+        </div>
+    </UI.appTabs>
+</UI.appSettings>
+

@@ -1,0 +1,90 @@
+<svg class="symbol-site-history-clipart" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="110px" height="140px" viewBox="0 0 110 140">
+  <g>
+    <g>
+      <ellipse style="fill:#D9E1E8;" cx="51.473" cy="137.346" rx="25" ry="2.5"/>
+      <circle style="fill:none;stroke:#2B5672;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" cx="49.5" cy="36.5" r="6.5"/>
+      <line style="fill:none;stroke:#2B5672;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" x1="49.5" y1="48" x2="49.5" y2="38"/>
+      <g>
+        <defs>
+          <circle id="SVGID_167_" cx="50.5" cy="76.5" r="29.5"/>
+        </defs>
+        <use xlink:href="#SVGID_167_"  style="overflow:visible;fill:#2B5672;"/>
+        <clipPath id="SVGID_2_">
+          <use xlink:href="#SVGID_167_"  style="overflow:visible;"/>
+        </clipPath>
+        <g style="clip-path:url(#SVGID_2_);">
+          <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="49" y1="47.9052" x2="50.0311" y2="47.9052">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="1" style="stop-color:#FFFFFF"/>
+          </linearGradient>
+          <line style="fill:none;stroke:url(#SVGID_3_);stroke-miterlimit:10;" x1="49.5" y1="45" x2="49.531" y2="50.81"/>
+          <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="49" y1="104.5" x2="50" y2="104.5">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="1" style="stop-color:#FFFFFF"/>
+          </linearGradient>
+          <line style="fill:none;stroke:url(#SVGID_5_);stroke-miterlimit:10;" x1="49.5" y1="101" x2="49.5" y2="108"/>
+          <linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="18.9973" y1="77.4123" x2="24.8261" y2="77.4123">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="1" style="stop-color:#FFFFFF"/>
+          </linearGradient>
+          <line style="fill:none;stroke:url(#SVGID_7_);stroke-miterlimit:10;" x1="19" y1="77.428" x2="24.823" y2="77.397"/>
+          <linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="76.1739" y1="77.4123" x2="82.0027" y2="77.4123">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="1" style="stop-color:#FFFFFF"/>
+          </linearGradient>
+          <line style="fill:none;stroke:url(#SVGID_9_);stroke-miterlimit:10;" x1="76.177" y1="77.397" x2="82" y2="77.428"/>
+          <linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="23.5418" y1="62.6277" x2="28.3389" y2="62.6277">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="1" style="stop-color:#FFFFFF"/>
+          </linearGradient>
+          <line style="fill:none;stroke:url(#SVGID_11_);stroke-miterlimit:10;" x1="23.791" y1="61.395" x2="28.09" y2="63.861"/>
+          <linearGradient id="SVGID_13_" gradientUnits="userSpaceOnUse" x1="72.681" y1="90.9363" x2="77.4821" y2="90.9363">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="1" style="stop-color:#FFFFFF"/>
+          </linearGradient>
+          <line style="fill:none;stroke:url(#SVGID_13_);stroke-miterlimit:10;" x1="72.931" y1="89.692" x2="77.232" y2="92.18"/>
+          <linearGradient id="SVGID_15_" gradientUnits="userSpaceOnUse" x1="34.6509" y1="101.298" x2="37.9993" y2="101.298">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="1" style="stop-color:#FFFFFF"/>
+          </linearGradient>
+          <line style="fill:none;stroke:url(#SVGID_15_);stroke-miterlimit:10;" x1="35.084" y1="103.449" x2="37.566" y2="99.147"/>
+          <linearGradient id="SVGID_17_" gradientUnits="userSpaceOnUse" x1="63.0228" y1="52.266" x2="66.3707" y2="52.266">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="1" style="stop-color:#FFFFFF"/>
+          </linearGradient>
+          <line style="fill:none;stroke:url(#SVGID_17_);stroke-miterlimit:10;" x1="63.455" y1="54.406" x2="65.938" y2="50.126"/>
+          <linearGradient id="SVGID_19_" gradientUnits="userSpaceOnUse" x1="34.6515" y1="52.266" x2="37.9987" y2="52.266">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="1" style="stop-color:#FFFFFF"/>
+          </linearGradient>
+          <line style="fill:none;stroke:url(#SVGID_19_);stroke-miterlimit:10;" x1="35.084" y1="50.126" x2="37.566" y2="54.406"/>
+          <linearGradient id="SVGID_20_" gradientUnits="userSpaceOnUse" x1="63.0223" y1="101.298" x2="66.3713" y2="101.298">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="1" style="stop-color:#FFFFFF"/>
+          </linearGradient>
+          <line style="fill:none;stroke:url(#SVGID_20_);stroke-miterlimit:10;" x1="63.455" y1="99.147" x2="65.938" y2="103.449"/>
+          <linearGradient id="SVGID_22_" gradientUnits="userSpaceOnUse" x1="23.5401" y1="90.9363" x2="28.3406" y2="90.9363">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="1" style="stop-color:#FFFFFF"/>
+          </linearGradient>
+          <line style="fill:none;stroke:url(#SVGID_22_);stroke-miterlimit:10;" x1="23.791" y1="92.18" x2="28.09" y2="89.692"/>
+          <linearGradient id="SVGID_23_" gradientUnits="userSpaceOnUse" x1="72.6826" y1="62.6277" x2="77.4804" y2="62.6277">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="1" style="stop-color:#FFFFFF"/>
+          </linearGradient>
+          <line style="fill:none;stroke:url(#SVGID_23_);stroke-miterlimit:10;" x1="72.931" y1="63.861" x2="77.232" y2="61.395"/>
+        </g>
+      </g>
+      <path style="fill:#A7E3FA;" d="M70.399,78.541c1.253-12.649-9.29-23.192-21.939-21.939c-9.36,0.927-16.931,8.498-17.858,17.858
+                                     c-1.253,12.649,9.29,23.192,21.939,21.939C61.901,95.472,69.472,87.901,70.399,78.541z"/>
+      <polyline style="fill:none;stroke:#2B5672;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+                                                                                                                                         55,83.25 48.5,79.298 48.5,67 		"/>
+      <path style="fill:none;stroke:#7992A5;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:1,4;" d="
+                                                                                                                                                     M99,78.07C99,103.989,76.609,125,50,125S1,103.989,1,78.07V29.798c0-3.207,2.803-5.804,6.005-5.801
+                                                                                                                                                     C10.206,23.999,13,26.6,13,29.807v-0.221l0.716,1.956c0.003,3.359,3.071,6.077,6.424,6.074s5.992-2.732,5.99-6.091l0.189-18.435
+                                                                                                                                                     C26.318,6.982,31.773,2.005,37.87,2c6.097-0.005,11.519,4.892,11.524,10.999l-0.038,15.413"/>
+    </g>
+    <polyline style="fill:none;stroke:#7992A5;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+                                                                                                                                       91,80.5 99.5,71.5 108,80.5 	"/>
+  </g>
+</svg>

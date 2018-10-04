@@ -1,0 +1,20 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+$name: inputValidationSuccess;
+
+@include symbol-up($name) {
+  fill: $g-color-g1;
+
+  .c1 {
+    fill: #fff;
+  }
+
+  //overrides
+  .media-button-filename-text & {
+    @include size(20px);
+    padding-left: 4px;
+    vertical-align: middle;
+    display: inline-block;
+    background-color: $g-color-d6;
+  }
+}

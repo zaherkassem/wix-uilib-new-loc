@@ -1,0 +1,77 @@
+@import "../framework/framework.scss";
+
+@mixin vertical-centering($height) {
+  top: calc(50% - #{$height/2}px);
+}
+
+section.tabs {
+  overflow: hidden;
+  position: relative;
+
+  > ul.tab-header {
+    > li.tab-label {
+      cursor: pointer;
+      display: block;
+    }
+  }
+
+  > section.tab-content {
+    position: relative;
+  }
+
+  &.left {
+    display: flex;
+
+    > section.tab-content {
+      align-self: stretch;
+    }
+  }
+
+  &.top {
+    > ul.tab-header {
+      display: block;
+      overflow: hidden;
+      width: 100%;
+
+      > li.tab-label {
+        float: left;
+      }
+    }
+  }
+
+  &.radio {
+    > ul.tab-header {
+      > li.tab-label {
+        line-height: 16px;
+        margin-bottom: 15px;
+        padding-left: 32px;
+        position: relative;
+
+        &:before,
+        &:after {
+          content: '';
+          border-radius: 50%;
+          display: block;
+          position: absolute;
+        }
+
+        &:before {
+          border: 1px solid $g-color-b1;
+          box-sizing: border-box;
+          height: 16px;
+          left: 5px;
+          width: 16px;
+          @include vertical-centering(16);
+        }
+
+        &.selected:after {
+          background-color: $g-color-b1;
+          height: 12px;
+          left: 7px;
+          width: 12px;
+          @include vertical-centering(12);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<rt-require dependency="baseUI" as="UI"/>
+<div class="control-accordion">
+    <div class="accordion-header" onClick="{this.toggle}">
+        <span rt-class="{'accordion-icon': true,  open: this.state.opened}"><UI.symbol name="{(this.state.opened) ? 'accordionOpen' : 'accordionClose' }"></UI.symbol></span>
+        <label>{this.translateIfNeeded(this.getLabel())}</label>
+        <span key="textEffectsIndicator" class="selected-indicator" rt-if="this.props.isOptionSelected"><UI.symbol name="textEffectsIndicator"></UI.symbol></span>
+        <UI.infoIcon key="accordionInfoIcon" rt-if="this.props.infoText || this.props.infoTitle" title="{this.props.infoTitle}" text="{this.props.infoText}" />
+    </div>
+    <div key="accordionContent" rt-if="this.state.opened" class="content">{this.props.children}</div>
+</div>

@@ -1,0 +1,113 @@
+@import "../../../../../packages/baseUI/src/main/framework/framework.scss";
+
+.dropdown-options {
+  .option.style-option {
+    height: 72px !important;
+    border-bottom: 1px solid $g-color-d4;
+    padding: 0 12px !important;
+
+    .style-option-label{
+      display: none;
+    }
+    div {
+      pointer-events: none;
+    }
+
+    .style-option-header {
+      margin-top: 12px;
+      height: 42px;
+
+      .style-name {
+        width: 186px;
+        display: inline-block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        vertical-align: middle;
+      }
+
+      .style-color {
+        border-radius: 50%;
+        width: 21px;
+        height: 21px;
+        border: 1px solid $g-color-d4;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    .style-option-footer {
+      height: 18px;
+    }
+
+    &.selected {
+      .style-size, .style-tag {
+        color: #ffffff;
+      }
+    }
+
+    .style-color-container, .style-size {
+      display: inline-block;
+      width: 42px;
+      text-align: center;
+      margin-right: 12px;
+    }
+
+    .style-size, .style-tag {
+      @include g-font-f10();
+      color: $g-color-d3;
+      line-height: 12px;
+      font-weight: 300;
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  .option.style-option.advanced-style-option {
+    .style-option-header, .style-option-footer {
+      margin-left: 12px;
+    }
+    .style-color-container, .style-tag {
+      display: none;
+    }
+    .style-size {
+      text-align: left
+    }
+  }
+}
+
+.text-style-dd {
+
+  position: inherit !important;
+
+  &.toolbar-mode {
+    display: inline-block;
+    vertical-align: middle;
+
+    i.expand.arrow {
+      border: none !important;
+      width: 9px !important;
+      opacity: 1 !important;;
+      right: 8px !important;;
+
+      svg {
+        width: 9px;
+        padding: 0;
+      }
+
+      &:hover {
+        background-color: transparent !important;
+
+        svg {
+          fill: $g-color-b1 !important;
+        }
+      }
+    }
+  }
+
+  .selected {
+    .style-option-footer, .style-option-header{
+      display: none;
+    }
+  }
+
+}

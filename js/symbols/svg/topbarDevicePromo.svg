@@ -1,0 +1,46 @@
+<svg class="symbol-desktop-mobile-view-clipart" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="116px" height="86px" viewBox="0 0 116 86">
+  <ellipse style="fill:#A2DBF4;" cx="43.164" cy="72.534" rx="38.5" ry="2"/>
+  <ellipse style="fill:#A2DBF4;" cx="78.164" cy="77.534" rx="20" ry="2.5"/>
+  <ellipse style="fill:#A2DBF4;" cx="101.164" cy="83.534" rx="14.5" ry="2"/>
+  <path style="fill:#7FCCF7;" d="M46.365,58h-7.094c0,0-0.877,8.492-3.634,12.45c-0.554,0.795-0.02,1.55,0.949,1.55h12.463
+                                 c0.969,0,1.503-0.755,0.949-1.55C47.241,66.492,46.365,58,46.365,58z"/>
+  <defs>
+    <path id="SVGID-125-" d="M86,59.115C86,60.708,84.708,62,83.115,62H2.885C1.292,62,0,60.708,0,59.115V2.885
+                             C0,1.292,1.292,0,2.885,0h80.23C84.708,0,86,1.292,86,2.885V59.115z"/>
+  </defs>
+  <use xlink:href="#SVGID-125-"  style="overflow:visible;fill:#FFFFFF;"/>
+  <clipPath id="SVGID-2-">
+    <use xlink:href="#SVGID-125-"  style="overflow:visible;"/>
+  </clipPath>
+  <rect x="-4" y="-3" style="clip-path:url(#SVGID-2-);fill:#A2DBF4;" width="97" height="16"/>
+  <circle style="fill:#FFFFFF;" cx="6.993" cy="6.442" r="1.665"/>
+  <circle style="fill:#FFFFFF;" cx="13.34" cy="6.442" r="1.665"/>
+  <path style="fill:#FFFFFF;" d="M80,6.5C80,7.328,79.328,8,78.5,8h-59C18.672,8,18,7.328,18,6.5l0,0C18,5.672,18.672,5,19.5,5h59
+                                 C79.328,5,80,5.672,80,6.5L80,6.5z"/>
+  <defs>
+    <path id="SVGID-127-" d="M95,75.51c0,1.375-1.115,2.49-2.49,2.49H63.49C62.115,78,61,76.885,61,75.51V30.49
+                             c0-1.375,1.115-2.49,2.49-2.49h29.02c1.375,0,2.49,1.115,2.49,2.49V75.51z"/>
+  </defs>
+  <use xlink:href="#SVGID-127-"  style="overflow:visible;fill:#EAF7FF;"/>
+  <clipPath id="SVGID-3-">
+    <use xlink:href="#SVGID-127-"  style="overflow:visible;"/>
+  </clipPath>
+  <rect x="54" y="69" style="clip-path:url(#SVGID-3-);fill:#7FCCF7;" width="44" height="13"/>
+  <rect x="60" y="28" style="clip-path:url(#SVGID-3-);fill:#7FCCF7;" width="36" height="4"/>
+  <circle style="clip-path:url(#SVGID-3-);fill:#FFFFFF;" cx="78.34" cy="73.442" r="1.665"/>
+  <defs>
+    <path id="SVGID-129-" d="M112,81.633c0,1.307-1.06,2.367-2.367,2.367H91.367C90.06,84,89,82.94,89,81.633V44.367
+                             C89,43.06,90.06,42,91.367,42h18.266c1.307,0,2.367,1.06,2.367,2.367V81.633z"/>
+  </defs>
+  <use xlink:href="#SVGID-129-"  style="overflow:visible;fill:#A7E3FA;"/>
+  <clipPath id="SVGID-5-">
+    <use xlink:href="#SVGID-129-"  style="overflow:visible;"/>
+  </clipPath>
+  <path style="clip-path:url(#SVGID-5-);fill:#4EB7F5;" d="M116,86.951c0,1.131-0.917,2.049-2.049,2.049H87.049
+                                                          C85.917,89,85,88.083,85,86.951v-9.903C85,75.917,85.917,75,87.049,75h26.903c1.131,0,2.049,0.917,2.049,2.049V86.951z"/>
+  <path style="clip-path:url(#SVGID-5-);fill:#4EB7F5;" d="M116,42.951c0,1.131-0.917,2.049-2.049,2.049H87.049
+                                                          C85.917,45,85,44.083,85,42.951v-9.903C85,31.917,85.917,31,87.049,31h26.903c1.131,0,2.049,0.917,2.049,2.049V42.951z"/>
+  <circle style="fill:#FFFFFF;" cx="101.34" cy="79.442" r="1.665"/>
+</svg>

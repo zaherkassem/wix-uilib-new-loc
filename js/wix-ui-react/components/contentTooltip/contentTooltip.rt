@@ -1,0 +1,13 @@
+<rt-require dependency="wix-ui-react/components/tooltip/tooltip" as="tooltip"/>
+
+<div class="content-tooltip">
+    <div class="tab-label" rt-class="{'active': this.props.isActive, hidden: this.state.shouldUseTooltip}" onClick="{this.props.onClick}">
+        <div class="label-text" ref="labelText">{this.props.children}</div>
+    </div>
+    <tooltip rt-if="this.state.shouldUseTooltip" key="tab-with-tooltip" value="{this.props.children}" styleType="{this.getStyleType()}">
+        <div class="tab-label" rt-class="{'active': this.props.isActive}" onClick="{this.props.onClick}">
+            <div class="label-text">{this.props.children}</div>
+        </div>
+    </tooltip>
+</div>
+

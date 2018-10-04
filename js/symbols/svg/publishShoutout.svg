@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="52px" height="63px" viewBox="0 0 52 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>send_shout_out_newsletter</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M0,0.113577265 L19.9644005,12.5019315 L40,0 L39.984178,24 L2.74467991e-17,24 L4.11701987e-17,0.113577265"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="send_shout_out_newsletter" sketch:type="MSArtboardGroup">
+            <path d="M41,24.0129525 L20.9940755,9 L1,24.0896712 L1,48 L40.9842014,48 L41,24.0129525" id="Fill-1" fill="#A7E3FA" sketch:type="MSShapeGroup"></path>
+            <path d="M41,24 L20.9940755,36.5019315 L1,24.0767601 L1,48 L40.9842014,48 L41,24" id="Fill-2" fill="#D3EDFF" sketch:type="MSShapeGroup"></path>
+            <g id="Group-5" sketch:type="MSLayerGroup" transform="translate(1.000000, 24.000000)">
+                <mask id="mask-2" sketch:name="Clip 4" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-4"></g>
+                <path d="M40.3372291,25 L23,10.7480341 L23.6637921,10 L41,24.2519659 L40.3372291,25" id="Fill-1" fill="#A7E3FA" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                <path d="M-0.337229093,25 L-1,24.2519659 L16.3362079,10 L17,10.7480341 L-0.337229093,25" id="Fill-2" fill="#A7E3FA" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+            </g>
+            <path d="M49.1132582,18.472 L48,17.701 C49.5593616,15.451 50.1725038,12.587 49.6803897,9.845 C49.4123275,8.354 48.8511974,6.983 48.0110026,5.77 L49.1242607,5 C50.0754813,6.373 50.7106286,7.923 51.0126987,9.606 C51.5678274,12.698 50.8756669,15.93 49.1132582,18.472" id="Fill-6" fill="#3899EC" sketch:type="MSShapeGroup"></path>
+            <path d="M46.1117633,16.391 L45,15.62 C45.8940055,14.328 46.2446155,12.684 45.9619299,11.109 C45.8090999,10.253 45.4874577,9.467 45.0059933,8.771 L46.1177566,8 C46.7100977,8.857 47.1056576,9.822 47.2934487,10.87 C47.6390643,12.795 47.2075443,14.808 46.1117633,16.391" id="Fill-7" fill="#3899EC" sketch:type="MSShapeGroup"></path>
+            <path d="M22.1344156,22.8899573 C22.2644456,22.8899573 22.3924752,22.926559 22.5025006,22.9977841 C24.5479726,24.307534 26.9195199,25 29.3610833,25 C36.3306917,25 42,19.3930041 42,12.5009892 C42,5.60798512 36.3306917,0 29.3610833,0 C22.3924752,0 16.7221667,5.60798512 16.7221667,12.5009892 C16.7221667,14.7168803 17.3193045,16.8971589 18.4485651,18.8053973 C18.5625914,18.9953308 18.5725937,19.2287908 18.4765715,19.4286167 L16,24.6310146 L21.945372,22.9166667 C22.0073863,22.8988604 22.0714011,22.8899573 22.1344156,22.8899573" id="Fill-8" fill="#3899EC" sketch:type="MSShapeGroup"></path>
+            <ellipse id="Oval-1" fill="#D3EDFF" sketch:type="MSShapeGroup" cx="21" cy="61" rx="18" ry="2"></ellipse>
+        </g>
+    </g>
+</svg>

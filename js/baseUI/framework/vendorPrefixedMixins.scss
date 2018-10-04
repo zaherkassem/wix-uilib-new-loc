@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+//tap-hightlight-color isn't prefixed by autoprefixer
+@mixin tap-highlight-color($val) {
+  -webkit-tap-highlight-color: unquote($val);
+}
+
+//user-drag isn't prefixed by autoprefixer
+@mixin user-drag($val) {
+  -webkit-user-drag: unquote($val);
+  -moz-user-drag: unquote($val);
+  -ms-user-drag: unquote($val);
+  user-drag: unquote($val);
+}
+
+//user-modify isn't prefixed by autoprefixer
+@mixin user-modify($val) {
+  -webkit-user-modify: unquote($val);
+  -moz-user-modify: unquote($val);
+  -ms-user-modify: unquote($val);
+  user-modify: unquote($val);
+}
+
+//https://github.com/postcss/autoprefixer#why-doesnt-autoprefixer-support-appearance
+//https://github.com/postcss/autoprefixer/issues/43
+@mixin appearance($val) {
+  -webkit-appearance: unquote($val);
+  -moz-appearance: unquote($val);
+}
+
+@mixin user-select($val) {
+  -moz-user-select: $val;
+  -webkit-user-select: $val;
+  -ms-user-select: $val;
+  user-select: $val;
+}
+
+@mixin font-smoothing($value: on) {
+  //http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+@mixin linear-gradient($property, $value...) {
+  #{$property}: -webkit-linear-gradient(#{$value});
+  #{$property}: -moz-linear-gradient(#{$value});
+  #{$property}: -ms-linear-gradient(#{$value});
+  #{$property}: linear-gradient(#{$value});
+}
+
+@mixin cursor($value) {
+  $property: cursor;
+  #{$property}: -webkit-#{$value};
+  #{$property}: -moz-#{$value};
+  #{$property}: #{$value};
+}
+
+@mixin margin-end($margin) {
+  -webkit-margin-end: $margin;
+  -moz-margin-end: $margin;
+  -o-margin-end: $margin;
+  margin-end: $margin;
+}
+
+@mixin margin-before($margin) {
+  -webkit-margin-before: $margin;
+  -moz-margin-before: $margin;
+  -o-margin-before: $margin;
+  margin-before: $margin;
+}
+
+@mixin margin-after($margin) {
+  -webkit-margin-after: $margin;
+  -moz-margin-after: $margin;
+  -o-margin-after: $margin;
+  margin-after: $margin;
+}
+
+@mixin margin-start($margin) {
+  -webkit-margin-start: $margin;
+  -moz-margin-start: $margin;
+  -o-margin-start: $margin;
+  margin-start: $margin;
+}
+
+@mixin padding-start($padding) {
+  -webkit-padding-start: $padding;
+  -moz-padding-start: $padding;
+  -o-padding-start: $padding;
+  padding-start: $padding;
+}
+
+@mixin padding-end($padding) {
+  -webkit-padding-end: $padding;
+  -moz-padding-end: $padding;
+  -o-padding-end: $padding;
+  padding-end: $padding;
+}

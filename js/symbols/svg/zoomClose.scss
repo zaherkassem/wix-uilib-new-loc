@@ -1,0 +1,23 @@
+@import "../../../baseUI/src/main/framework/framework";
+
+$symbol-name: zoomClose;
+
+@include symbol-up($symbol-name) {
+  stroke: none;
+  stroke-width: 1px;
+  fill: none;
+
+  .c1 {
+    fill: #DFF2DD;
+  }
+
+  .c2 {
+    stroke: #468B42;
+  }
+}
+
+@include symbol-hover($symbol-name) {
+  .c1 {
+    fill: #cfebcc;
+  }
+}

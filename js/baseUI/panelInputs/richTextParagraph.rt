@@ -1,0 +1,9 @@
+<div>
+    <div rt-if="this.props.paragraphTitle" key="title" class="rich-text-paragraph-title">
+        {this.props.paragraphTitle}
+    </div>
+
+    <div class="rich-text-paragraph-content">
+        <span rt-repeat="chunk in this.props.paragraphTextChunks" style="{chunk.style}">{chunk.text}</span>
+    </div>
+</div>

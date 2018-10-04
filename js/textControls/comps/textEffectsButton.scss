@@ -1,0 +1,63 @@
+@import "../../../../../packages/baseUI/src/main/framework/framework.scss";
+
+.text-effect-container {
+
+  padding: 0 0 20px 25px;
+
+  .text-none-icon {
+    margin: 12px 12px 0 0;
+    width: 32px;
+    height: 32px;
+    vertical-align: top;
+    display: inline-block;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 8px;
+    position: relative;
+    border: 2px solid $g-color-d4;
+
+    &:before {
+      content: '';
+      height: 2px;
+      background: red;
+      position: absolute;
+      width: 42px;
+      right: -5px;
+      top: 15px;
+      transform: rotate(135deg);
+    }
+
+    &:hover {
+      background: $g-color-b5;
+    }
+
+    &.selected {
+      border: 2px solid $g-color-b2;
+    }
+
+  }
+}
+
+.text-effect-button {
+  color: $g-color-b1;
+  font-size: 26px;
+  border-radius: 8px;
+  width: 38px;
+  height: 38px;
+  background-color: $g-color-b5;
+  border: none;
+  outline: none;
+  display: inline-block;
+  margin: 12px 12px 0 0;
+  padding: 0px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $g-color-b4;
+  }
+  &.selected, &:active {
+    background-color: $g-color-b2;
+    color: $g-color-b5;
+  }
+}

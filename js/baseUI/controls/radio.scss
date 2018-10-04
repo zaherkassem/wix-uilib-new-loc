@@ -1,0 +1,16 @@
+@import "../framework/framework";
+
+//only set css rules which apply to all radio controls
+.radio-control {
+  cursor: pointer;
+
+  input {
+    display: none;
+
+  }
+
+  span.label {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+}

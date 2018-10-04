@@ -1,0 +1,11 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+$name: inputValidationWarning;
+
+@include symbol-up($name) {
+  fill: $g-color-y1;
+
+  > .line {
+    stroke: #fff;
+  }
+}

@@ -1,0 +1,37 @@
+@import "../../../baseUI/src/main/framework/framework";
+
+.symbol-bgVideo {
+  .video-icon {
+    .st2 {
+      fill: $g-color-b1;
+    }
+
+    .st6 {
+      fill: #E9F1F4;
+    }
+  }
+
+  .video-icon:hover {
+    .st2 {
+      fill: $g-color-b2;
+    }
+
+    .st6 {
+      fill: #E9F1F4;
+    }
+  }
+}
+
+.disabled {
+  .video-icon,
+  .video-icon:hover {
+    .st2 {
+      fill: #F1F1F1;
+    }
+
+    .st6 {
+      fill: #CCCCCC;
+    }
+  }
+}
+

@@ -1,0 +1,10 @@
+<rt-require dependency="baseUI/colorPicker/colorPickerInputWithOpacity" as="colorPickerInputWithOpacity"/>
+<colorPickerInputWithOpacity
+        label="{this.props.title}"
+        valueLink="{this.getValueLink('colorWithOpacity')}"
+        openColorPicker="{this.openColorPicker}"
+        useMouseEvent="{true}"
+        onSlideEnd="{this.handleSlideEnd}"
+        handleStepperChange="{this.handleSlideEnd}"
+       />
+

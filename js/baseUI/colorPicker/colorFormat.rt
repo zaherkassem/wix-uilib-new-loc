@@ -1,0 +1,45 @@
+<!--suppress CheckEmptyScriptTag -->
+<rt-require dependency="baseUI/controls/horizontalTabs" as="horizontalTabs"/>
+<rt-require dependency="baseUI/panelInputs/stepper" as="stepper"/>
+<rt-require dependency="baseUI/panelInputs/textInput" as="textInput"/>
+<rt-require dependency="baseUI/framework/uiConstants" as="uiConstants"/>
+<div class="color-format" rt-scope="uiConstants.COLOR_FORMATS as FORMATS">
+    <horizontalTabs options="{this.getFormatOptions()}"
+                    valueLink={this.linkState('selectedFormat')}
+                    class="arrowed"/>
+
+    <div class="color-values-wrapper">
+        <div rt-if="this.state.selectedFormat === FORMATS.HEX" key="hexSection" class="color-value-hex"  rt-scope="this.getColorAsHEX() as colorAsHEX">
+            <textInput
+                    validator="{this.validateHexValue}"
+                    invalidMessage="ColorPicker_ColorSpace_HEXErrorTooltip"
+                    value="{colorAsHEX}"
+                    maxlength="{6}"
+                    onChange="{this.handleHexChange}"
+                    onChangeInValidationStatus="{this.props.onChangeInValidationStatus}" />
+        </div>
+        <div rt-if="this.state.selectedFormat === FORMATS.RGB" key="rgbSection" rt-scope="this.getColorAsRGB() as colorAsRGB">
+            <div class="color-value-item">
+                <stepper min="{0}" max="{255}" value="{colorAsRGB.red}" step="{1}" onChange="{this.handleRedChange}"/>
+            </div>
+            <div class="color-value-item">
+                <stepper min="{0}" max="{255}" value="{colorAsRGB.green}" step="{1}" onChange="{this.handleGreenChange}"/>
+            </div>
+            <div class="color-value-item">
+                <stepper min="{0}" max="{255}" value="{colorAsRGB.blue}" step="{1}" onChange="{this.handleBlueChange}"/>
+            </div>
+
+        </div>
+        <div rt-if="this.state.selectedFormat === FORMATS.HSB" key="hsbSection" rt-scope="this.getColorAsExactHSB() as colorAsExactHSB">
+            <div class="color-value-item">
+                <stepper min="{0}" max="{360}" units="°" value="{Math.round(colorAsExactHSB.hue)}" step="{1}" onChange="{this.handleHueChange}"/>
+            </div>
+            <div class="color-value-item">
+                <stepper min="{0}" max="{100}" units="%" value="{Math.round(colorAsExactHSB.saturation)}" step="{1}" onChange="{this.handleSaturationChange}"/>
+            </div>
+            <div class="color-value-item">
+                <stepper min="{0}" max="{100}" units="%" value="{Math.round(colorAsExactHSB.brightness)}" step="{1}" onChange="{this.handleBrightnessChange}"/>
+            </div>
+        </div>
+    </div>
+</div>

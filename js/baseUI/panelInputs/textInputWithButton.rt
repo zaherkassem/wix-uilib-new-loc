@@ -1,0 +1,32 @@
+<!--suppress CheckEmptyScriptTag -->
+<rt-require dependency="baseUI/controls/button" as="UIButton"/>
+<rt-require dependency="baseUI/framework/uiConstants" as="uiConstants"/>
+<rt-require dependency="baseUI/panelInputs/textInput" as="textInput"/>
+<rt-require dependency="symbols" as="symbols"/>
+
+<div rt-props="this.filteredProps()" class="control-text-input-with-button{isDisabled ? ' disabled' : ''}"
+     rt-scope="this.isDisabled() as isDisabled">
+
+    <textInput valueLink="{{value: this.getValueFromProps(), requestChange: this.updateValue}}"
+               label="{this.props.label}"
+               placeholder="{this.props.placeholder}"
+               defaultText="{this.props.defaultText}"
+               maxLength="{this.props.maxLength}"
+               focus="{this.props.focus}"
+               isMultiLine="{this.props.multiLine}"
+               validator="{this.props.validator}"
+               asyncValidator="{this.props.asyncValidator}"
+               invalidMessage="{this.props.invalidMessage}"
+               processValue="{this.props.processValue}"
+               onFocus="()=>this.toggleFocus(true)"
+               onBlur="()=>this.toggleFocus(false)"
+               infoText="{this.props.infoText}"
+               infoTitle="{this.props.infoTitle}"
+               validateOnBlurOnly="{true}"/>
+
+    <UIButton key="textInputWithButtonButton" rt-if="this.shouldShowButton()"
+              ref="actionButton"
+              onClick="{this.handleClick}"
+              disabled="{!this.state.isFocused}"
+              label="{this.props.buttonLabel}"/>
+</div>

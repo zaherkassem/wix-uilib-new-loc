@@ -1,0 +1,41 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include button-up(align-center-vertical-btn-bld) {
+  .st1 {
+    fill: $g-color-e4;
+  }
+
+  .st2 {
+    fill: $g-color-d3;
+  }
+}
+
+@include button-hover(align-center-vertical-btn-bld) {
+  .st1 {
+    fill: $g-color-b1;
+  }
+
+  .st2 {
+    fill: $g-color-b3;
+  }
+}
+
+@include button-down(align-center-vertical-btn-bld) {
+  .st1 {
+    fill: $g-color-e4;
+  }
+
+  .st2 {
+    fill: $g-color-d3;
+  }
+}
+
+@include button-disabled(align-center-vertical-btn-bld) {
+  .st1 {
+    fill: $g-color-e4x;
+  }
+
+  .st2 {
+    fill: $g-color-d3x;
+  }
+}

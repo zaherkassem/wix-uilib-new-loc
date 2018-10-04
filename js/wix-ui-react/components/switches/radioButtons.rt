@@ -1,0 +1,11 @@
+<!--suppress CheckEmptyScriptTag -->
+<rt-require dependency="baseUI/controls/radioButtons" as="radioButtons"/>
+<radioButtons
+        valueLink="{this.getValueLink('value')}"
+        options="{this.props.options}"
+        disabled="{this.state.disabled}"
+        infoText="{this.props.infoText}"
+        infoTitle="{this.props.infoTitle}"
+        label="{this.props.title}"
+        onMouseOverPreview="{this.props.onMouseOverPreview}">
+</radioButtons>

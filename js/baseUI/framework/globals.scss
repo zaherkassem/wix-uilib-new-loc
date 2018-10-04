@@ -1,0 +1,54 @@
+//** preview frame globals
+$g-mobile-preview-top: 59px;
+$g-mobile-preview-margin-from-bottom: 94px;
+
+//** Top Bar Globals
+$g-top-bar-height: 48px;
+
+// Z index
+$g-zindex-editor-wrapper: 0;
+$g-zindex-left-panel-frame: 1100;
+$g-zindex-left-bar: 1250;
+$g-zindex-pages-menu: 1255;
+$g-zindex-tool-bar: 1275;
+$g-zindex-right-click-menu: 1290;
+$g-zindex-panels-layer: 1300;
+$g-zindex-comp-panel-frame: 1310;
+$g-zindex-tpa-settings-panel-frame: 1320;
+$g-zindex-add-panel-draggable-item-frame: 1350;
+$g-zindex-top-bar: 1450;
+$g-zindex-tool-panel: 1710;
+$g-zindex-notification-panel-frame: 1710;
+$g-zindex-focus-panel-frame: 1710;
+$g-zindex-help-panel-frame: 1720;
+$g-zindex-save-publish-panel: 1730;
+$g-zindex-message-panel-frame: 1800;
+$g-zindex-confirmation-panel-frame: 1800;
+$g-zindex-combobox-list: 1810;
+$g-zindex-dropdown: 9998;
+$g-zindex-tooltip: 9999;
+$g-zindex-media-manager: 10000;
+// do not add zIndex which are greater than 10000
+
+$g-left-bar-relative-top: 24px;
+$g-left-bar-margin: 12px;
+$g-left-bar-button-size: 48px;
+$g-left-bar-abs-top: $g-top-bar-height + $g-left-bar-relative-top;
+
+//** Left Panels
+$g-left-panels-left: $g-left-bar-margin * 2 + $g-left-bar-button-size - 2;
+$g-left-panels-top: $g-top-bar-height + $g-left-bar-relative-top;
+
+//** Panels
+$g-panel-header-height: 54px;
+$g-left-panel-max-height: calc(100vh - #{$g-left-panels-top + $g-left-bar-relative-top});
+
+@function g-panel-max-content-height($header-height) {
+  @return calc(100vh - #{$g-left-panels-top + $g-left-bar-relative-top + $header-height});
+}
+
+//** Common
+$g-tag-triangle-size: 10px;
+$g-panels-border-radius: 8px;
+$g-preloader-width: 30px;
+$g-preloader-height: 30px;

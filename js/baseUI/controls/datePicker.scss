@@ -1,0 +1,148 @@
+@import "../framework/framework";
+
+$header-border-color: #f0f3f5;
+
+.input-date-picker {
+  position: relative;
+  background-color: $g-color-d6;
+  border-radius: 8px;
+
+  .dp-header {
+    box-sizing: border-box;
+    height: 48px;
+    line-height: 32px;
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 1px 3.96px 0.04px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid $header-border-color;
+
+    .dp-previous {
+      transform: rotate(-180deg);
+    }
+
+    .dp-navigate {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background-color: $g-color-b5;
+      }
+
+      &:active {
+        background-color: $g-color-b1;
+
+        * {
+          fill: $g-color-d6;
+        }
+      }
+    }
+
+    .dp-title {
+      flex: 1;
+      font-family: $g-font65;
+      font-size: 14px;
+      color: $g-color-b1;
+    }
+  }
+
+  .dp-body {
+    table {
+      text-align: center;
+      width: calc(100% - 24px);
+      margin: 8px 12px;
+      font-size: 13px;
+      font-family: $g-font65;
+      color: $g-color-d2;
+
+      td div {
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+      }
+      .dp-day-name {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .dp-day {
+    cursor: pointer;
+
+    &:not(.dp-day-selected):hover {
+      background-color: $g-color-b5;
+    }
+  }
+
+  .dp-day-not-in-current-month {
+    color: $g-color-d4;
+  }
+
+  .dp-day-selected,
+  .dp-day-selected:hover {
+    background-color: $g-color-b1;
+    color: $g-color-d6;
+  }
+
+  .dp-today:not(.dp-day-not-in-current-month) {
+    border: 1px solid $g-color-b1;
+  }
+
+  .dp-footer {
+    border-top: 1px solid #f0f3f5;
+    height: 32px;
+    padding: 12px;
+
+    .delete-btn {
+      background-color: $g-color-d6;
+      padding: 0 12px;
+      margin-right: 12px;
+      height: 32px;
+      vertical-align: middle;
+
+      path {
+        fill: $g-color-d2;
+      }
+
+      &:hover {
+        path {
+          fill: $g-color-r1;
+        }
+      }
+    }
+
+    .goto-today, .goto-selection {
+      @include g-font-f04();
+      background-color: transparent;
+      color: $g-color-b1;
+      display: inline-block;
+      border-radius: 32px;
+      line-height: 32px;
+      height: 32px;
+      padding: 0 20px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $g-color-b5;
+      }
+    }
+
+    .goto-selection {
+      float: right;
+
+      &:disabled {
+        cursor: inherit;
+        color: $g-color-b1x;
+        background-color: transparent;
+      }
+    }
+  }
+}

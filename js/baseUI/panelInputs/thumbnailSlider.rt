@@ -1,0 +1,17 @@
+<rt-require dependency="symbols" as="symbols"/>
+<rt-require dependency="util" as="util"/>
+
+<div class="control-thumbnailsSlider" style="width: {this.props.width}px">
+    <div class="itemsContainer" style="left: -{this.state.position}px;">
+        <label rt-repeat="item in this.props.items" key="{item.value}">
+            <input type="radio" name="{this.getRadioGroupId()}" checked="{item.value === this.getValueFromProps()}" onChange="()=>this.handleChange(item.value);"/>
+            <img src="{util.media.getMediaUrl(item.iconSrc)}"/>
+        </label>
+    </div>
+    <div class="left arrow" rt-if="(!this.state.isLeftEdge)" key="left" onMouseDown="{this.startLeft}" onMouseUp="{this.endLeft}">
+        <span></span>
+    </div>
+    <div class="right arrow" rt-if="(!this.state.isRightEdge)" key="right" onMouseDown="{this.startRight}" onMouseUp="{this.endRight}">
+        <span></span>
+    </div>
+</div>

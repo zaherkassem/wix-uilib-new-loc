@@ -1,0 +1,6 @@
+<span rt-props="this.topLevelProps" rt-scope="this.getValueFromProps(this.props) as selectedValue">
+    <span class="label">{this.getLabel()}</span>
+    <div rt-repeat="option in this.props.options" onClick="()=>this.handleClick(optionIndex)">
+        <span class="option">{option.label} {selectedValue === option.value ? 'selected' : ''}</span>
+    </div>
+</span>

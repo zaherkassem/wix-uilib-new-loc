@@ -1,0 +1,16 @@
+<rt-require dependency="baseUI/controls/infoIcon" as="infoIcon" />
+<rt-require dependency="wix-ui-react/components/fontPicker/fontPicker" as="fontPicker"/>
+<rt-require dependency="wix-ui-react/components/colorSpace/colorPickerInput" as="colorPickerInput"/>
+
+<div class="font-and-color-picker">
+    <label rt-if="this.hasTitle()" key="dropdownLabel">{this.props.title}</label>
+    <infoIcon rt-if="this.hasTitle() && (this.props.infoText || this.props.infoTitle)" key="infoIcon" text="{this.props.infoText}" title="{this.props.infoTitle}"/>
+
+    <div class="font-picker">
+        <fontPicker ref="fontPicker" rt-props="this.getFontPickerProps()"/>
+    </div>
+
+    <div class="color-picker">
+        <colorPickerInput ref="colorPicker" rt-props="this.getColorPickerProps()"/>
+    </div>
+</div>

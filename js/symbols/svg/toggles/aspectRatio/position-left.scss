@@ -1,0 +1,13 @@
+@import "../../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(position-left) {
+  .st1 {
+    fill: $g-color-b3;
+  }
+}
+
+@include toggle-selected-up(position-left) {
+  .st1 {
+    fill: $g-color-b5;
+  }
+}

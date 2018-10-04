@@ -1,0 +1,11 @@
+<rt-require dependency="util" as="util"/>
+<rt-require dependency="symbols" as="symbols"/>
+<div class="listItem"  onClick="()=>this.onItemClick()">
+    <img class="image" src="{this.props.url}"/>
+    <div class="content">
+        <div rt-if="this.props.title" key="title" class="title ellipsis">{util.translate(this.props.title)}</div>
+        <div rt-if="this.props.desc" key="desc" class="desc ellipsis">{util.translate(this.props.desc)}</div>
+    </div>
+    <symbols.symbol class="arrow" name="arrowWithStates"></symbols.symbol>
+
+</div>

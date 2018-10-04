@@ -1,0 +1,26 @@
+<div class="colorSpace"
+     rt-scope="this.getSelectedColor() as selectedColor">
+    <div class="top-section">
+        <div ref="colorSpace"
+             class="select-area"
+             onMouseDown="{this.selectAreaClicked}">
+            <div class="selector-layer" style="background-color: hsl({selectedColor.hue}, 100%, 50%);"></div>
+            <div class="selector-layer saturation-layer"></div>
+            <div class="selector-layer brightness-layer"></div>
+            <div class="color-indicator {selectedColor.brightness > 60 ? 'bright-background' : 'dark-background'}" style="{this.getIndicatorStyle()}"></div>
+        </div>
+        <div class="brightness-options">
+            <div rt-repeat="option in this.getBrightnessOptions()" key="{'brightnessOption-' + optionIndex}"
+                 class="option"
+                 style="background-color: rgb({option.red}, {option.green}, {option.blue})"
+                 onClick="()=>this.brightnessOptionSelected(optionIndex)"></div>
+        </div>
+    </div>
+
+    <div class="hue-scale"
+         onMouseDown="{this.hueScaleClicked}">
+        <div class="hue-indicator {this.state.hueIndicatorDrag ? 'hue-indicator-drag' : ''}" style="{this.getHueIndicatorStyle()}"></div>
+    </div>
+
+
+</div>

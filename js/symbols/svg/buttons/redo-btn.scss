@@ -1,0 +1,25 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include button-up(redo-btn) {
+  .st1 {
+    fill: $g-color-e4;
+  }
+}
+
+@include button-hover(redo-btn) {
+  .st1 {
+    fill: $g-color-b2;
+  }
+}
+
+@include button-down(redo-btn) {
+  .st1 {
+    fill: $g-color-e4;
+  }
+}
+
+@include button-disabled(redo-btn) {
+  .st1 {
+    fill: $g-color-e4x;
+  }
+}

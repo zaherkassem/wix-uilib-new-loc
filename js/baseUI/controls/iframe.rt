@@ -1,0 +1,1 @@
+<iframe src="{this.props.src}" name="{this.name}" ref="iframe" rt-props="this.filteredProps()"></iframe>

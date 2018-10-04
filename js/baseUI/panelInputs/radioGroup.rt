@@ -1,0 +1,12 @@
+<span>
+    <span ref="label" class="label">{this.translateIfNeeded(this.getLabel())}</span>
+    <label rt-repeat="option in this.props.options" rt-scope="this.getValueFromProps(this.props) as selectedValue">
+        <input  ref="{'radio_' + optionIndex}"
+                type="radio" name="{this.getRadioGroupId()}"
+                onClick="() => this.handleOnRadioSelect(option.value)"
+                onMouseOver="() => this.handleOnMouseOver(option.value)"
+                onChange="() => this.handleChange(option.value)"
+                checked="{selectedValue === option.value}">
+        <span ref="{'option_' + optionIndex}" class="option">{this.translateIfNeeded(option.label)}</span>
+    </label>
+</span>

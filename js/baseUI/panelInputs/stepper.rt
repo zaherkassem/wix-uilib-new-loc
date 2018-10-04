@@ -1,0 +1,16 @@
+<rt-require dependency="util" as="util"/>
+
+<div rt-class="this.getWrapperClasses()"
+     onClick="()=>this.refs.input.focus()">
+    <input ref="input"
+           class="input"
+           type="text"
+           value="{this.state.value}"
+           disabled="{!!this.props.disabled}"
+           readonly="{!this.state.edited}"
+           maxlength="8"
+           step="{this.props.step}" onChange="{this.handleChange}" onKeyDown="{this.handleKeyDown}"
+           onFocus="()=>this.onFocus()"
+           onBlur="()=>this.handleBlur()"/>
+    <span rt-if="this.props.units" class="units" key="units">{this.props.units}</span>
+</div>

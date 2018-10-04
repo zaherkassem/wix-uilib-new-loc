@@ -1,0 +1,14 @@
+<rt-require dependency="baseUI/controls/button" as="buttonControl"/>
+
+<div rt-props="this.getContainerProps()">
+    <input ref="input" type="text"
+           value="{this.state.value}"
+           placeholder="{this.props.placeholder}"
+           onKeyDown="{this.onKeyDown}"
+           onChange="{this.onChange}" />
+
+    <buttonControl key="cancel"
+        rt-if="this.state.value"
+        icon="{this.props.cancelIcon}"
+        onClick="{this.onClickCancel}" />
+</div>

@@ -1,0 +1,25 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include button-up(delete-btn-bld) {
+  .st1 {
+    fill: $g-color-d1;
+  }
+}
+
+@include button-hover(delete-btn-bld) {
+  .st1 {
+    fill: $g-color-b1;
+  }
+}
+
+@include button-down(delete-btn-bld) {
+  .st1 {
+    fill: $g-color-d1;
+  }
+}
+
+@include button-disabled(delete-btn-bld) {
+  .st1 {
+    fill: $g-color-d1x;
+  }
+}

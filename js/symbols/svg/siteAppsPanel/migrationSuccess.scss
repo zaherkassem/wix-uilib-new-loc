@@ -1,0 +1,27 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include symbol-up(migrationSuccess) {
+  stroke: none;
+  stroke-width: 1;
+  fill: none;
+
+  .c1 {
+    fill: #d3edff;
+  }
+
+  .c2 {
+    fill: #5fcef6;
+  }
+
+  .c3 {
+    fill: #2b81cb;
+  }
+
+  .c4 {
+    stroke: #d3edff;
+  }
+
+  .v {
+    fill: #ffffff;
+  }
+}

@@ -1,0 +1,59 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(play-video) {
+  .st0 {
+    fill: $g-color-d6;
+  }
+
+  .st1 {
+    fill: transparent;
+  }
+}
+
+@include toggle-regular-hover(play-video) {
+  .st0 {
+    fill: $g-color-b1;
+  }
+}
+
+@include toggle-regular-down(play-video) {
+  .st0 {
+    fill: $g-color-d6;
+  }
+}
+
+@include toggle-regular-disabled(play-video) {
+  .st0 {
+    fill: $g-color-b1x;
+  }
+}
+
+@include toggle-selected-up(play-video) {
+  .st0 {
+    fill: transparent;
+  }
+
+  .st1 {
+    fill: $g-color-d6;
+  }
+}
+
+@include toggle-selected-hover(play-video) {
+  .st1 {
+    fill: $g-color-b1;
+  }
+}
+
+@include toggle-selected-down(play-video) {
+  .st1 {
+    fill: $g-color-d6;
+  }
+}
+
+@include toggle-selected-disabled(play-video) {
+  .st1 {
+    fill: $g-color-b1x;
+  }
+}
+
+

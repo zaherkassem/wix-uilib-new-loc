@@ -1,0 +1,113 @@
+<h1>Tabs panel</h1>
+
+<h2>Explanation</h2>
+
+<p>
+    The markup of the panel is similar to the "<table></table>" markup.
+    A wrapper is <baseUI.tabs.holder></baseUI.tabs.holder>. Inside you should place
+    <baseUI.tabs.header></baseUI.tabs.header> and <baseUI.tabs.content></baseUI.tabs.content>.
+    You can't wrap this parts to any block element. They must be direct children of
+    the baseUI.tabs.holder and sublings to each other.
+    You can put any content you like as a siblings of the baseUI.tabs.header and baseUI.tabs.content.
+
+    <baseUI.tabs.header></baseUI.tabs.header> is the container for the tab labels and "Show more..."
+    Inside <baseUI.tabs.header></baseUI.tabs.header> you can put only <baseUI.tabs.label></baseUI.tabs.label>
+    and <baseUI.tabs.showMoreLabel></baseUI.tabs.showMoreLabel>.
+
+    <baseUI.tabs.content></baseUI.tabs.content> is the container for the current tab
+    Inside <baseUI.tabs.content></baseUI.tabs.content> you can put only <baseUI.tabs.tab></baseUI.tabs.tab>
+
+    <baseUI.tabs.label></baseUI.tabs.label> is the label for a tab (<baseUI.tabs.tab></baseUI.tabs.tab>).
+    The label and tab are connected by label's "for" attribute and tab's "name" attribute.
+    So the first tabs.label for="example" in the tabs.header will be the label to the tab in the tabs.content with name="example".
+    <baseUI.tabs.showMoreLabel></baseUI.tabs.showMoreLabel> is a special component which hides all tabs.labels
+    following it in markup. After the click on it the hidden tabs.labels will be shown and tabs.showMoreLabel
+    will be hidden. tabs.showMoreLabel doesn't impact the connections between tabs.labels and tabs.
+    All of these three components can contain anything you like.
+
+    You can add class and style to any of the described components. Provide "class" and "style"
+    properties to the components.
+
+    There are two layout presets for placing the tabLabels on top and on left of the tabContent.
+    Just provide the "top" or "left" to the baseUI.tabs class property.
+
+    This is not final version, it may contain some bugs. Please inform Serhii Trofimets (trofima) if you find
+    a problem or need something to add.
+</p>
+
+<div>
+    <baseUI.tabs.holder class="top" style="height: 300px"> <!-- special class "top" is used to put labels on top of the tab. "left" is another option -->
+
+        <!-- you can put anything here -->
+
+        <baseUI.tabs.header>
+            <baseUI.tabs.label for="first" class="first">Tab Label 1</baseUI.tabs.label>
+            <baseUI.tabs.label for="second" style="background: yellow">Tab Label 1</baseUI.tabs.label>
+            <baseUI.tabs.label for="third">Tab Label 2</baseUI.tabs.label>
+
+            <baseUI.tabs.label>
+                <!-- you can put anything here -->
+                <img src="icon.png">
+                <h1>Tab Label 1 </h1>
+            </baseUI.tabs.label>
+
+            <baseUI.tabs.showMoreLabel>
+                Show More... <div class="triangle down"></div>
+            </baseUI.tabs.showMoreLabel>
+
+            <baseUI.tabs.label for="fifth">Tab Label 1</baseUI.tabs.label>
+            <baseUI.tabs.label for="sixth">Tab Label 1</baseUI.tabs.label>
+        </baseUI.tabs.header>
+
+        <!-- you can put anything here -->
+
+        <baseUI.tabs.content>
+            <baseUI.tabs.tab name="first" class="my-custom-tab">
+                <!-- you can put anything here -->
+                <div>
+                    first
+                    <baseUI.textInput></baseUI.textInput>
+                </div>
+
+                <baseUI.slider
+                    rt-if="this.getProperty('align') !== 'center'"
+                    label="Button_Layout__Margins"
+                    valueLink="{this.linkedProperty('margin')}"
+                    unit="Slider_Control_px_label"
+                    min="{0}"
+                    max="{100}"
+                    step="{1}"
+                />
+            </baseUI.tabs.tab>
+
+            <baseUI.tabs.tab name="second">
+                <div>Any content</div>
+                <baseUI.control></baseUI.control>
+            </baseUI.tabs.tab>
+
+            <baseUI.tabs.tab name="third">
+                <div>Any content</div>
+                <baseUI.control></baseUI.control>
+            </baseUI.tabs.tab>
+
+            <baseUI.tabs.tab name="forth">
+                <div style="background: red; color: white;">four</div>
+                <div>Any content</div>
+                <baseUI.control></baseUI.control>
+            </baseUI.tabs.tab>
+
+            <baseUI.tabs.tab name="fifth">
+                <div>Any content</div>
+                <baseUI.control></baseUI.control>
+            </baseUI.tabs.tab>
+
+            <baseUI.tabs.tab name="sixth">
+                <div>Any content</div>
+                <baseUI.control></baseUI.control>
+            </baseUI.tabs.tab>
+        </baseUI.tabs.content>
+
+        <!-- you can put anything here -->
+
+    </baseUI.tabs.holder>
+</div>

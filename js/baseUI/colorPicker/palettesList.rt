@@ -1,0 +1,12 @@
+<div class="palettes-list" rt-props="this.filteredProps()">
+    <div class="palette-options" onMouseLeave="{this.resetPalette}">
+        <div class="palette-option-wrapper" rt-repeat="palette in this.props.palettes" key="{'paletteOption-' + paletteIndex}"
+             onMouseEnter="{this.previewPalette.bind(null, palette)}"
+             onMouseDown="{this.selectPalette.bind(null, palette)}">
+            <div rt-props="this.getPaletteOptionProps(palette)">
+                <span rt-repeat="color in this.getRootColors(palette)" key="{'paletteRootColor-' + colorIndex}" rt-class="this.getPaletteOptionColorClasses(color)" style="background-color:{color}"></span>
+            </div>
+        </div>
+    </div>
+</div>
+

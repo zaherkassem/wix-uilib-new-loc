@@ -1,0 +1,69 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(mech-hw-btn-bld) {
+
+  path {
+    transition: fill 0.2s;
+  }
+
+  .st2 {
+    fill: $g-color-b1;
+  }
+
+  .st1 {
+    fill: $g-color-b3;
+  }
+}
+
+@include toggle-selected-up(mech-hw-btn-bld) {
+  .st2 {
+    fill: $g-color-b3;
+  }
+
+  .st1 {
+    fill: $g-color-b5;
+  }
+}
+
+
+
+
+@include button-up(mech-hw-btn-bld) {
+  .st1 {
+    fill: $g-color-d1;
+  }
+
+  .st2 {
+    fill: $g-color-d3;
+  }
+}
+
+@include button-hover(mech-hw-btn-bld) {
+  .st1 {
+    fill: $g-color-b1;
+  }
+
+  .st2 {
+    fill: $g-color-d1;
+  }
+}
+
+@include button-down(mech-hw-btn-bld) {
+  .st1 {
+    fill: $g-color-d1;
+  }
+
+  .st2 {
+    fill: $g-color-b3;
+  }
+}
+
+@include button-disabled(mech-hw-btn-bld) {
+  .st1 {
+    fill: $g-color-d1x;
+  }
+
+  .st2 {
+    fill: $g-color-d3x;
+  }
+}

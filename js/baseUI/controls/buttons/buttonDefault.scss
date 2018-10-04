@@ -1,0 +1,35 @@
+@import "../../framework/framework";
+
+$button-name: default;
+
+@include button-up($button-name) {
+  height: 36px;
+  background-color: $g-color-b1;
+  border-radius: 18px;
+
+  .symbol:nth-child(2):nth-last-child(2) {
+    //there's svg is not alone here (optionally 3 siblings: input, symbol, label)
+    //here we address the symbol if its the second child both from the start and the end
+    margin-left: 8px;
+  }
+}
+
+@include button-up($button-name, label) {
+  font-family: $g-font45;
+  font-size: 16px;
+  padding: 0 24px;
+  color: #fff;
+  @include ellipsis();
+}
+
+@include button-hover($button-name) {
+  background-color: $g-color-b2;
+}
+
+@include button-down($button-name) {
+  background-color: $g-color-b1;
+}
+
+@include button-disabled($button-name) {
+  background-color: $g-color-b1x;
+}

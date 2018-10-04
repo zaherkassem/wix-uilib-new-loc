@@ -1,0 +1,8 @@
+<rt-require dependency="util" as="util"/>
+
+<div class="{this.getClassName('control-tabs-horizontal')}">
+    <label rt-repeat="option in this.props.options" rt-scope="this.getValueFromProps(this.props) as selectedValue" class="{option.className}" key="{option.value}">
+        <input type="radio" name="{this.getRadioGroupId()}" value="{option.value}" checked="{option.value === selectedValue}" onChange="()=>this.handleChange(option.value);" />
+        <span class="tab-decorator"><span>{util.translate(option.label)}</span></span>
+    </label>
+</div>

@@ -1,0 +1,13 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(textUnderline) {
+  fill: $g-color-d2;
+}
+
+@include toggle-regular-down(textUnderline) {
+  fill: $g-color-d6;
+}
+
+@include toggle-selected-up(textUnderline) {
+  fill: $g-color-d6;
+}

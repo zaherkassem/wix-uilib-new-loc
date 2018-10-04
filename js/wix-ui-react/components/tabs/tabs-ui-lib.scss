@@ -1,0 +1,54 @@
+@import '../../../baseUI/tabs/tabs.scss';
+
+section.tabs.top > ul.tab-header {
+  display: flex;
+}
+
+section.tabs {
+  $height-controls: 47px;
+  $height-header: 54px;
+  $psp-width: 480px;
+  $color-back: #fff;
+  display: flex;
+  flex-direction: column;
+
+  > ul.tab-header {
+    min-height: $height-controls;
+    display: flex;
+
+    > li.tab-label {
+      flex: 1 1;
+      border: 1px solid #daedfe;
+      border-top: 0;
+      box-sizing: border-box;
+      position: relative;
+      background-color: $g-color-b5;
+      height: $height-controls;
+      line-height: $height-controls;
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding: 0 10px;
+      color: #2b5672;
+
+      &:hover {
+        background-color: $g-color-b4;
+        border-bottom: 1px solid $g-color-b4;
+      }
+
+      &.selected {
+        border: none;
+        background-color: $color-back;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
+}

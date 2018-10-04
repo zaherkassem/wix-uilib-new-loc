@@ -1,0 +1,28 @@
+<rt-require dependency="util" as="util"/>
+<rt-require dependency="baseUI/controls/button" as="UIButton"/>
+<rt-require dependency="symbols" as="symbols"/>
+
+
+<div class="{util.inheritClassName(this.props, 'video-input')}{this.isEmpty() ? ' empty' : ''}" rt-props="this.filteredProps()"
+     onMouseEnter="{this.onMouseEnter}"
+     onMouseLeave="{this.onMouseLeave}">
+
+    <div rt-if="!this.isEmpty()" class="video-wrapper" key="wrapper">
+        <iframe src="{this.getURL()}"></iframe>
+    </div>
+
+    <div class="video-controls" rt-if="!this.isEmpty()" key="videoControls">
+        <div rt-class="{'blocking-layer': true, 'pause': !this.state.isPlaying, 'play': this.state.isPlaying}" onClick="(e)=>e.preventDefault()"></div>
+        <div rt-class="{'play-button': !this.state.isPlaying, 'pause-button': this.state.isPlaying && this.state.isMouseHovering}"
+             onClick="()=> this.state.isPlaying ? this.pauseVideo() : this.playVideo()">
+            <span rt-class="{'triangle': !this.state.isPlaying, 'pause': this.state.isPlaying}"/>
+        </div>
+    </div>
+
+    <div rt-if="this.isEmpty()" rt-class="{'placeholder-wrapper': true}" key="placeholder">
+        <symbols.symbol name="videoInvalid" key="symbol"/>
+    </div>
+    <span rt-if="!this.state.isPlaying" class="button-wrapper" rt-scope="this.getButton() as button" key="button">
+        <UIButton class="action{!!this.getButtonIcon(button) ? ' has-icon' : ''} btn-confirm-secondary" label="{this.getButtonLabel(button)}" icon="{this.getButtonIcon(button)}" key="{this.getButtonLabel(button)}" onClick="()=>this.onClick(button)"/>
+    </span>
+</div>

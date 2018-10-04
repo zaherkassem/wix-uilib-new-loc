@@ -1,0 +1,41 @@
+<rt-require dependency="baseUI/customScroll/customScroll" as="customScroll"/>
+<rt-require dependency="wix-ui-react/components/contentTooltip/contentTooltip" as="contentTooltip"/>
+<rt-require dependency="wix-ui-react/components/button/button" as="myButton"/>
+<rt-require dependency="symbols" as="symbols"/>
+<rt-require dependency="wix-ui-react/components/tooltip/tooltip" as="myTooltip"/>
+
+
+<div class="tabs">
+    <div class="tabs-menu">
+        <div rt-repeat="child in this.getChildren()" key="{'child' + childIndex}">
+            <span rt-class="{'tab-wrapper': !!child.props.tab}">
+                <contentTooltip rt-if="child.props.tab" key="withTooltip"
+                                maxWidth="{this.getMenuLabelWidth()}"
+                                isActive="{this.isActiveTab(childIndex)}"
+                                styleType="normal"
+                                onClick="{this.tabClicked.bind(this, childIndex)}">
+                    {child.props.tab}
+
+                </contentTooltip>
+                <span class="my-tooltip">
+                    <myTooltip value="{this.getNotificationText(childIndex)}">
+                        <symbols.symbol name='tooltipWarning' rt-if=this.shouldShowNotification(childIndex)>
+                    </myTooltip>
+                </span>
+            </span>
+
+            <div rt-if="!child.props.tab" key="withoutTooltip">{child}</div>
+        </div>
+    </div>
+    <div class="active-tab-content-pos settings-panel">
+        <customScroll ref="customScroll" onScroll="{this.onScroll}" heightRelativetoParent="100%">
+            <div class="active-tab-content">
+                <div rt-repeat="child in this.getChildren()" rt-class="{hidden: !this.isActiveTab(childIndex)}" key="{'child' + childIndex}">
+                    <div rt-if="child.props.tab">
+                        {child}
+                    </div>
+                </div>
+            </div>
+        </customScroll>
+    </div>
+</div>

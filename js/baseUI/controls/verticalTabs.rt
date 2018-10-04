@@ -1,0 +1,24 @@
+<rt-require dependency="symbols" as="symbols"/>
+<rt-require dependency="baseUI/popovers/tooltip" as="tooltip"/>
+<rt-require dependency="baseUI/framework/uiConstants" as="uiConstants"/>
+
+<div rt-class="{'control-vertical-tabs': true, closed: this.props.closed}" rt-scope="this.getValueFromProps(this.props) as selectedValue">
+    <div key="option-{option.value}" rt-repeat="option in this.props.options" name="{option.value}">
+        <tooltip
+                shouldTranslate="{false}"
+                disabled="{this.props.closed}"
+                value="{option.text}"
+                alignment="{uiConstants.TOOLTIP.ALIGNMENT.RIGHT}"
+                styleType="{uiConstants.TOOLTIP.STYLE_TYPE.SMALL}"
+                interactive="{false}">
+            <label>
+                <input type="radio" name="{this.getRadioGroupId()}" value="{option.value}" checked="{option.value === selectedValue}" onChange="()=>this.handleChange(option.value);">
+                <span onClick="{this.reportTabClicked}">
+                    <symbols.symbol name="{option.symbolName}"/>
+                    <span rt-if="this.props.closed" class="tab-text" key="verticalTabText">{option.text}</span>
+                </span>
+                <hr class="divider-long" key="divider" rt-if="this.props.closed">
+            </label>
+        </tooltip>
+    </div>
+</div>

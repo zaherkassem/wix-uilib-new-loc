@@ -1,0 +1,192 @@
+@import "../../../baseUI/src/main/framework/framework";
+
+.background-sub-panel,
+.animation-panel,
+.settings-panel {
+  //reset paddings and margins:
+  padding: 0;
+  margin: 0;
+
+  //standard-padding:
+  .dropdown {
+    padding: 19px 12px 17px 12px;
+    margin: 0 11px;
+  }
+
+  .control-switch {
+
+    .label-switch {
+      width: calc(100% - 57px);
+    }
+  }
+
+  .control-buttons-group {
+    padding: 19px 24px 26px 24px;
+  }
+
+  .control-button-in-panel-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(100% - 48px);
+  }
+
+  .selective-text-input {
+    .control-checkbox {
+      margin: -6px 0;
+    }
+
+    .control-text-input {
+      width: calc(100% - 100px);
+    }
+  }
+
+  :not(.selective-text-input) > .control-checkbox {
+    display: block;
+    width: calc(100% - 60px);
+    margin: 21px 30px;
+    box-sizing: border-box;
+  }
+
+  .control-alignment {
+    padding: 19px 24px 24px 24px;
+
+    .label {
+      padding: 0 0 12px 0;
+    }
+  }
+
+  .control-radio-buttons {
+    margin: 19px 24px 24px 24px;
+  }
+
+  .first-time-info-box {
+    margin-bottom: 12px;
+  }
+
+  .control-section-divider {
+    padding: 0 42px;
+  }
+
+  .rich-text-paragraph {
+    padding: 18px 24px;
+  }
+
+  .rich-text-paragraph-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .control-button:not(.btn-back):not(.no-margin):not(.create-news-letter) {
+    margin: 12px 24px;
+  }
+
+  .thumbnails-with-icons {
+    margin: 24px;
+  }
+
+  .media-button {
+    margin: 24px;
+
+    .control-button {
+      margin: 0 auto;
+      max-width: calc(100% - 24px);
+    }
+  }
+
+  .control-button2-wrapper {
+    padding: 24px 0;
+    text-align: center;
+
+    &.control-button2-wrapper-no-top-spacing {
+      padding-top: 0;
+    }
+
+    &.control-button2-wrapper-no-bottom-spacing {
+      padding-bottom: 0;
+    }
+  }
+
+  > .control-button {
+    margin: 24px auto;
+    max-width: calc(100% - 48px);
+    display: block;
+  }
+
+  .inner-control-button {
+    margin: 24px auto;
+    max-width: calc(100% - 48px);
+    display: block;
+
+    &.no-margin-top {
+      margin-top: 0;
+    }
+  }
+
+  .control-text-input {
+    margin: 12px;
+    width: calc(100% - 24px);
+  }
+
+  .control-text-input-with-button {
+    margin: 0 12px;
+    width: calc(100% - 24px);
+  }
+
+  .input-link-to {
+    padding: 12px;
+    width: calc(100% - 24px);
+  }
+
+  .c22 {
+    margin: 0 23px;
+  }
+
+  .control-checkbox {
+    display: block;
+    margin: 14px 24px;
+  }
+
+  .radio-group {
+    display: block;
+    margin: 14px 24px;
+  }
+
+  .button-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 19px 12px;
+
+    .dropdown {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .input-slider {
+    margin: 12px 12px 12px 24px;
+  }
+
+  .writable-drop-down {
+    padding: 17px 12px;
+    margin-right: 11px;
+  }
+
+  .image-control-action-link {
+    min-height: 150px;
+  }
+
+  .color-picker-input-wrapper {
+    padding: 15px 24px;
+    box-sizing: border-box;
+  }
+
+  .color-picker-input-with-opacity {
+    margin: 15px 24px 0 24px;
+
+    .input-slider {
+      margin: 0 35px 10px 0;
+    }
+  }
+}

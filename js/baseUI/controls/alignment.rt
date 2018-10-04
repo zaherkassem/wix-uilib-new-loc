@@ -1,0 +1,19 @@
+<rt-require dependency="util" as="util"/>
+<rt-require dependency="symbols" as="symbols"/>
+<div class="{this.getClassName('control-alignment')}">
+    <div class="label">{util.translate(this.props.label)}</div>
+    <div class="items">
+        <label class="item" rt-repeat="option in this.props.options"
+               rt-scope="this.getValueFromProps(this.props) as selectedValue">
+            <input
+                    type="radio"
+                    name="{this.getRadioGroupId()}"
+                    value="{option.value}"
+                    checked="{option.value === selectedValue}"
+                    onChange="()=>this.handleChange(option.value, option.type);"/>
+            <span>
+                <symbols.symbol rt-if="option.symbolName" key="symbol" name="{option.symbolName}"></symbols.symbol>
+            </span>
+        </label>
+    </div>
+</div>

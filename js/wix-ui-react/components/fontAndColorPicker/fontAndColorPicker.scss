@@ -1,0 +1,60 @@
+@import '../../../baseUI/framework/framework.scss';
+
+.font-and-color-picker {
+  position: relative;
+  text-align: left;
+  padding: 17px 24px 9px;
+
+  label {
+    width: calc(100% - 15px);
+    @include ellipsis;
+    color: #2b5672;
+    font-size: 14px;
+    margin-bottom: 3px;
+    display: block;
+  }
+
+  .info-icon {
+    top: 12px;
+    right: 12px;
+    position: absolute;
+    opacity: 0;
+  }
+
+  &:hover .info-icon {
+    opacity: 1;
+  }
+
+  .font-picker {
+    display: inline-block;
+    width: 158px;
+
+    .dropdown {
+      margin: 0 19px 0 0;
+      padding: 16px 11px 13px 12px;
+      &.select{
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+
+  .color-picker {
+    display: inline-block;
+    padding-left: 23px;
+    border-left: 1px solid #d9e1e8;
+    margin-left: 28px;
+    position: relative;
+    bottom: 1px;
+    height: 30px;
+
+    .color-picker-input {
+      margin: 0;
+
+      .color-picker-wrapper {
+        margin-bottom: 4px;
+      }
+    }
+  }
+}

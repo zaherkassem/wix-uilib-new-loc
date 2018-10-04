@@ -1,0 +1,12 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+$name: inputValidationError;
+
+@include symbol-up($name) {
+  fill: $g-color-r1;
+
+  .c1,
+  .c2 {
+    fill: #fff;
+  }
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg class="pinModeIndicator" width="14px" height="14px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="pin" sketch:type="MSArtboardGroup" fill="#1D2D3C">
+            <path d="M7.44141176,9.50753086 L7.44141176,6.45106027 L9.42847059,4.36517792 L10.74,4.07435439 C11.2842353,3.95364851 11.4811765,3.27882498 11.0865882,2.88423674 L8.40988235,0.207530859 C8.01529412,-0.187057376 7.34047059,0.00988380014 7.21976471,0.554824977 L6.92894118,1.86564851 L4.84305882,3.85341321 L1.78658824,3.85341321 C1.14635294,3.83223674 0.811058824,4.60658968 1.26423529,5.05976615 L2.99929412,6.79482498 L0,10.7943544 L0.499764706,11.2941191 L4.49929412,8.29482498 L6.23435294,10.0298838 C6.68752941,10.4830603 7.46188235,10.1477662 7.44141176,9.50753086" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

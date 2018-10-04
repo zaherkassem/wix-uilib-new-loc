@@ -1,0 +1,65 @@
+@import "../../../../../baseUI/src/main/framework/framework";
+
+// regular - up
+@include toggle-regular-up(transition-gallery-inout) {
+  .st2 {
+    fill: #ADDDFB;
+  }
+
+  .st3 {
+    fill: #7DCAF9;
+  }
+
+  .st4 {
+    fill: #6AC2F8;
+  }
+
+  .st5 {
+    fill: #B6E1FC;
+  }
+
+  .st6 {
+    fill: #A2D9FB;
+  }
+
+  .st7,
+  .st9 {
+    fill: #C8E8FE;
+  }
+
+  .st8 {
+    fill: #DBF0FF;
+  }
+}
+
+// selected - up
+@include toggle-selected-up(transition-gallery-inout) {
+  .st2 {
+    fill: #76BBF4;
+  }
+
+  .st3 {
+    fill: #A5D4F9;
+  }
+
+  .st4 {
+    fill: #B7DEFC;
+  }
+
+  .st5 {
+    fill: #82C6F7;
+  }
+
+  .st6 {
+    fill: #94D0F9;
+  }
+
+  .st7,
+  .st9 {
+    fill: #7CC7F7;
+  }
+
+  .st8 {
+    fill: #6ABDF4;
+  }
+}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 viewBox="0 0 20 22" enable-background="new 0 0 20 22" xml:space="preserve" width="20" height="22">
+<g>
+	<g>
+		<rect x="3" y="15" width="10" height="2"/>
+	</g>
+	<g>
+		<rect x="3" y="9" width="10" height="2"/>
+	</g>
+	<g>
+		<rect x="3" y="3" width="10" height="2"/>
+	</g>
+	<polygon points="15,2 15,3 16,3 16,6 17,6 17,2 	"/>
+	<g>
+		<path d="M18,12h-2.4c0-1,0-1,0-1l2-2H15V8h3v1l-1.4,2H18V12z"/>
+	</g>
+	<g>
+		<path d="M17.8,17l-1.2-1l1.2-1H15v-1h3v1l-1.2,1l1.2,1v1h-3v-1H17.8z"/>
+	</g>
+</g>
+
+
+</svg>

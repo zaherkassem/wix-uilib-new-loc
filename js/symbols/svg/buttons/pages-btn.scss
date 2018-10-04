@@ -1,0 +1,25 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include button-up(pages-btn) {
+  .st1 {
+    fill: $g-color-e4;
+  }
+}
+
+@include button-hover(pages-btn) {
+  .st1 {
+    fill: $g-color-b2;
+  }
+}
+
+@include button-down(pages-btn) {
+  .st1 {
+    fill: $g-color-e4;
+  }
+}
+
+@include button-disabled(pages-btn) {
+  .st1 {
+    fill: $g-color-e4x;
+  }
+}

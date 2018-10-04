@@ -1,0 +1,1 @@
+module.exports = require('wix-ui-react/ui');

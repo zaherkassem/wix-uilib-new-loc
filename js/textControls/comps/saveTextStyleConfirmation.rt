@@ -1,0 +1,23 @@
+<rt-require dependency="panels" as="panels"/>
+<rt-require dependency="core" as="core"/>
+
+<panels.frames.messagePanelFrame ref="frame"
+                                 key="saveTextConfirmationPanel"
+                                 panelName="{this.props.panelName}"
+                                 class="text-style-save-confirm-panel"
+                                 onConfirm="{this.props.onConfirm}"
+                                 panelTitle="{this.translateIfNeeded('text_editor_save_theme_dialog_header')}"
+                                 confirmLabel="text_editor_save_theme_confirm_button"
+                                 editorAPI="{this.getEditorAPI()}"
+                                 dontShowAgainKey="{core.constants.USER_PREFS.TEXT.SAVE_THEME.DONT_SHOW_AGAIN}"
+                                 userPrefType="session">
+
+    <div class="text-style-save-confirm-content">
+        <p><span>{this.translateIfNeeded('text_editor_save_theme_dialog_text_1')}</span>
+            <span class="bold"> '{this.props.textStyleName}' </span>
+            <span>{this.translateIfNeeded('text_editor_save_theme_dialog_text_2')}</span>
+    </div>
+
+
+</panels.frames.messagePanelFrame>
+

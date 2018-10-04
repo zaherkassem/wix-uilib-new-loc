@@ -1,0 +1,8 @@
+<rt-require dependency="util" as="util"/>
+<div onClick="{this.openColorPicker}" class="{this.getClassName('color-picker-input') + (this.props.label ? ' with-label' : '')}">
+    <label class="color-picker-label" rt-if="this.props.label" key="colorPickerLabel">{util.translate(this.props.label)}</label>
+    <div rt-class="{'color-picker-wrapper': true, disabled: this.props.disabled, colorPickerOpen: this.state.forceHighlight}">
+        <div class="color-picker-color"
+             style="background-color:{this.resolveColor()};opacity:{this.getOpacity()}"></div>
+    </div>
+</div>

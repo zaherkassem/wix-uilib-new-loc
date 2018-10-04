@@ -1,0 +1,86 @@
+@import "../framework/framework";
+
+.control-thumbnailsSlider {
+  white-space: nowrap;
+  height: 68px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  background-color: white;
+
+  .itemsContainer {
+    visibility: hidden;
+    padding-left: 25px;
+    padding-right: 25px;
+    position: absolute;
+    transition-property: left;
+    transition-duration: 0.3s;
+    top: 50%;
+  }
+
+  .arrow {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 24px;
+    height: 100%;
+    cursor: pointer;
+
+    span {
+      width: 8px;
+      height: 8px;
+      position: relative;
+      top: calc(50% - 10px);
+      left: calc(50% - 4px);
+      border-top: 1px solid $g-color-b1;
+      border-right: 1px solid $g-color-b1;
+      display: inline-block;
+    }
+    &.left {
+      left: 0;
+      span {
+        transform: rotate(225deg);
+        left: 10px;
+      }
+    }
+    &.right {
+      right: 0;
+      span {
+        transform: rotate(45deg);
+        left: 5px;
+      }
+    }
+  }
+
+  input {
+    display: none;
+
+    &:hover:checked, &:checked {
+      + img {
+        border-radius: 6px;
+        border-color: $g-color-o2;
+        background-color: transparent;
+      }
+    }
+  }
+
+  img {
+    margin-right: 6px;
+    border: solid 2px transparent;
+  }
+
+  label {
+//    margin-top: 8px;
+    height: 100%;
+    display: inline-block;
+    font-size: 0;
+    cursor: pointer;
+
+    &:hover {
+      img {
+        border-radius: 6px;
+        border-color: $g-color-b3;
+        background-color: rgba(127, 204, 247, 0.2); //$g-color-b3 with 20% opacity
+      }
+    }
+  }
+}

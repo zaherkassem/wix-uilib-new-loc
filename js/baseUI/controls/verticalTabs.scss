@@ -1,0 +1,103 @@
+.control-vertical-tabs {
+  $icons-box-size: 48px;
+  $svg-box-size: 7px;
+  display: block;
+  font-size: 0;
+  width: $icons-box-size;
+  height: 100%;
+  background-color: #eaf7ff;
+  box-shadow: inset -1px 0 0 0 #e5f4ff, inset -2px 0 0 0 #d3edff;
+
+  .tab-text {
+    display: none;
+  }
+
+  &.closed {
+    width: 288px;
+    background-color: transparent;
+    box-shadow: none;
+
+    svg {
+      left: $icons-box-size / 2 - $svg-box-size;
+    }
+
+    .tab-text {
+      display: inline-block;
+    }
+  }
+
+  label {
+    cursor: pointer;
+    display: block;
+  }
+
+  input {
+    display: none;
+
+    + span {
+      display: inline-block;
+      width: 100%;
+      height: $icons-box-size;
+      position: relative;
+      line-height: $icons-box-size;
+
+      svg {
+        background-repeat: no-repeat;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: calc(50% - #{$svg-box-size});
+        left: calc(50% - #{$svg-box-size});
+        fill: #3899ec;
+      }
+    }
+
+    &:checked {
+      + span {
+        background-color: #ffffff;
+        border-top: 1px solid #d3edff;
+        border-bottom: 1px solid #d3edff;
+
+        svg {
+          fill: #162d3d;
+        }
+      }
+    }
+
+    &:not(:checked) {
+      + span {
+        box-shadow: inset -1px 0px 0px 0px #e5f4ff,
+        inset -2px 0px 0px 0px #d3edff;
+      }
+
+      + span {
+        &:hover {
+          background-color: #d3edff;
+        }
+      }
+
+    }
+  }
+
+  label:first-child {
+    input {
+      &:checked {
+        + span {
+          border-top: none;
+          border-bottom: 1px solid #d3edff;
+        }
+      }
+    }
+  }
+
+  label:last-child {
+    input {
+      &:checked {
+        + span {
+          //border-top: 1px solid #d3edff;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

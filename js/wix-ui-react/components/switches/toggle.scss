@@ -1,0 +1,19 @@
+.control-switch {
+  position: relative;
+  padding: 22px 24px 20px;
+  display: block;
+
+  .info-icon {
+    opacity: 0;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    transition-property: opacity;
+    transition-duration: .15s;
+  }
+
+  &:hover .info-icon {
+    opacity: 1;
+  }
+
+}

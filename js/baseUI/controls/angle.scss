@@ -1,0 +1,145 @@
+@import "../framework/framework";
+
+.control-angle .disabled {
+  opacity: 0.4;
+}
+
+.control-angle {
+  $control-color: #d6e1e8;
+  $left-inputs-padding: 48px;
+  $center-circle-radius: 3px;
+  $knob-outer-radius: 8px;
+  $control-radius: 36px;
+  $outer-circle-width: 4px;
+  position: relative;
+  height: $control-radius * 3;
+
+  .circle {
+    top: 32px;
+    left: $left-inputs-padding;
+    width: $control-radius * 2;
+    height: $control-radius * 2;
+    border-radius: 50%;
+    border: solid $outer-circle-width $control-color;
+    position: absolute;
+    box-sizing: border-box;
+
+    &.disabled {
+      opacity: 0.4;
+    }
+
+      &:hover {
+      .knob {
+        background-color: #86ccf7;
+        box-shadow: 0px 0px 4px 1px rgba(25, 94, 153, 0.3),
+        0px 0px 8px 1px #86ccf7;
+      }
+    }
+
+    &:active {
+
+      body {
+        background-color: red;
+      }
+
+      >.circle-center {
+        background-color: #0199ef;
+      }
+
+      &:after {
+        border: solid 1px #0199ef;
+      }
+
+      /*user-select: none;*/
+      .knob {
+        box-shadow: 0px 0px 4px 1px rgba(25, 94, 153, 0.3),
+        0px 0px 8px 1px #86ccf7;
+        background-color: #0199ef;
+      }
+
+      + .input-stepper {
+        background-color: #edf7ff;
+
+        * {
+          background-color: #edf7ff;
+        }
+      }
+    }
+
+    >.circle-center {
+      width: $center-circle-radius * 2;
+      height: $center-circle-radius * 2;
+      border-radius: 50%;
+      position: absolute;
+      background-color: $control-color;
+      top: calc(50% - #{$center-circle-radius});
+      left: calc(50% - #{$center-circle-radius});
+    }
+
+    &:after {
+      width: 0;
+      height: $control-radius - $outer-circle-width;
+      content: '';
+      position: absolute;
+      border: solid 1px #d6e1e8;
+      z-index: -1;
+      left: $control-radius - $outer-circle-width - 1;
+    }
+
+    .knob {
+      position: absolute;
+      cursor: pointer;
+      width: $knob-outer-radius * 2;
+      height: $knob-outer-radius * 2;
+      background-color: #3899ec;
+      border-radius: 50%;
+      border: solid 4px #fff;
+      box-shadow: 0px 0px 4px 1px rgba(25, 94, 153, 0.3);
+      box-sizing: border-box;
+      top: -1 * ($knob-outer-radius + 1px);
+      left: calc(50% - #{$knob-outer-radius});
+    }
+
+  }
+
+  &:hover {
+    .input-stepper, .input-stepper > * {
+      background-color: #edf7ff;
+    }
+  }
+
+  .input-stepper {
+    position: absolute;
+    top: 52px;
+    left: 18px + (2 * ($control-radius)) + $left-inputs-padding;
+    width: 40px;
+
+    .units {
+      height: 28px;
+      line-height: 28px;
+
+    }
+
+    .input {
+      height: 28px;
+      line-height: 28px;
+    }
+
+    &.has-units {
+      .input {
+        width: 78%;
+      }
+    }
+  }
+
+  label {
+    width: 54px;
+    color: $g-color-d2;
+    font-size: 14px;
+    font-family: $g-font45;
+
+    input {
+      display: none;
+    }
+  }
+}

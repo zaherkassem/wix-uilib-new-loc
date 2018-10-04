@@ -1,0 +1,17 @@
+@mixin symbol-up($name) {
+  .symbol-#{$name} {
+    @content;
+  }
+}
+
+@mixin symbol-hover($name) {
+  .symbol-#{$name}:hover {
+    @content;
+  }
+}
+
+@mixin symbol-down($name) {
+  .symbol-#{$name}:active {
+    @content;
+  }
+}

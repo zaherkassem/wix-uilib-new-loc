@@ -1,0 +1,8 @@
+@import "../../../baseUI/src/main/framework/framework";
+
+@include symbol-up(firstTimeInfoBoxArrowRight) {
+  cursor: pointer;
+  position: relative;
+  padding-left: 9px;
+  stroke: $g-color-b1;
+}

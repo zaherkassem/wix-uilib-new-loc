@@ -1,0 +1,4 @@
+<!--suppress CheckEmptyScriptTag -->
+<inputComp rt-scope="this.getInputComponent() as inputComp"
+           ref="inputComp"
+           rt-props="this.getPropsForInputComponent()"/>

@@ -1,0 +1,67 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(scroll-fx-strip-bg-reveal) {
+  .st1 {
+    fill: #A5DBF9;
+  }
+
+  .st2 {
+    fill: $g-color-d6;
+  }
+
+  .st3 {
+    fill: $g-color-b5;
+  }
+
+  .st4 {
+    fill: $g-color-b2;
+  }
+
+  .st5 {
+    fill: $g-color-b2;
+    opacity: 0.9;
+  }
+
+  .st6 {
+    fill: $g-color-b3;
+  }
+
+  .st7 {
+    fill: $g-color-b4;
+  }
+}
+
+@include toggle-selected-up(scroll-fx-strip-bg-reveal) {
+  .st1 {
+    fill: $g-color-b2;
+    opacity: 0.7;
+  }
+
+  .st2 {
+    fill: $g-color-b3;
+  }
+
+  .st3 {
+    fill: $g-color-b3;
+    opacity: 0.6;
+  }
+
+  .st4 {
+    fill: $g-color-b4;
+  }
+
+  .st5 {
+    fill: $g-color-b4;
+    opacity: 0.9;
+  }
+
+  .st6 {
+    fill: $g-color-b3;
+  }
+
+  .st7 {
+    fill: $g-color-b3;
+  }
+}
+
+

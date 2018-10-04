@@ -1,0 +1,6 @@
+<rt-require dependency="textControls/comps/iconButton" as="iconButton"/>
+
+<iconButton
+        name="Link"
+        rt-props="this.props"
+        onClick="{this.openLinkDialog}" />

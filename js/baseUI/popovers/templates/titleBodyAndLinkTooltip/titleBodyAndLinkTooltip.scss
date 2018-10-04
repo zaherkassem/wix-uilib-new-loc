@@ -1,0 +1,29 @@
+@import "../../../framework/framework";
+
+.titleBodyAndLinkTooltip {
+  white-space: normal;
+  max-width: 300px;
+  padding: 18px;
+
+  .title {
+    @include g-font-f01();
+    color: $g-color-d2;
+    margin-bottom: 6px;
+  }
+
+  .text {
+    @include g-font-f03();
+    color: $g-color-d2;
+  }
+
+  .link {
+    @include g-font-f03();
+    color: $g-color-b1;
+    cursor: pointer;
+    margin-top: 11px;
+
+    :hover {
+      text-decoration: underline;
+    }
+  }
+}

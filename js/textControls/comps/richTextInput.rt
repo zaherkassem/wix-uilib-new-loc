@@ -1,0 +1,62 @@
+<rt-require dependency="ckeditor" as="ck"/>
+<rt-require dependency="textControls/comps/iconButton" as="iconButton"/>
+<rt-require dependency="textControls/comps/textColor" as="textColor"/>
+<rt-require dependency="textControls/comps/fontFamily" as="fontFamily"/>
+<rt-require dependency="textControls/comps/textStyle" as="textStyle"/>
+<rt-require dependency="textControls/comps/textPopup" as="textPopup"/>
+<rt-require dependency="textControls/comps/lineHeight" as="lineHeight"/>
+<rt-require dependency="textControls/comps/iconsDropDown" as="iconsDropDown"/>
+<rt-require dependency="textControls/comps/textBackgroundColor" as="textBackgroundColor"/>
+<rt-require dependency="textControls/utils/constants" as="CONSTANTS"/>
+<rt-require dependency="baseUI" as="UI"/>
+
+
+<div class="{this.getClassName('rich-text-input-control')} {this.props.hideToolbar ? '' : 'with-toolbar'}" rt-props="this.getPosition()" onClick="{this.handleClick}" ref="textStyle">
+    <div class="rich-text-toolbar" key="richTextToolBar" rt-if="!this.props.hideToolbar" rt-scope="UI.uiConstants.TOOLTIP.STYLE_TYPE.SMALL as smallDesign">
+        <section>
+            <textStyle value="{this.getFormatBlockValue()}" themeColors="{this.props.themeColors}" ref="textStyle" tooltipStyleType="{smallDesign}"
+                       themeFonts="{this.props.themeFonts}" toolbarMode="{true}"
+                       hasSmallArrow="{true}" tooltipValue="text_editor_theme_label" optionsWidth="{264}"
+                       onChange="(value)=>this.execFormatBlockCommand(value)"/>
+            <fontFamily ref="fontFamily" tooltipStyleType="{smallDesign}"
+                        value="{this.getValue('fontFamily')}"
+                        onChange="(value)=>this.changeFontFamily(value)" tooltipValue="text_editor_font_label"
+                        fonts="{this.props.fonts}" toolbarMode="{true}"/>
+            <textPopup label="{this.getValue('fontSize')} px" width="{71}" ref="fontSizePopUp">
+                <UI.slider label="text_editor_font_size_label" id="font-size-slider" value="{this.getValue('fontSize')}" min={6} max="{176}" stepperMax="{999}" onChange="(value)=>this.execCommand('fontSize', value + 'px')" onSlideEnd="{this.focus}"/>
+            </textPopup>
+            <iconButton rt-props="this.getBoldProps()"/>
+            <iconButton rt-props="this.getItalicProps()"/>
+            <iconButton isSelected="{this.getBooleanValue('underline')}" onClick="()=>this.execCommand('underline')" name="textUnderline" tooltipValue="{this.getTooltipValue('underline', 'U')}" tooltipStyleType="{smallDesign}"/>
+            <textColor value="{this.getValue('foreColor')}" onClick="()=>this.openColorPicker(true)" tooltipValue="{this.getTooltipValue('text_color')}" tooltipStyleType="{smallDesign}" ref="foreColorButton"/>
+            <textBackgroundColor ref="backColorButton" color="{this.getBackColorValue()}" onClick="()=>this.handleColorClick(false)" handleNoColor="{this.execNoBackColor}"
+                                            tooltipValue="{this.getTooltipValue('text_highlight')}" tooltipStyleType="{smallDesign}"/>
+
+            <iconButton isSelected="{this.hasLink()}" onClick="{this.openLinkDialog}" name="textLink" tooltipValue="{this.getTooltipValue('link')}" tooltipStyleType="{smallDesign}"/>
+            <iconButton onClick="()=>this.execCommand('resetTheme')" name="textRemoveFormat" tooltipValue="text_editor_reset_button" tooltipStyleType="{smallDesign}"/>
+            <span class="expand-toolbar-button" onClick="()=>this.toggleToolbar()">
+                <span  class="more-text" key="richTextToolBarMore" rt-if="!this.state.extraToolbarOpened"><UI.symbol name="accordionClose"></UI.symbol><span>{this.translateIfNeeded('list_dbe_edit_item_text_toolbar_more')}</span></span>
+                <span class="less-text" key="richTextToolBarLess" rt-if="this.state.extraToolbarOpened"><UI.symbol name="accordionOpen"></UI.symbol><span>{this.translateIfNeeded('list_dbe_edit_item_text_toolbar_less')}</span></span>
+            </span>
+        </section>
+        <div key="richTextToolBarDivider" rt-if="this.state.extraToolbarOpened" class="toolbar-divider"></div>
+        <section key="richTextToolBarExtraControls" rt-if="this.state.extraToolbarOpened">
+            <iconsDropDown ref="textAlign" className="align-dd" value="{this.getTextAlignment()}" onChange="(value)=>this.changeAlignment(value)" items="{CONSTANTS.ALIGNMENT_TYPES}" tooltipValue="{this.getTooltipValue('alignment')}" tooltipStyleType="{smallDesign}"/>
+            <iconsDropDown ref="textBullets" className="bullets-dd" value="{this.getListType()}" onChange="(value)=>this.execListCommand(value)" items="{this.getBulletsItems()}" tooltipValue="{this.getTooltipValue('bullets_and_numbering')}" tooltipStyleType="{smallDesign}" fixedIconName="{this.getBulletsIconName()}"/>
+
+            <iconButton onClick="()=>this.execCommand('outdent')" name="{(this.getBooleanValue('bidiltr')) ? 'textOutdentLeft' : 'textOutdentRight'}" tooltipValue="{this.getTooltipValue('decrease_indent')}" tooltipStyleType="{smallDesign}"/>
+            <iconButton onClick="()=>this.execCommand('indent')" name="{(this.getBooleanValue('bidiltr')) ? 'textIndentLeft' : 'textIndentRight'}" tooltipValue="{this.getTooltipValue('increase_indent')}" tooltipStyleType="{smallDesign}"/>
+            <textPopup iconName="textLineHeight" ref="lineHeightPopUp">
+                <lineHeight value="{this.getLineHeightValue()}" onChange="(value)=>this.execLineHeightCommand(value)"  onSlideEnd="{this.focus}" />
+            </textPopup>
+            <textPopup iconName="textCharSpacing" ref="charSpacingPopUp">
+                <UI.slider value="{this.getLetterSpacingValue()}" min="{-0.1}" max="{0.7}" stepperMin="{-0.4}" stepperMax="{3}" step="{0.05}" onChange="(value)=>this.execCommand('letterSpacing', value + 'em')" label="text_editor_character_spacing_label"  onSlideEnd="{this.focus}"/>
+            </textPopup>
+            <iconButton onClick="()=>this.execCommand('bidiltr')"  key="richTextWriteLTR" rt-if="this.getBooleanValue('bidirtl')" name="textWriteDirectionLeft" tooltipValue="{this.getTooltipValue('text_direction')}" tooltipStyleType="{smallDesign}"/>
+            <iconButton onClick="()=>this.execCommand('bidirtl')"  key="richTextWriteRTL" rt-if="this.getBooleanValue('bidiltr')" name="textWriteDirectionRight" tooltipValue="{this.getTooltipValue('text_direction')}" tooltipStyleType="{smallDesign}"/>
+        </section>
+    </div>
+    <div class="rich-text-content">
+        <div ref="editorContainer"/>
+    </div>
+</div>

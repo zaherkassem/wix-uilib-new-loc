@@ -1,0 +1,19 @@
+@import "../../framework/framework";
+
+$button-name: btn-back;
+
+@include button-up($button-name) {
+  min-width: 67px;
+  height: 21px;
+  background-color: $g-color-b5;
+}
+
+@include button-up($button-name, label) {
+  color: $g-color-b1;
+  font-size: 13px;
+//  @include vertical-align-font-size(13px);
+}
+
+@include button-hover($button-name) {
+  background-color: $g-color-b4;
+}

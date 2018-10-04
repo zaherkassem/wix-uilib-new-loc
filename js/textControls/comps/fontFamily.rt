@@ -1,0 +1,23 @@
+<rt-require dependency="baseUI" as="UI"/>
+
+<UI.tooltip value="{this.props.tooltipValue}" disabled="{!this.props.tooltipValue}"
+            styleType="{this.props.tooltipStyleType}">
+    <div style="display: inline;">
+        <UI.dropDown.combobox label="{this.props.label}" ref="combobox" optionsWidth="{this.props.optionsWidth}" autotranslate="{false}"
+                              valueLink="{this.props.valueLink}" value="{this.props.value}"
+                              className="font-family-dd {this.props.toolbarMode ? 'toolbar-mode' : ''}"
+                              onChange="{this.props.onChange}" infoText="{this.props.infoText}"
+                              infoTitle="{this.props.infoTitle}">
+            <UI.dropDown.option rt-repeat="font in this.state.fontsItems" value="{font.value}"
+                                class="font-option {this.props.optionsClass ? this.props.optionsClass : ''}"
+                                key="{this.props.value}">
+                <div class="font-option-container">
+                    <div class="font-image" style="{font.style}"></div>
+                    <span class="font-label">{font.label}</span></div>
+            </UI.dropDown.option>
+            <UI.dropDown.footer rt-if="this.props.footerText && (this.props.footerOnClick || this.props.footerText)"
+                                key="font_family_footer"><span onClick="{this.handleFooterOnClick}">{this.props.footerText}</span>
+            </UI.dropDown.footer>
+        </UI.dropDown.combobox>
+    </div>
+</UI.tooltip>

@@ -1,0 +1,45 @@
+<rt-require dependency="baseUI/controls/button" as="BaseButton"/>
+<rt-require dependency="baseUI/popovers/tooltip" as="tooltip"/>
+<rt-require dependency="baseUI/framework/uiConstants" as="uiConstants"/>
+<rt-require dependency="symbols" as="symbols"/>
+
+<div class="domain-input-with-buttons">
+    <span class="address-part">
+        <span class="mini-toolbar">
+            <symbols.symbol name="addressBarMiniToolbar"/>
+        </span>
+
+        <div class="full-domain-wrapper{!this.state.isEditingDisabled ? ' focus' : ''}">
+            <div rt-if="this.props.prefix" key="domainPrefix" ref="prefix" class="domain-prefix" onClick="{this.reportPrefixClicked}">{this.props.prefix}</div>
+            <span class="input-wrapper">
+                <input ref="domain"
+                       type="text"
+                       class="{this.state.invalidMessage ? 'invalid' : ''}"
+                       value={this.state.value}
+                       onChange="{this.handleChange}"
+                       onKeyDown="{this.handleInputKeyDown}"
+                       onClick="{this.reportValueClickedIfNeeded}"
+                       onBlur="{this.reportInvalidValueIfNeeded}"
+                       disabled="{this.state.isEditingDisabled}"
+                       spellcheck="false"/>
+            </span>
+            <tooltip class="domain-tooltip" id="{this.getTooltipId()}" value="{this.state.invalidMessage}" alignment="{uiConstants.TOOLTIP.ALIGNMENT.TOP}" openTriggers="{[]}" closeTriggers="{[]}">
+                <div class="tooltip-anchor"></div>
+            </tooltip>
+        </div>
+    </span>
+
+    <div rt-if="this.props.isEditable" key="buttonsContainer" class="button-container">
+        <BaseButton class="edit-button{this.shouldDisplayEditButton() ? ' displayed' : ''}" label="SAVE_SITE_SAVED_BUTTON_EDIT"
+                    onClick="{this.enableEditing}"/>
+        <div class="dual-button-container{this.shouldDisplayApplyCancelButtons() ? ' displayed' : ''}">
+            <button class="cancel-button" onClick="{this.cancelEditing}">
+                <symbols.symbol name="x"/>
+            </button>
+            <button class="apply-button" disabled="{!!this.state.invalidMessage}"
+                    onClick="{this.applyEditing}">
+                <symbols.symbol name="check"/>
+            </button>
+        </div>
+    </div>
+</div>

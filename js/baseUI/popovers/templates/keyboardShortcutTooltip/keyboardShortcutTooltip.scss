@@ -1,0 +1,14 @@
+@import "../../../framework/framework";
+
+.keyboardShortcutTooltip {
+  .label {
+    @include g-font-f04();
+    color: $g-color-d2;
+  }
+
+  .shortcut {
+    @include g-font-f07();
+    color: $g-color-d3;
+    margin-left: 2px;
+  }
+}

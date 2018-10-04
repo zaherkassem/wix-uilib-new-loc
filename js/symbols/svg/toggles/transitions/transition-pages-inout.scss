@@ -1,0 +1,69 @@
+@import "../../../../../baseUI/src/main/framework/framework";
+
+// regular - up
+@include toggle-regular-up(transition-pages-inout) {
+  .st2 {
+    fill: #79C8F9;
+  }
+
+  .st3 {
+    fill: #9DD8F9;
+  }
+
+  .st4 {
+    fill: #8ED1F9;
+  }
+
+  .st5 {
+    fill: #5FBEF7;
+  }
+
+  .st6 {
+    fill: #7DCAF8;
+  }
+
+  .st7,
+  .st9,
+  .st10 {
+    fill: #DDF1FF;
+  }
+
+  .st8,
+  .st11 {
+    fill: #AFDEFC;
+  }
+}
+
+// selected - up
+@include toggle-selected-up(transition-pages-inout) {
+  .st2 {
+    fill: #A9D6FA;
+  }
+
+  .st3 {
+    fill: #C9E3FA;
+  }
+
+  .st4 {
+    fill: #95CBF8;
+  }
+
+  .st5 {
+    fill: #C2E4FD;
+  }
+
+  .st6 {
+    fill: #DDEFFD;
+  }
+
+  .st7,
+  .st9,
+  .st10 {
+    fill: #63B8F3;
+  }
+
+  .st8,
+  .st11 {
+    fill: #90D0F9;
+  }
+}

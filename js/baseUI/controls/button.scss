@@ -1,0 +1,242 @@
+@import "../framework/framework";
+
+.control-button {
+  @include g-font-f02();
+  height: 36px;
+  line-height: 16px;
+  padding: 0 24px;
+  border-radius: 18px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 0;
+  outline: none;
+  background-color: $g-color-b1;
+  color: #fff;
+  @include ellipsis();
+
+  svg {
+    background: transparent;
+
+    * {
+      fill: #fff;
+    }
+  }
+
+  &:hover {
+    background-color: $g-color-b2;
+  }
+
+  &:active {
+    background-color: $g-color-b1;
+  }
+
+  &[disabled] {
+    color: #fff;
+    background-color: $g-color-b1x;
+  }
+
+  &.btn-big {
+    @include g-font-f01();
+  }
+
+  &.btn-md {
+    @include g-font-f03();
+    height: 30px;
+    line-height: 14px;
+    padding: 0 18px;
+    border-radius: 15px;
+  }
+
+  &.btn-sm {
+    @include g-font-f03();
+    height: 24px;
+    line-height: 14px;
+    padding: 0 18px;
+    border-radius: 15px;
+  }
+
+  &.btn-back {
+    min-width: 67px;
+    height: 21px;
+    line-height: 21px;
+    color: $g-color-b1;
+    background-color: $g-color-b5;
+    font-weight: 300;
+    font-size: 13px;
+    margin: 15px 0px 15px 12px;
+    text-align: center;
+
+    &:hover {
+      color: $g-color-b1;
+      background-color: $g-color-b4;
+    }
+
+    svg * {
+      fill: $g-color-b1;
+    }
+  }
+
+  &.btn-danger-primary {
+    background-color: $g-color-r1;
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+      background-color: $g-color-r2;
+    }
+
+    &:active {
+      color: #fff;
+      background-color: $g-color-r1;
+    }
+  }
+
+  &.btn-danger-secondary {
+    background-color: $g-color-r4;
+    color: $g-color-r1;
+
+    &:hover {
+      color: $g-color-r1;
+      background-color: $g-color-r3;
+    }
+
+    &:active {
+      color: $g-color-r1;
+      background-color: $g-color-r4;
+    }
+
+    svg * {
+      fill: $g-color-r1;
+    }
+  }
+
+  &.btn-confirm-primary {
+    background-color: $g-color-b1;
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+      background-color: $g-color-b2;
+    }
+
+    &:active {
+      color: #fff;
+      background-color: $g-color-b1;
+    }
+
+    &[disabled] {
+      color: #fff;
+      background-color: $g-color-b1x;
+    }
+  }
+
+  &.btn-confirm-secondary {
+    background-color: $g-color-b5;
+    color: $g-color-b1;
+
+    &:hover {
+      color: $g-color-b1;
+      background-color: $g-color-b4;
+    }
+
+    &:active {
+      color: $g-color-b1;
+      background-color: $g-color-b5;
+    }
+
+    svg * {
+      fill: $g-color-b1;
+    }
+
+    &[disabled] {
+      color: $g-color-b1x;
+      background-color: $g-color-b5x;
+
+      svg * {
+        fill: $g-color-b1x;
+      }
+    }
+  }
+
+  &.btn-text {
+    background: none;
+    border-radius: 0;
+    font-size: 18px;
+    color: $g-color-b1;
+    padding: 0;
+
+    &:hover {
+      color: $g-color-b1;
+      text-decoration: underline;
+    }
+  }
+
+  &.btn-upgrade {
+    @include g-font-f03();
+    background-color: $g-color-p1;
+    color: #fff;
+    height: 30px;
+    padding: 9px 24px 8px 23px;
+    line-height: 14px;
+  }
+
+  &.btn-upgrade-nav {
+    @include g-font-f03();
+    background-color: transparent;
+    color: #cd68ed;
+    height: 32px;
+    padding: 10px 14px 9px 13px;
+    line-height: 14px;
+
+    &:hover {
+      background-color: rgba(238, 219, 244, 0.7);
+    }
+  }
+
+  &.btn-upgrade-link {
+    @include g-font-f03();
+    background-color: transparent;
+    color: $g-color-p1;
+    line-height: 16.8px;
+    &:hover {
+      color: $g-color-p2;
+    }
+  }
+
+  &.btn-upgrade-banner {
+    @include g-font-f03();
+    color: $g-color-p1;
+    background-color: $g-color-p4;
+    line-height: 19.2px;
+    size: 16px;
+
+    &:hover {
+      opacity: 0.7;
+      color: #9a4cc6;
+    }
+  }
+
+  &.btn-nav {
+    @include g-font-f03();
+    box-sizing: border-box;
+    background-color: transparent;
+    padding: 6px 14px 6px;
+    margin: 0 0 4px;
+    border-radius: 20px;
+    color: $g-color-d2;
+    display: inline-block;
+    size: 14px;
+    &:hover {
+      background-color: rgba(211,237,255,.7);
+    }
+  }
+
+  .symbol-with-label {
+    margin-right: 8px;
+  }
+}
+
+.button-wrapper-center {
+  text-align: center;
+  margin-bottom: 15px;
+}

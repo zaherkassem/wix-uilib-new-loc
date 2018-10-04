@@ -1,0 +1,64 @@
+@import "../../../../../packages/baseUI/src/main/framework/framework.scss";
+
+/*.font-family-footer {
+  > a {
+    @include g-font-f03();
+    color: $g-color-b1;
+    text-decoration: none;
+    margin: 11px 12px;
+    display: inline-block;
+    line-height: 13px;
+  }
+}*/
+
+.font-family-dd {
+  &.toolbar-mode {
+    display: inline-block;
+    vertical-align: middle;
+
+    i.expand.arrow {
+      border: none !important;
+      width: 9px !important;
+      opacity: 1 !important;
+      right: 8px !important;
+
+      svg {
+        width: 9px;
+        padding: 0;
+      }
+
+      &:hover {
+        background-color: transparent !important;
+
+        svg {
+          fill: $g-color-b1 !important;
+        }
+      }
+    }
+  }
+}
+
+.dropdown-options {
+  .font-option {
+    height: 24px !important;
+  }
+  .font-option .font-label {
+    display: none;
+  }
+}
+
+.selected-container {
+  .font-image {
+    display: none;
+  }
+  .font-label{
+    height: 36px;
+    line-height: 36px;
+    min-height: 36px;
+    overflow: hidden;
+    padding-right: 30px;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

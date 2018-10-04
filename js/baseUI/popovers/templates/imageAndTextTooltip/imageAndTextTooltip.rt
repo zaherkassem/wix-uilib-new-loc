@@ -1,0 +1,25 @@
+<rt-require dependency="util" as="util"/>
+<rt-require dependency="symbols" as="symbols"/>
+<rt-require dependency="baseUI/framework/uiConstants" as="uiConstants"/>
+
+<div class="imageAndTextTooltip">
+    <div rt-if="this.props.calculatedAlignment === uiConstants.TOOLTIP.ALIGNMENT.TOP && !!this.props.image"
+         key="upperImage" class="image-container upper-image" style="{this.getImageContainerStyle()}">
+        <symbols.symbol name="{this.props.image}"/>
+    </div>
+
+    <div class="text-container {!this.props.image ? 'text-no-image' : ''}">
+        <div class="title" rt-if="!!this.props.title" key="tooltipTitle">{util.translate(this.props.title)}</div>
+        <div class="text" rt-if="!!this.props.text" key="tooltipText">{util.translate(this.props.text)}</div>
+        <div class="learn-more"
+             rt-if="!!this.props.linkAction"
+             onClick="{this.onLinkClick}"
+             key="learnMore">{util.translate(this.props.learnMoreText)}
+        </div>
+    </div>
+
+    <div rt-if="this.props.calculatedAlignment === uiConstants.TOOLTIP.ALIGNMENT.BOTTOM && !!this.props.image"
+         key="lowerImage" class="image-container lower-image" style="{this.getImageContainerStyle()}">
+        <symbols.symbol name="{this.props.image}"/>
+    </div>
+</div>

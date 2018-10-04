@@ -1,0 +1,25 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include button-up(undo-btn) {
+  .st1 {
+    fill: $g-color-e4;
+  }
+}
+
+@include button-hover(undo-btn) {
+  .st1 {
+    fill: $g-color-b2;
+  }
+}
+
+@include button-down(undo-btn) {
+  .st1 {
+    fill: $g-color-e4;
+  }
+}
+
+@include button-disabled(undo-btn) {
+  .st1 {
+    fill: $g-color-e4x;
+  }
+}

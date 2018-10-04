@@ -1,0 +1,25 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include button-up(video-btn) {
+  .st0 {
+    fill: $g-color-b1;
+  }
+}
+
+@include button-hover(video-btn) {
+  .st0 {
+    fill: $g-color-b1;
+  }
+}
+
+@include button-down(video-btn) {
+  .st0 {
+    fill: $g-color-b1;
+  }
+}
+
+@include button-disabled(video-btn) {
+  .st0 {
+    fill: $g-color-b1x;
+  }
+}

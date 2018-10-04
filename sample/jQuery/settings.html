@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="//fb.me/react-with-addons-0.13.0.js"></script>
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js"></script>
+    <script src="//static.parastorage.com/services/js-sdk/1.61.0/js/wix.min.js"></script>
+    <title></title>
+    <style>
+        #app {
+            margin: 20px;
+        }
+        .header {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .header .icon {
+            flex: initial;
+            padding-right: 20px;
+            border-right: 1px solid #eaf7ff;
+        }
+
+        .header .right {
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+            padding-left: 10px;
+        }
+
+        .header .right .container {
+            flex-direction: column;
+        }
+
+        .header .right .container .button {
+            float: right;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div>
+
+    <script src="../../lib/ui-lib-jquery.js"></script>
+    <div wix-ctrl="appTabs" wix-options="{defaultTabIndex:1}">
+        <div tab="first tab">
+            first tab
+            <div id="toggleButtons" wix-ctrl="toggleButtons"
+                 wix-options="{ defaultValue: '2',
+                 title: 'title',
+                 infoText: 'fooo',
+                 infoTitle: 'bllaaa',
+                 options: [
+                    { value: '1', label: 'first'},
+                    { value: '2', label: 'second'}
+                    ]}">
+            </div>
+        </div>
+        <div tab="tab2" class="tab">
+            <div id="teaserPopup" wix-ctrl="TeaserPopup"></div>
+            <div>
+                <div id="radioButtons" wix-ctrl="RadioButtons" wix-options="{label: 'How many images to sync?', infoTitle: 'my radio info title', infoText: 'my radio info title', defaultValue:'3', options:[{ value: '1', title: 'Sync 10 images', className: 'firstOne'},{ value: '2', label: 'Sync 25 images', className: 'differentOne'},{ value: '3', label: 'Sync 50 images'}]}" wix-param="myRadioButtonsValue"></div>
+            </div>
+        </div>
+        <div tab="tab3">
+            <section wix-ctrl="Tabs" wix-options="{defaultValue:'tab1'}" class="tabs" style="margin: 0px">
+                <ul class="tab-header">
+                    <li class="tab-label" data-tab="tab0"><div>Tab 1</div></li>
+                    <li class="tab-label" data-tab="tab1"><div>Tab 2</div></li>
+                    <li class="tab-label" data-tab="tab2"><div>Tab 3</div></li>
+                </ul>
+                <section class="tab-content">
+                    <div data-tab="tab0" class="tab" style="height:300px">
+                        Tab content 0
+                    </div>
+                    <div data-tab="tab1" class="tab">
+                        Tab content 1
+                    </div>
+                    <div data-tab="tab2" class="tab">
+                        Tab content 2
+                    </div>
+                </section>
+            </section>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+
+        });
+    </script>
+</body>
+</html>

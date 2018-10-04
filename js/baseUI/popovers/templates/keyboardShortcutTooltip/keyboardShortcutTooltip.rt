@@ -1,0 +1,5 @@
+<rt-require dependency="util" as="util"/>
+<div class="keyboardShortcutTooltip">
+    <span class="label" rt-if="!!this.props.label" key="label">{util.translate(this.props.label)}</span>
+    <span class="shortcut" rt-if="!!this.props.shortcut" key="shortcut">({this.props.shortcut})</span>
+</div>

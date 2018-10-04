@@ -1,0 +1,6 @@
+<rt-require dependency="baseUI/controls/dock" as="dock"/>
+<dock label="{this.props.title}"
+      onChange="{this.handleChange}"
+      value="{this.state.value}"
+      onPreviewHover="{this.props.onPreviewHover}">
+</dock>

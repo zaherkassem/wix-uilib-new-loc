@@ -1,0 +1,15 @@
+<rt-require dependency="baseUI/panelInputs/textInputWithButton" as="textInputWithButton"/>
+<textInputWithButton
+    valueLink="{this.getValueLink('value')}"
+    label="{this.props.title}"
+    placeholder="{this.props.placeholder}"
+    validator="{this.props.validator}"
+    asyncValidator="{this.props.asyncValidator}"
+    infoText="{this.props.infoText}"
+    infoTitle="{this.props.infoTitle}"
+    invalidMessage="{this.props.invalidMessage}"
+    defaultText="{this.props.defaultText}"
+    buttonLabel="{this.props.buttonText}"
+    maxLength="{this.props.maxLength}"
+    multiLine="{this.props.isMultiLine}">
+</textInputWithButton>

@@ -1,0 +1,51 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+@include toggle-regular-up(save2) {
+  .st1 {
+    fill: $g-color-e4;
+  }
+
+  .st2 {
+    fill: transparent;
+  }
+}
+
+@include toggle-regular-hover(save2) {
+  .st1 {
+    fill: $g-color-b2;
+  }
+
+  .st2 {
+    fill: transparent;
+  }
+}
+
+@include toggle-regular-down(save2) {
+  .st1 {
+    fill: $g-color-e4;
+  }
+
+  .st2 {
+    fill: transparent;
+  }
+}
+
+@include toggle-regular-disabled(save2) {
+  .st1 {
+    fill: $g-color-e4x;
+  }
+
+  .st2 {
+    fill: transparent;
+  }
+}
+
+@include toggle-indeterminate-disabled(save2) {
+  .st1 {
+    fill: transparent;
+  }
+
+  .st2 {
+    fill: $g-color-b1;
+  }
+}

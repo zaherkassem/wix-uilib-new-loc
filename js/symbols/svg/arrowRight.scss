@@ -1,0 +1,19 @@
+@import "../../../baseUI/src/main/framework/framework";
+
+@include symbol-up(arrowRight) {
+  fill: none;
+  stroke-width: 1px;
+  stroke: 000;
+
+  //overrides:
+  .section-footer & {
+    vertical-align: middle;
+    margin-left: 6px;
+    width: 4px;
+    height: 7px;
+
+    .c1 {
+      stroke: $g-color-b1;
+    }
+  }
+}

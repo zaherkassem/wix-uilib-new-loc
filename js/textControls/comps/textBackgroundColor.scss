@@ -1,0 +1,36 @@
+@import "../../../../../packages/baseUI/src/main/framework/framework.scss";
+
+.back-color-dd {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 8px;
+
+  svg{
+    fill: $g-color-d2;
+  }
+
+  &:hover {
+    background-color: $g-color-b5;
+  }
+
+  &:active {
+    background-color: $g-color-b2;
+    svg {
+      fill: #ffffff !important;
+    }
+  }
+
+  .selected-container {
+    height: 32px !important;
+    line-height: 32px !important;
+    min-height: 32px !important;
+    width: 32px;
+    padding-right: 0 !important;
+
+    .symbol-textBackColor{
+      vertical-align: middle !important;
+    }
+  }
+
+}

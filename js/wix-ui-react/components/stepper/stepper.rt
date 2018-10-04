@@ -1,0 +1,8 @@
+<rt-require dependency="baseUI/panelInputs/stepper" as="stepper"/>
+<stepper step="{this.props.step}"
+        min="{this.props.min}"
+        max="{this.props.max}"
+        units="{this.props.units}"
+        value="{this.state.value}"
+        onChange="{this.handleChange}">
+</stepper>

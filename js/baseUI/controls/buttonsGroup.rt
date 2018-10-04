@@ -1,0 +1,13 @@
+<rt-require dependency="baseUI/controls/infoIcon" as="infoIcon"/>
+<rt-require dependency="util" as="util"/>
+
+<div class="control-buttons-group">
+    <p rt-if="this.props.title" key="title">{util.translate(this.props.title)}</p>
+    <infoIcon key="infoIcon" rt-if="this.props.title && (this.props.infoText || this.props.infoTitle)" text="{this.props.infoText}" title="{this.props.infoTitle}" size="{18}"/>
+    <div class="group-buttons-container{this.props.align ? '-' + this.props.align : ''}">
+        <label rt-repeat="option in this.props.options" key="{option.value}" rt-scope="this.getValueFromProps(this.props) as selectedValue" class="{option.className}">
+            <input type="radio" name="{this.getRadioGroupId()}" value="{option.value}" checked="{option.value === selectedValue}" onChange="()=>this.handleChange(option.value);">
+            <span>{this.translateIfNeeded(option.label)}</span>
+        </label>
+    </div>
+</div>

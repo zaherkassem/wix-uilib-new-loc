@@ -1,0 +1,33 @@
+@import "../../../baseUI/src/main/framework/framework";
+
+.symbol-noLink {
+  stroke: none;
+  stroke-width: 1;
+  fill: none;
+  fill-rule: evenodd;
+
+  .plug-pin {
+    fill: #B1DDF9;
+  }
+
+  .wires {
+    stroke: #A7E3FA;
+    stroke-width: 2;
+  }
+
+  .plug-body {
+    fill: #A7E3FA;
+  }
+
+  .plug-strip {
+    fill: #5FCEF6;
+  }
+
+  .plug-shadow {
+    fill: $g-color-b5;
+  }
+
+  .white {
+    fill: #fff;
+  }
+}

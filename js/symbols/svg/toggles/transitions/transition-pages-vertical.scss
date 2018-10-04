@@ -1,0 +1,41 @@
+@import "../../../../../baseUI/src/main/framework/framework";
+
+// regular - up
+@include toggle-regular-up(transition-pages-vertical) {
+  .st2 {
+    fill: #4eb7f6;
+  }
+
+  .st3,
+  .st7,
+  .st8,
+  .st9 {
+    fill: #7fccf8;
+  }
+
+  .st4,
+  .st5,
+  .st6 {
+    fill: $g-color-b4;
+  }
+}
+
+// selected - up
+@include toggle-selected-up(transition-pages-vertical) {
+  .st2 {
+    fill: $g-color-b4;
+  }
+
+  .st3,
+  .st7,
+  .st8,
+  .st9 {
+    fill: #ffffff;
+  }
+
+  .st4,
+  .st5,
+  .st6 {
+    fill: #7fccf8;
+  }
+}

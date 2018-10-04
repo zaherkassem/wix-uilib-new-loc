@@ -1,0 +1,70 @@
+@import "../framework/framework";
+
+$item-height: 90px;
+$item-padding-hor: 24px;
+$item-padding-ver: 13px;
+$item-image-size: 90px;
+$item-arrow-size: 28px;
+$item-arrow-margin-ver: ($item-height - $item-arrow-size) / 2;
+
+$item-content-width: 148px;
+
+.listItem {
+  height: $item-height;
+  cursor: pointer;
+  padding: $item-padding-ver $item-padding-hor;
+  background-color: #ffffff;
+  display: flex;
+
+  &:hover {
+    background-color: $g-color-b5;
+  }
+
+  .image {
+    display: inline-block;
+    width: $item-image-size;
+    height: $item-image-size;
+  }
+
+  .content {
+    vertical-align: top;
+    display: inline-block;
+    width: $item-content-width;
+    margin: 9px 10px 0 16px;
+    flex: 1;
+
+    .ellipsis {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .title {
+      @include g-font-f11();
+      color: $g-color-d1;
+      margin-bottom: 6px;
+    }
+
+    .desc {
+      @include g-font-f03();
+      color: $g-color-d2;
+    }
+  }
+
+  .symbol-arrowWithStates {
+
+    width: $item-arrow-size;
+    height: $item-arrow-size;
+    margin: $item-arrow-margin-ver 0;
+
+    .st0 {
+      fill: #ffffff;
+      stroke: $g-color-b2;
+      stroke-width: 1px;
+    }
+    .st1 {
+      fill: #ffffff;
+      stroke: $g-color-b2;
+      stroke-miterlimit: 10;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.palette-displayer {
+  $panel-width: 210px;
+  $color-displayer-width: $panel-width / 5;
+  $color-displayer-height: 24px;
+  $color-displayer-width-hover: $color-displayer-width + 4;
+  $color-displayer-height-hover: 28px;
+
+  width: $panel-width;
+  .palette-color-option {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: $color-displayer-width;
+    height: $color-displayer-height;
+
+    &.white-option {
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+    }
+
+    &.selectable {
+      cursor: pointer;
+
+      @mixin color-zoom() {
+        content: "";
+        position: absolute;
+        width: $color-displayer-width-hover;
+        height: $color-displayer-height-hover;
+        background-color: inherit;
+        top: -1px;
+        left: -2px;
+        z-index: 1;
+      }
+
+      @mixin white-color-zoom() {
+        content: "";
+        position: absolute;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        width: $color-displayer-width-hover;
+        height: $color-displayer-height-hover;
+        background-color: inherit;
+        top: -2px;
+        left: -3px;
+        z-index: 1;
+      }
+
+      &.option-selected::after {
+        @include color-zoom();
+        box-sizing: border-box;
+        border: 1px solid #fff;
+        box-shadow: 0px 0px 7px 0px rgba(22, 45, 61, 0.44);
+        z-index: 2;
+      }
+
+      &:not(.option-selected):hover::after {
+        @include color-zoom();
+      }
+
+      &.white-option {
+        &.option-selected::after {
+          @include white-color-zoom();
+          z-index: 2;
+        }
+
+        &:not(.option-selected):hover::after {
+          @include white-color-zoom();
+          border: 1px solid #fff;
+          box-shadow: 0px 0px 7px 0px rgba(22, 45, 61, 0.44);
+        }
+      }
+    }
+  }
+}

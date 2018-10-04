@@ -1,0 +1,11 @@
+.symbol-handle-arrow {
+
+  .arrow {
+    fill: #fff;
+  }
+
+  &.bottom {
+    transform: scale(1, -1);
+  }
+
+}

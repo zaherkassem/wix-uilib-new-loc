@@ -1,0 +1,7 @@
+<rt-require dependency="symbols" as="symbols" />
+<label class="control-link" >
+    <input type="checkbox" defaultChecked="{this.props.value}" />
+    <div onClick="{this.props.onClick}">
+        <symbols.symbol name="linkBtn" />
+    </div>
+</label>

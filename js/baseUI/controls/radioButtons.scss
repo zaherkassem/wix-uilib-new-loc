@@ -1,0 +1,105 @@
+@import "../framework/framework";
+
+.control-radio-buttons {
+  box-sizing: border-box;
+  position: relative;
+
+  .info-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .15s;
+  }
+
+  &:hover {
+    .info-icon {
+      opacity: 1;
+    }
+  }
+
+  div {
+    margin-bottom: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @include g-font-f03();
+    color: $g-color-d2;
+  }
+
+  label {
+    display: block;
+    margin: 0 0 13px 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  span:nth-of-type(2) {
+    position: relative;
+    top: -4px;
+    display: inline;
+    color: $g-color-d1;
+    margin-left: 12px;
+    @include g-font-f04();
+  }
+
+  input {
+    display: none;
+
+    + span {
+      border-radius: 50%;
+      display: inline-block;
+      height: 17px;
+      width: 17px;
+      box-shadow: inset 0 0 0 1px $g-color-b1;
+      transition-property: background-color, border-width;
+      transition-duration: .15s;
+      box-sizing: border-box;
+    }
+
+    &:checked {
+      + span {
+        background-color: $g-color-b1;
+        box-shadow: inset 0 0 0 1px $g-color-b1, inset 0 0 0 2px #fff
+      }
+    }
+  }
+
+  &.disabled {
+    span:nth-of-type(2) {
+      color: $g-color-d2x;
+    }
+
+    input {
+      + span {
+        box-shadow: inset 0 0 0 1px $g-color-b1x;
+      }
+
+      &:checked {
+        + span {
+          background-color: $g-color-b1x;
+          box-shadow: inset 0 0 0 1px $g-color-b1x, inset 0 0 0 2px #fff
+        }
+      }
+    }
+  }
+  &:not(.disabled) {
+    label {
+      cursor: pointer;
+      &:hover {
+        input {
+          &:not(:checked) {
+            + span {
+              background-color: $g-color-b4;
+            }
+          }
+        }
+      }
+    }
+  }
+}

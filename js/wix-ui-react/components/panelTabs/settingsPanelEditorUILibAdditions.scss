@@ -1,0 +1,10 @@
+.settings-panel {
+  .color-picker-input {
+    margin: 12px 24px;
+  }
+  .color-picker-input-with-opacity-slider {
+    .color-picker-input {
+      margin: 0;
+    }
+  }
+}

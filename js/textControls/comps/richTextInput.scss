@@ -1,0 +1,110 @@
+@import "../../../../../packages/baseUI/src/main/framework/framework.scss";
+
+.rich-text-input-control {
+
+  display: flex;
+  flex-direction: column;
+
+  .rich-text-content {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .rich-text-toolbar {
+
+    margin-bottom: 12px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 2px 0px rgba(43, 86, 114, 0.2);
+    border-radius: 8px 8px 0 0;
+
+    > section {
+      margin: 0 5px;
+    }
+
+    .toolbar-divider {
+      background: $g-color-b5;
+      height: 1px;
+      width: 95%;
+      margin: 0 auto;
+    }
+
+    .extra-toolbar {
+      box-shadow: 0px 1px 2px 0px rgba(43, 86, 114, 0.2);
+    }
+
+    .icon-button {
+      margin: 4px 5px 4px 5px;
+
+      &.popup{
+        margin: 4px 0;
+      }
+    }
+
+    .writable-drop-down, .text-style-dd , .font-family-dd{
+      margin: 4px 5px;
+    }
+
+   /* .writable-drop-down i.arrow-button.without-border {
+      bottom: 14px !important;
+    }
+
+    .writable-drop-down .wdd-input > input {
+      width: 89px;
+      margin: 0 12px 0 0 !important;
+      font-size: 14px !important;
+      padding: 0 5px !important;
+      height: 32px !important;
+
+    }*/
+
+    .text-style-dd .selected-container .style-name , .font-family-dd .selected-container .font-label{
+      display: inline-block;
+      font-size: 14px !important;
+      padding-right: 0 !important;
+    }
+
+    .text-style-dd .selected-container,
+    .font-family-dd .selected-container{
+      min-height: 32px !important;
+      line-height: 32px !important;
+      height: 32px !important;
+    }
+
+    .text-style-dd .selected-container .style-name{
+      width: 64px;
+    }
+
+    .font-family-dd .selected-container .font-label{
+      width: 89px;
+    }
+
+    .back-color-dd{
+      vertical-align: middle;
+      margin: 4px 5px 4px 5px;
+
+      .icon-button{
+        margin: 0;
+      }
+    }
+
+    .expand-toolbar-button {
+      color: $g-color-d2;
+      cursor: pointer;
+
+      svg {
+        fill: $g-color-d2;
+      }
+
+      .symbol-accordionClose {
+        width: 4px;
+        padding: 0 9px;
+      }
+
+      .symbol-accordionOpen {
+        width: 7px;
+        padding: 3px 7px;
+      }
+    }
+  }
+
+}

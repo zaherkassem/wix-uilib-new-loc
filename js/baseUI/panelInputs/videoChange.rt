@@ -1,0 +1,29 @@
+<rt-require dependency="util" as="util"/>
+<rt-require dependency="baseUI/controls/button" as="UIButton"/>
+<rt-require dependency="symbols" as="symbols"/>
+
+
+<div class="{util.inheritClassName(this.props, 'control-video-change')}{this.isEmpty() ? ' empty' : ''}"
+     onMouseEnter="()=> this.setState({'isMouseHovering': true})"
+     onMouseLeave="()=> this.setState({'isMouseHovering': false})">
+
+    <iframe style="display: {this.isEmpty() ? 'none' : 'block'}" class="video" src="{this.getVideoSrc()}"></iframe>
+
+    <div rt-if="!this.isEmpty()" key="blocking-layer"
+         class="blocking-layer-{this.state.isPlaying ? 'play' : 'pause'}" onClick="{this.blockEvent}"></div>
+
+    <div rt-if="!this.isEmpty()" key="play" rt-class="{'play-button': !this.state.isPlaying,
+                                            'pause-button': this.state.isPlaying && this.state.isMouseHovering}"
+         onClick="()=> this.state.isPlaying ? this.pauseVideo() : this.playVideo()">
+        <span rt-class="{'triangle': !this.state.isPlaying, 'pause': this.state.isPlaying}"></span>
+    </div>
+
+    <span rt-if="!this.state.isPlaying && this.props.searchable" class="button-wrapper" key="search">
+        <UIButton label="{this.getButtonLabel()}" icon="magnifyingGlass" onClick="{this.openVideoSearchPanel}"/>
+    </span>
+    <div rt-if="!this.state.isPlaying" key="controls">
+        <symbols.symbol rt-if="this.isEmpty()" name="videoCamera" key="camera"/>
+        <div rt-if="this.isEmpty()" class="corner-borders top" key="top"/>
+        <div rt-if="this.isEmpty()" class="corner-borders bottom" key="bottom"/>
+    </div>
+</div>

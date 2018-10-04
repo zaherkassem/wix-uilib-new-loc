@@ -1,0 +1,9 @@
+npm-debug.log
+node_modules/
+.idea/
+build/
+_site
+lib/
+Gemfile.lock
+**/.DS_Store
+*.rt.js

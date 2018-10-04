@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36px" height="36px" viewBox="0 0 36 36">
+
+<clipPath id="clip0">
+<use xlink:href="#symbol0a"/>
+</clipPath>
+<defs>
+<rect id="symbol0a" x="0.00" y="0.00" width="36.00" height="36.00"/>
+</defs>
+<g>
+<use xlink:href="#symbol0a" fill="rgb(0,153,239)"/>
+<use clip-path="url(#clip0)" xlink:href="#symbol0a" fill="none" stroke="rgb(77,183,245)" stroke-width="4.00px"/>
+</g>
+<text transform="matrix(1,0,0,1,0.578125,13.5955)" class="style0">
+<tspan x="821.169 827.435" y="9.23">
+ab</tspan>
+</text>
+</svg>

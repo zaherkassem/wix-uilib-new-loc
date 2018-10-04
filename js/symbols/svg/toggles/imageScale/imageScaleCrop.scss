@@ -1,0 +1,43 @@
+@import "../../../../../baseUI/src/main/framework/framework";
+
+// regular - up
+@include toggle-regular-up(imageScaleCrop) {
+  .st1 {
+    fill: #4EB7F6;
+  }
+
+  .st2 {
+    fill: #D8F0FD;
+  }
+
+  .st3 {
+    fill: $g-color-b4;
+  }
+
+  .st4 {
+    fill: #A4DAFB;
+  }
+}
+
+// selected - up
+@include toggle-selected-up(imageScaleCrop) {
+  .st1 {
+    fill: $g-color-b4;
+  }
+
+  .st2 {
+    fill-opacity: 0.3;
+  }
+
+  .st3 {
+    fill: #7FCCF8;
+  }
+
+  .st4 {
+    fill: #A1D9FA;
+  }
+}
+
+
+
+

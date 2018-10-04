@@ -1,0 +1,12 @@
+<rt-require dependency="symbols" as="symbols"/>
+<rt-require dependency="baseUI" as="UI"/>
+<UI.tooltip value="{this.props.tooltipValue}" disabled="{!this.props.tooltipValue}" styleType="{this.props.tooltipStyleType}">
+    <div class="icon-button-container">
+        <button class="{this.getClassName()}" onClick="{this.props.onClick}" style="{this.props.style}">
+            <span key="{'key' + this.props.name}" rt-if="this.props.name"><symbols.symbol name="{this.props.name}"></symbols.symbol></span>
+            <span>{this.props.children}</span>
+            <UI.arrowButton key="iconButtonArrow" rt-if="this.props.popupMode" withoutBorder="{true}"></UI.arrowButton>
+        </button>
+    </div>
+</UI.tooltip>
+

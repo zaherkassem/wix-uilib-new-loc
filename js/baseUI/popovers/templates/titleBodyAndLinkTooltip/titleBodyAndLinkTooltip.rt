@@ -1,0 +1,6 @@
+<rt-require dependency="util" as="util"/>
+<div class="titleBodyAndLinkTooltip">
+    <div class="title" rt-if="!!this.props.title" key="title">{util.translate(this.props.title)}</div>
+    <div class="text" rt-if="!!this.props.text" key="text">{util.translate(this.props.text)}</div>
+    <div class="link" rt-if="!!this.props.link" key="link" onClick="{this.onLinkClick}">{util.translate(this.props.link)}</div>
+</div>

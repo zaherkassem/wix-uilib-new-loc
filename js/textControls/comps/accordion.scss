@@ -1,0 +1,67 @@
+@import "../../../../../packages/baseUI/src/main/framework/framework.scss";
+
+.control-accordion {
+  position: relative;
+
+  .accordion-header {
+    background-color: #ffffff;
+
+    .selected-indicator {
+      margin-left: 12px;
+      vertical-align: middle;
+
+      .symbol-textEffectsIndicator {
+        fill: #80abe4;
+      }
+    }
+
+    &:hover {
+      background-color: $g-color-b5;
+
+      .info-icon {
+        display: inline-block;
+      }
+    }
+
+    .info-icon {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      display: none;
+    }
+
+    > label {
+      color: $g-color-d1;
+      @include g-font-f04();
+      font-weight: 500;
+      text-align: left;
+      padding: 19px 0 18px 0;
+      display: inline-block;
+      line-height: 13px;
+    }
+
+    .accordion-icon {
+      margin: 19px 15px 18px 24px;
+      svg {
+        fill: $g-color-d1;
+      }
+
+      &.open {
+        margin: 22px 12px 20px 24px;
+
+      }
+
+    }
+
+    .symbol-accordionClose {
+      width: 5px;
+      height: 10px;
+    }
+
+    .symbol-accordionOpen {
+      width: 10px;
+      height: 5px;
+    }
+  }
+
+}

@@ -1,0 +1,74 @@
+@import "../framework/framework";
+
+.palettes-list {
+  $palettes-list-width: 138px;
+  $palette-option-height: 24px;
+  $palette-option-padding: 3px;
+  $palette-option-margin: 3px;
+  $palette-option-hover-border-color: #d3edff;
+  $palette-option-selected-border-color: #3899ec;
+  $palette-option-color-width: 18px;
+
+  position: relative;
+  width: $palettes-list-width;
+  height: 100%;
+  text-align: center;
+
+  .palette-options {
+    display: inline;
+    vertical-align: top;
+
+    .palette-option-wrapper {
+      padding: $palette-option-margin 0;
+      display: inline-block;
+      cursor: pointer;
+
+      &:hover {
+        .palette-option {
+          border-color: $palette-option-hover-border-color;
+          transition-duration: 0.4s;
+          transition-property: border-color;
+        }
+      }
+
+      .palette-option {
+        position: relative;
+        display: inline-block;
+        height: $palette-option-height;
+        line-height: $palette-option-height;
+        border: 1px solid transparent;
+        font-size: 0;
+        padding: $palette-option-padding;
+
+        &.selected {
+          border-color: $palette-option-selected-border-color;
+
+          &:before {
+            position: absolute;
+            content: '';
+            font-size: initial;
+            left: -11px;
+            cursor: initial;
+            width: 0;
+            height: 0;
+            border-right: 6px solid $g-color-b1;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            top: 9px;
+          }
+        }
+
+        .palette-option-color {
+          display: inline-block;
+          width: $palette-option-color-width;
+          height: 100%;
+
+          &.white-color {
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+          }
+        }
+      }
+    }
+  }
+}

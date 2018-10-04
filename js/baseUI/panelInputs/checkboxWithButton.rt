@@ -1,0 +1,17 @@
+<rt-require dependency="baseUI/controls/button" as="UIButton"/>
+<rt-require dependency="baseUI/controls/toggle" as="toggle"/>
+<rt-require dependency="symbols" as="symbols"/>
+<rt-require dependency="util" as="util"/>
+
+<div rt-scope="this.getValueFromProps(this.props) as isChecked"
+     class="{util.inheritClassName(this.props, 'control-checkbox-with-button')}">
+    <div class="controls-wrapper">
+        <toggle name="checkbox" data-indeterminate="{this.props.indeterminate}" value="{isChecked}"
+                   onChange="{this.handleChange}" ref="checkbox"
+                   disabled="{this.props.isCheckboxDisabled}" label="{this.props.label}"
+                   shouldTranslate="{this.props.shouldTranslate}" labelAfterSymbol="{true}"/>
+        <UIButton rt-if="isChecked" key="ui-button" class="checkbox-button" label="{this.props.buttonLabel}"
+                  onClick="{this.props.onButtonClick}"
+                  shouldTranslate="{this.props.shouldTranslate}" disabled="{Boolean(this.props.isButtonDisabled)}"/>
+    </div>
+</div>

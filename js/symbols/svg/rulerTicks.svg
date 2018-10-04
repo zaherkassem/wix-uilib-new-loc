@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100px" height="12px" viewBox="0 0 100 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>Ruler Unit</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Ruler-Unit" sketch:type="MSArtboardGroup" fill="#728596">
+            <path d="M99,12 L100,12 L100,0 L99,0 L99,12 Z M89,5 L90,5 L90,0.001 L89,0.001 L89,5 Z M79,5 L80,5 L80,0.001 L79,0.001 L79,5 Z M69,5 L70,5 L70,0.001 L69,0.001 L69,5 Z M59,5 L60,5 L60,0.001 L59,0.001 L59,5 Z M49,8 L50,8 L50,0 L49,0 L49,8 Z M39,5 L40.001,5 L40.001,0.001 L39,0.001 L39,5 Z M29,5 L30,5 L30,0.001 L29,0.001 L29,5 Z M19,5 L20,5 L20,0.001 L19,0.001 L19,5 Z M9,5 L10,5 L10,0.001 L9,0.001 L9,5 Z" id="Page-1" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

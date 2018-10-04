@@ -1,0 +1,12 @@
+.shadow-control {
+  margin-top: 15px;
+  position: relative;
+
+  .blocking-layer {
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}
+

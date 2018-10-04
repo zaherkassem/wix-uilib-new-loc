@@ -1,0 +1,25 @@
+<rt-require dependency="baseUI/popovers/tooltip" as="tooltip"/>
+<rt-require dependency="baseUI/framework/uiConstants" as="uiConstants"/>
+<rt-require dependency="symbols" as="symbols"/>
+
+<span class="domain-input-wrapper">
+    <span class="mini-toolbar">
+        <symbols.symbol name="addressBarMiniToolbar"/>
+    </span>
+    <div class="full-domain-wrapper{this.state.isFocused ? ' focus' : ''}">
+        <span key="domainPrefix" rt-if="this.props.prefix" ref="prefix" class="domain-prefix" onClick="{this.reportPrefixClicked}">{this.props.prefix}</span>
+        <span class="input-wrapper" onClick="{this.handleDomainNameClickBI}">
+            <input ref="domain" type="text" value={this.state.value}
+                   class="{this.state.invalidMessage ? 'invalid' : ''}"
+                   onFocus="()=>this.setFocusState(true)"
+                   onBlur="{this.handleInputBlur}"
+                   onChange="{this.handleChange}"
+                   onKeyDown="{this.handleInputKeyDown}"
+                   onClick="{this.reportValueClickedIfNeeded}"
+                   disabled="{!this.props.isEditable}" spellcheck="false"/>
+        </span>
+        <tooltip class="domain-tooltip" id="{this.getTooltipId()}" value="{this.state.invalidMessage}" alignment="{uiConstants.TOOLTIP.ALIGNMENT.TOP}" openTriggers="{[]}" closeTriggers="{[]}">
+            <div class="tooltip-anchor"></div>
+        </tooltip>
+    </div>
+</span>

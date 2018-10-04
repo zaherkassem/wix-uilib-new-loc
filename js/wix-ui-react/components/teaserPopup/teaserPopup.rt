@@ -1,0 +1,12 @@
+<rt-require dependency="baseUI/panelInputs/firstTimeInfoBox" as="firstTimeInfoBox"/>
+<firstTimeInfoBox
+    text="{this.props.text}"
+    title="{this.props.title}"
+    id="{this.props.id}"
+    learnMore="{this.props.linkClicked}"
+    linkText="{this.props.linkText}"
+    gotItText="{this.props.gotItText}"
+    biClose="{this.biClose}"
+    biLearnMore="{this.biLearnMore}"
+    userPrefs="{this.userPrefs()}">
+</firstTimeInfoBox>

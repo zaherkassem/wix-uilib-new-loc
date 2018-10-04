@@ -1,0 +1,158 @@
+@import "../../../../baseUI/src/main/framework/framework";
+
+$transition-duration: .2s;
+
+@include toggle-regular-up(switch) {
+  float: right;
+
+  .st1 {
+    fill: $g-color-b4;
+    @include with-parent-class(show-on-all-pages) {
+      fill: $g-color-o4;
+    }
+  }
+
+  .st2 {
+    fill: $g-color-e5;
+    @include with-parent-class(show-on-all-pages) {
+      fill: $g-color-o3;
+    }
+  }
+
+  .switch-thumb-circle {
+    fill: $g-color-d6;
+  }
+
+  .switch-thumb-minus {
+    fill: $g-color-e5;
+    @include with-parent-class(show-on-all-pages) {
+      fill: $g-color-o3;
+    }
+  }
+
+  .switch-thumb-check {
+    fill: none;
+  }
+
+  .switch-thumb-regular {
+    visibility: visible;
+  }
+
+  .switch-thumb-selected {
+    visibility: hidden;
+  }
+}
+
+@include toggle-regular-up(switch, label) {
+  color: $g-color-d2;
+  font-size: 14px;
+  line-height: 1.8;
+  font-family: $g-font45;
+}
+
+@include toggle-regular-hover(switch) {
+  .st1 {
+    fill: $g-color-e5;
+    @include with-parent-class(show-on-all-pages) {
+      fill: $g-color-o3;
+    }
+  }
+}
+
+@include toggle-regular-disabled(switch) {
+  .st1 {
+    fill: $g-color-d4x;
+  }
+
+  .st2 {
+    fill: $g-color-e5x;
+  }
+
+  .switch-thumb-circle {
+    filter: none;
+  }
+
+  .switch-thumb-minus {
+    fill: $g-color-e5x;
+  }
+
+  .switch-thumb-check {
+    fill: none;
+  }
+}
+
+@include toggle-selected-up(switch) {
+  .st1,
+  .st2 {
+    fill: $g-color-b1;
+
+    @include with-parent-class(show-on-all-pages) {
+      fill: $g-color-o1;
+    }
+  }
+
+  .switch-thumb-circle {
+    fill: $g-color-d6;
+  }
+
+  .switch-thumb-minus {
+    fill: none;
+  }
+
+  .switch-thumb-check {
+    fill: $g-color-b1;
+
+    @include with-parent-class(show-on-all-pages) {
+      fill: $g-color-o1;
+    }
+  }
+
+  .switch-thumb-regular {
+    visibility: hidden;
+  }
+
+  .switch-thumb-selected {
+    visibility: visible;
+  }
+}
+
+@include toggle-selected-hover(switch) {
+  .st1,
+  .st2 {
+    fill: $g-color-b2;
+
+    @include with-parent-class(show-on-all-pages) {
+      fill: $g-color-o2;
+    }
+  }
+
+  .switch-thumb-check {
+    fill: $g-color-b2;
+
+    @include with-parent-class(show-on-all-pages) {
+      fill: $g-color-o1;
+    }
+  }
+}
+
+@include toggle-selected-disabled(switch) {
+  .st1 {
+    fill: $g-color-d4x;
+  }
+
+  .st2 {
+    fill: $g-color-e5x;
+  }
+
+  .switch-thumb-circle {
+    filter: none;
+  }
+
+  .switch-thumb-minus {
+    fill: none;
+  }
+
+  .switch-thumb-check {
+    fill: $g-color-e5x;
+  }
+}

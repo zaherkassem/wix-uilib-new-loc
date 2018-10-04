@@ -1,0 +1,16 @@
+@import "../../framework/framework";
+
+$button-name: btn-confirm-primary;
+
+@include button-up($button-name) {
+  background-color: $g-color-b1;
+  color: #fff;
+}
+
+@include button-hover($button-name) {
+  background-color: $g-color-b2;
+}
+
+@include button-down($button-name) {
+  background-color: $g-color-b1;
+}

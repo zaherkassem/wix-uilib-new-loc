@@ -1,0 +1,76 @@
+@import "../framework/framework";
+
+.color-picker-input {
+  $color-picker-height: 30px;
+  $color-picker-width: 30px;
+
+  @function get-gradient() {
+    $color: #ccc;
+    @return linear-gradient(45deg, $color 25%, transparent 25%, transparent 75%, $color 75%, $color);
+  }
+
+  position: relative;
+
+  > .color-picker-wrapper {
+    width: $color-picker-width;
+    height: $color-picker-height;
+    border: 1px solid $g-color-e6x;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-size: 20px 20px;
+    background-image: get-gradient(), get-gradient();
+    background-position: 5px 5px, 15px 15px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+
+    &.disabled {
+      opacity: 0.4;
+    }
+
+    > .color-picker-color {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    &:hover,
+    &.colorPickerOpen {
+      border: 2px solid $g-color-b3;
+      background-position: 4px 4px, 14px 14px;
+    }
+
+  }
+
+  > .color-picker-label {
+    @include g-font-f03;
+    color: $g-color-d2;
+    height: $color-picker-height;
+    line-height: $color-picker-height;
+    cursor: pointer;
+
+    &:hover + .color-picker-wrapper {
+      border: 2px solid $g-color-b3;
+    }
+
+    ~ .color-picker-wrapper {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  > .divider-long,
+  > .rich-text-paragraph {
+    margin-top: 14px;
+  }
+
+  //overrides:
+  .color-picker-input-with-opacity & {
+    position: absolute;
+    right: 0;
+    top: 2px;
+  }
+}

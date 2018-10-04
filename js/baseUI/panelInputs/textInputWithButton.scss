@@ -1,0 +1,42 @@
+@import "../framework/framework";
+
+.control-text-input-with-button {
+  position: relative;
+
+  &:hover {
+    .info-icon {
+      display: inline-block;
+    }
+    .control-text-input:not(.focused) > input,
+    .control-text-input:not(.focused) > textarea {
+      background-color: $g-color-b5;
+      color: $g-color-d2;
+
+      &::placeholder{
+        color: $g-color-d2;
+      }
+    }
+
+    .control-text-input:not(.focused) > input:hover,
+    .control-text-input:not(.focused) > textarea:hover {
+      background-color: $g-color-b4;
+      color: $g-color-d2;
+    }
+  }
+
+  .control-text-input {
+    margin: 12px 0 !important;
+    width: 100% !important;
+  }
+
+  .control-button {
+    margin: 0 auto 18px !important;
+    display: block;
+    padding: 7px 24px;
+    width: auto;
+    min-width: 0;
+    line-height: 14px !important;
+    font-size: 14px;
+    height: 30px;
+  }
+}

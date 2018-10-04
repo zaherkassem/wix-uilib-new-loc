@@ -1,0 +1,123 @@
+@import "../../../../../baseUI/src/main/framework/framework";
+
+// regular - up
+@include toggle-regular-up(transition-imagebutton-dissolve) {
+  .st2 {
+    fill: #ADDDFB;
+  }
+
+  .st3 {
+    fill: #CDEBFD;
+  }
+
+  .st4 {
+    fill: #E3F3FF;
+  }
+
+  .st5 {
+    fill: #7DCAF9;
+  }
+
+  .st6 {
+    fill: #6AC2F8;
+  }
+
+  .st7 {
+    fill: #74C6F8;
+  }
+
+  .st8,
+  .st9 {
+    fill: #7AC9F9;
+  }
+
+  .st10 {
+    fill: #B6E1FC;
+  }
+
+  .st11 {
+    fill: #A2D9FB;
+  }
+
+  .st12 {
+    fill: #B3DFFC;
+  }
+
+  .st13,
+  .st17 {
+    fill: #C8E8FE;
+  }
+
+  .st14 {
+    fill: #D1ECFE;
+  }
+
+  .st15 {
+    fill: #D8EFFF;
+  }
+
+  .st16 {
+    fill: #DBF0FF;
+  }
+}
+
+// selected - up
+@include toggle-selected-up(transition-imagebutton-dissolve) {
+  .st2 {
+    fill: #76BBF4;
+  }
+
+  .st3 {
+    fill: #62B3F2;
+  }
+
+  .st4 {
+    fill: #54ADF0;
+  }
+
+  .st5 {
+    fill: #A5D4F9;
+  }
+
+  .st6 {
+    fill: #B7DEFC;
+  }
+
+  .st7 {
+    fill: #B1DCFB;
+  }
+
+  .st8,
+  .st9 {
+    fill: #ADDAFB;
+  }
+
+  .st10 {
+    fill: #82C6F7;
+  }
+
+  .st11 {
+    fill: #94D0F9;
+  }
+
+  .st12 {
+    fill: #8ACCF8;
+  }
+
+  .st13,
+  .st17 {
+    fill: #7CC7F7;
+  }
+
+  .st14 {
+    fill: #76C5F7;
+  }
+
+  .st15 {
+    fill: #72C3F6;
+  }
+
+  .st16 {
+    fill: #6ABDF4;
+  }
+}

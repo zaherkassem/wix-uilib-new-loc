@@ -1,0 +1,248 @@
+@import "../framework/framework";
+
+.image-preview {
+
+  $background-color: $g-color-b5;
+  $background-color-bottom: rgba(177, 221, 248, .4);
+  $button-color: $g-color-d6;
+  $button-color-hover: $g-color-b5;
+  $button-color-active: $g-color-d6;
+  $button-text-color: $g-color-b1;
+
+  $arrow-size: 24px;
+
+  background-color: $background-color;
+  box-sizing: border-box;
+  height: 155px;
+  position: relative;
+  text-align: center;
+  width: 288px;
+
+  .image-wrapper {
+    font-size: 0; // without it .image-wrapper will be about 4 pixels taller than the img which creates a scrollbar :(
+    height: 100%;
+
+    > img {
+      //    width: 100%;
+      height: 100%;
+    }
+  }
+
+  .button-wrapper {
+    background-color: $background-color-bottom;
+    bottom: 0;
+    display: block;
+    height: 54px;
+    left: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 100%;
+
+    button.action {
+      $margin: 24px;
+
+      background-color: $button-color;
+      border: 0;
+      border-radius: 17px;
+      color: $button-text-color;
+      cursor: pointer;
+      font-size: 14px;
+      height: 32px;
+      line-height: 32px;
+      margin-bottom: 0 !important;
+      margin-top: 11px !important;
+      outline: none;
+      text-overflow: clip; // we NEVER want to see ellipsis (and there are cases where although the label is short enough to fit the button, not overriding text-overflow would result in ellipsis)
+      vertical-align: top;
+
+      &.has-icon {
+        padding-left: 0;
+
+        &:not(.has-label) {
+          padding: 0 9px;
+          margin-left: 0;
+          margin-right: 10px;
+        }
+      }
+
+      &:nth-of-type(1):nth-last-of-type(1) {
+        // There's only one button
+        min-width: 167px;
+        max-width: 204px;
+      }
+
+      &:nth-of-type(1):nth-last-of-type(2) {
+        // There are two buttons
+        &, & + button {
+          width: 108px;
+        }
+        margin-right: $margin;
+        & + button {
+          margin-left: 0;
+        }
+      }
+
+      &:nth-of-type(1):nth-last-of-type(3) {
+        // 1st of three buttons
+        width: 152px;
+        margin-left: $margin;
+        margin-right: 12px;
+        float: left;
+      }
+
+      &:nth-of-type(2):nth-last-of-type(2) {
+        // 2nd of three buttons
+        float: right;
+        margin-right: $margin;
+      }
+
+      &:nth-of-type(3):nth-last-of-type(1) {
+        // 3rd of three buttons
+        float: right;
+        margin-right: 12px;
+      }
+
+      &:hover {
+        background-color: $button-color-hover;
+      }
+
+      &:active {
+        background-color: $button-color-active;
+      }
+
+      svg {
+        float: left;
+        width: 14px;
+        height: 32px;
+
+        &.symbol-with-label {
+          margin: 0 11px 0 9px !important;
+        }
+
+        * {
+          fill: $button-text-color;
+        }
+      }
+
+      span {
+        color: $button-text-color;
+        @include g-font-f04();
+        line-height: 17px;
+        text-align: left;
+        left: -3px;
+        position: relative;
+      }
+    }
+  }
+
+  .placeholder-wrapper {
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -75%);
+    }
+
+    &.symbol-in-the-middle {
+      svg {
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .corner-borders {
+      &:before,
+      &:after {
+        border: solid #5c99e8;
+        content: '';
+        height: 10px;
+        margin: 25px;
+        position: absolute;
+        width: 10px;
+      }
+
+      &.top:before {
+        border-width: 1px 0 0 1px;
+        left: 0;
+        top: 0;
+      }
+
+      &.top:after {
+        border-width: 1px 1px 0 0;
+        right: 0;
+        top: 0;
+      }
+
+      &.bottom:before {
+        border-width: 0 0 1px 1px;
+        bottom: 0;
+        left: 0;
+      }
+
+      &.bottom:after {
+        border-width: 0 1px 1px 0;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .arrow-button {
+    border-radius: 50%;
+    box-shadow: 0px 1px 3px 0px rgba(52, 94, 151, 0.43);
+    cursor: pointer;
+    height: $arrow-size;
+    position: absolute;
+    top: 50%;
+    width: $arrow-size;
+
+    &:after {
+      border-left: 2px solid #0199ef;
+      border-top: 2px solid #0199ef;
+      content: '';
+      height: 6px;
+      left: calc(50% - 2px);
+      position: absolute;
+      top: calc(50% - 4px);
+      transform: rotate(-45deg);
+      width: 6px;
+    }
+
+    &.prev {
+      left: 0px;
+      margin: -$arrow-size/2 0 0 $arrow-size/2;
+    }
+
+    &.next {
+      right: 0px;;
+      margin: -$arrow-size/2 $arrow-size/2 0 0;
+
+      &:after {
+        left: calc(50% - 5px);
+        top: calc(50% - 4px);
+        transform: rotate(135deg);
+      }
+    }
+
+    &:hover {
+      background-color: rgba(56, 153, 236, 0.9);
+
+      &:after {
+        border-color: $g-color-d6;
+      }
+    }
+
+    &[disabled] {
+      cursor: default;
+    }
+
+    &, &[disabled], &[disabled]:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    &[disabled], &[disabled]:hover {
+      &:after {
+        border-color: $g-color-b1x;
+      }
+    }
+  }
+}

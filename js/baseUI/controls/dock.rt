@@ -1,0 +1,49 @@
+<rt-require dependency="baseUI/controls/infoIcon" as="infoIcon"/>
+
+<div class="control-dock" onMouseLeave="{this.props.onMouseLeave}">
+
+    <infoIcon rt-if="this.hasLabel() && (this.props.infoText || this.props.infoText)" key="tooltip" title="{this.props.infoTitle}" text="{this.props.infoText}" size="{18}"/>
+    <label class="dock-label">{this.getLabel()}</label>
+
+    <div class="dock-corners-wrapper">
+        <label onMouseEnter="{this.onDockMouseEnter.bind(null, 'TOP_LEFT')}" onMouseLeave="{this.props.onMouseLeave}">
+            <input type="radio" name="{this.getRadioGroupId()}" onChange="{this.onDockChange.bind(null, 'TOP_LEFT')}" checked="{this.props.value === 'TOP_LEFT'}" value="TOP_LEFT" />
+            <span class="square top left"></span>
+        </label>
+        <label onMouseEnter="{this.onDockMouseEnter.bind(null, 'TOP')}" onMouseLeave="{this.props.onMouseLeave}">
+            <input type="radio" name="{this.getRadioGroupId()}" onChange="{this.onDockChange.bind(null, 'TOP')}" checked="{this.props.value === 'TOP'}" value="TOP" />
+            <span class="square top"></span>
+        </label>
+        <label onMouseEnter="{this.onDockMouseEnter.bind(null, 'TOP_RIGHT')}" onMouseLeave="{this.props.onMouseLeave}">
+            <input type="radio" name="{this.getRadioGroupId()}" onChange="{this.onDockChange.bind(null, 'TOP_RIGHT')}" checked="{this.props.value === 'TOP_RIGHT'}" value="TOP_RIGHT" />
+            <span class="square top right"></span>
+        </label>
+        <label onMouseEnter="{this.onDockMouseEnter.bind(null, 'LEFT')}" onMouseLeave="{this.props.onMouseLeave}">
+            <input type="radio" name="{this.getRadioGroupId()}" onChange="{this.onDockChange.bind(null, 'LEFT')}" checked="{this.props.value === 'LEFT'}" value="LEFT" />
+            <span class="square left"></span>
+        </label>
+        <label>
+            <span class="square middle"></span>
+        </label>
+        <label onMouseEnter="{this.onDockMouseEnter.bind(null, 'RIGHT')}" onMouseLeave="{this.props.onMouseLeave}">
+            <input type="radio" name="{this.getRadioGroupId()}" onChange="{this.onDockChange.bind(null, 'RIGHT')}" checked="{this.props.value === 'RIGHT'}" value="RIGHT" />
+            <span class="square right"></span>
+        </label>
+        <label onMouseEnter="{this.onDockMouseEnter.bind(null, 'BOTTOM_LEFT')}" onMouseLeave="{this.props.onMouseLeave}">
+            <input type="radio" name="{this.getRadioGroupId()}" onChange="{this.onDockChange.bind(null, 'BOTTOM_LEFT')}" checked="{this.props.value === 'BOTTOM_LEFT'}" value="BOTTOM_LEFT" />
+            <span class="square bottom left"></span>
+        </label>
+        <label onMouseEnter="{this.onDockMouseEnter.bind(null, 'BOTTOM')}" onMouseLeave="{this.props.onMouseLeave}">
+            <input type="radio" name="{this.getRadioGroupId()}" onChange="{this.onDockChange.bind(null, 'BOTTOM')}" checked="{this.props.value === 'BOTTOM'}" value="BOTTOM" />
+            <span class="square bottom"></span>
+        </label>
+        <label onMouseEnter="{this.onDockMouseEnter.bind(null, 'BOTTOM_RIGHT')}" onMouseLeave="{this.props.onMouseLeave}">
+            <input type="radio" name="{this.getRadioGroupId()}" onChange="{this.onDockChange.bind(null, 'BOTTOM_RIGHT')}" checked="{this.props.value === 'BOTTOM_RIGHT'}" value="BOTTOM_RIGHT" />
+            <span class="square bottom right"></span>
+        </label>
+
+        <div class="dashed horizontal"></div>
+        <div class="dashed vertical"></div>
+    </div>
+
+</div>

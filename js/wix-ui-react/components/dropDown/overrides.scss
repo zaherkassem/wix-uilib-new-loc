@@ -1,0 +1,23 @@
+@import '../../../baseUI/framework/framework.scss';
+
+div.dropdown, section.dropdown-options {
+  text-align: left;
+  padding: 17px 12px 17px 12px;
+  > div.options > ol.list > li.option {
+    color: $g-color-d1;
+    font-size: 16px;
+  }
+  &.select {
+    > .info-icon {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+    }
+    > label {
+      @include ellipsis();
+      width: calc(100% - 30px);
+      margin-bottom: 2px;
+      margin-top: 3px;
+    }
+  }
+}
