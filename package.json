@@ -3,7 +3,7 @@
   "version": "0.0.6",
   "description": "wix ui controls for third party applications",
   "publishConfig": {
-    "registry": "http://repo.dev.wix/artifactory/api/npm/npm-local/"
+    "registry": "https://github.com/zaherkassem/wix-uilib-new-loc"
   },
   "scripts": {
     "lint": "eslint js/**",

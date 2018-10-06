@@ -3,7 +3,7 @@
 Editor UI Lib (React,  jQuery and more)
 
 ## Site
-http://wix.github.io/editor-ui-lib-docs/
+https://github.com/zaherkassem/wix-uilib-new-loc
 
 ## After cloning the project run this to install dependencies:
 ```

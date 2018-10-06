@@ -1,0 +1,2 @@
+<rt-require dependency="baseUI/controls/drillDown" as="myDrillDown"/>
+<myDrillDown rt-props="this.getProps()"/>

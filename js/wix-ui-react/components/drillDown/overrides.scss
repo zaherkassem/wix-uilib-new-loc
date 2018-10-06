@@ -1,0 +1,10 @@
+.control-button {
+  &.btn-back {
+    padding: 0 12px 0 9px;
+    svg {
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      margin-right: 12px;
+    }
+  }
+}

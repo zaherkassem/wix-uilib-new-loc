@@ -5,6 +5,7 @@ var button = require('wix-ui-react/components/button/button');
 var colorPickerSlider = require('wix-ui-react/components/colorSpace/colorPickerSlider');
 var colorPickerInput = require('wix-ui-react/components/colorSpace/colorPickerInput');
 var checkbox = require('wix-ui-react/components/switches/checkbox');
+var drillDown = require('wix-ui-react/components/drillDown/drillDown');
 var dropDown = require('wix-ui-react/components/dropDown/dropDown');
 var dropDownSelect = require('wix-ui-react/components/dropDown/dropDownSelect');
 var radioButtons = require('wix-ui-react/components/switches/radioButtons');
@@ -40,6 +41,7 @@ module.exports = {
     tabs: tabs,
     slider: slider,
     stepper: stepper,
+    drillDown:drillDown,
     dropDown: dropDown,
     dropDownSelect: dropDownSelect,
     colorPickerSlider: colorPickerSlider,
