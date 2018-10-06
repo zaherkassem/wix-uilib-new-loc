@@ -1,3 +1,12 @@
-<div>
-I am drilldown
+<rt-require dependency="symbols" as="symbols" />
+<div class="drillDown"  hidden="{this.props.hidden ? 'hidden' : ''}" disabled="{this.props.disabled ? 'disabled' : ''}" onClick="{this.props.onClick}">
+    <div class="drillDownComponent">
+    	<span class="drillDownLabel">{this.translateIfNeeded(this.props.label)}</span>
+        <span class="drillDownImg">
+        	<div class="arrowIcon">
+        		<symbols.symbol key="symbol-arrowDrillDown" class="arrowDrillDown" name="arrowDrillDown" />
+        	</div>	
+        </span>	
+    </div>
+    <hr class="divider-long">
 </div>
