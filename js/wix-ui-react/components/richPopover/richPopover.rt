@@ -1,0 +1,10 @@
+<rt-require dependency="baseUI/richPopover/richPopover" as="richPopover"/>
+<richPopover
+    placement="{this.props.placement}"
+    width="{this.props.width}"
+    height="{this.props.height}"
+    content="{this.props.content}"
+    type="{this.props.type}" 
+    >
+    <span>{this.props.children}</span>
+</richPopover>

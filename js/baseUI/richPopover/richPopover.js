@@ -12,7 +12,7 @@ define([
             displayName: 'richPopover',
             propTypes: {
 				placement:	React.PropTypes.string,
-			    container: 	document.body,
+			    container: 	React.PropTypes.string,
 			    width:		React.PropTypes.string,
 			    height:		React.PropTypes.string,
 			    trigger:	React.PropTypes.string,
@@ -45,9 +45,9 @@ define([
                     React.PropTypes.string
                 ]),
 			    onShow: function($element) {},
-			    onHide: function($element) {},           	
+			    onHide: function($element) {}           	
            },
-            getDefaultProps: function () {
+            getDefaultProps: function() {
                 return {
                 	placement:'auto',//values: auto,top,right,bottom,left,top-right,top-left,bottom-right,bottom-left,auto-top,auto-right,auto-bottom,auto-left,horizontal,vertical
 				    container: document.body,// The container in which the popover will be added (i.e. The parent scrolling area). May be a jquery object, a selector string or a HTML element. See https://jsfiddle.net/1x21rj9e/1/
@@ -85,4 +85,16 @@ define([
                 return null;
             },
             
+            showTooltip: function () {
+                
+            },
+
+            hideTooltip: function () {
+                
+            },
+            render: function () {
+            	//var richPopoverOptions = this.getDefaultProps();
+            	return React.createElement('div', webuiPopover, this.props);
+            }
         });
+    });
