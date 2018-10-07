@@ -282,6 +282,14 @@ define(['lodash'], function(_) {
             },
             "content": (<path fill="#3899EC" d="M.466 2.99L0 2.5l.31-.327L2.07.327 2.378 0 3 .653 2.69.98 1.242 2.5 2.69 4.02l.31.327L2.38 5l-.312-.327L.466 2.99z" />)
         },
+        "arrowRightSmall": {
+            "svg": {
+                "width": "3",
+                "height": "5",
+                "viewBox": "0 0 3 5"
+            },
+            "content": (<path fill="#3899EC" d="M.466 2.99L0 2.5l.31-.327L2.07.327 2.378 0 3 .653 2.69.98 1.242 2.5 2.69 4.02l.31.327L2.38 5l-.312-.327L.466 2.99z" />)
+        },
         "cyclePickerMoreArrow": {
             "svg": {
                 "width": "9",

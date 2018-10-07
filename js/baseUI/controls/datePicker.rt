@@ -4,11 +4,11 @@
 <div class="input-date-picker">
     <div class="dp-header">
         <div class="dp-navigate dp-previous" onClick="() => this.updateMonth(-1)">
-            <symbols.symbol name="greaterThen" />
+            <symbols.symbol name="arrowRightSmall" />
         </div>
         <div class="dp-title">{this.getMonthTitle()}</div>
         <div class="dp-navigate dp-next" onClick="() => this.updateMonth(1)">
-            <symbols.symbol name="greaterThen"/>
+            <symbols.symbol name="arrowLeftSmall"/>
         </div>
     </div>
     <div class="dp-body">

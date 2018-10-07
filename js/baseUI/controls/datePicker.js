@@ -11,7 +11,9 @@ define(['react', 'lodash', 'util', 'baseUI/controls/datePicker.rt'], function (R
             goToSelectedLabel: React.PropTypes.string,
             startDay: React.PropTypes.string,
             days: React.PropTypes.arrayOf(React.PropTypes.string),
+            daysShort: React.PropTypes.arrayOf(React.PropTypes.string),
             monthNames: React.PropTypes.arrayOf(React.PropTypes.string),
+            monthNamesShort: React.PropTypes.arrayOf(React.PropTypes.string),
             showDelete: React.PropTypes.bool,
             fixedNumberOfRows: React.PropTypes.bool
         },
@@ -21,12 +23,20 @@ define(['react', 'lodash', 'util', 'baseUI/controls/datePicker.rt'], function (R
                 goToSelectedLabel: 'Go to selected',
                 value: new Date(),
                 days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
                 monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                monthNamesShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                showShortNames: true,
                 fixedNumberOfRows: true
             };
         },
+        
+        getDaysList: function(){
+        	return (this.props.showShortNames) ?  this.props.daysShort : this.props.days;
+        },
         getDays: function () {
-            var result = _.map(this.props.days, this.translateIfNeeded);
+        	var daysList = this.getDaysList();
+            var result = _.map(daysList, this.translateIfNeeded);
             var startDay = this.props.startDay ? this.translateIfNeeded(this.props.startDay) : result[0];
             while (result[0] !== startDay) {
                 result.push(result.shift());
@@ -42,9 +52,10 @@ define(['react', 'lodash', 'util', 'baseUI/controls/datePicker.rt'], function (R
         },
 
         getDatesInMonth: function () {
+        	var daysList = this.getDaysList();
             var days = [];
             var day = new Date(this.state.value.getFullYear(), this.state.value.getMonth(), 1);
-            var firstDayIndex = this.props.startDay ? this.props.days.indexOf(this.props.startDay) : 0;
+            var firstDayIndex = this.props.startDay ? daysList.indexOf(this.props.startDay) : 0;
             while (day.getDay() !== firstDayIndex) {
                 day = new Date(day.getFullYear(), day.getMonth(), day.getDate() - 1);
                 days.unshift(day);
@@ -97,7 +108,9 @@ define(['react', 'lodash', 'util', 'baseUI/controls/datePicker.rt'], function (R
                 date1.getDate() === date2.getDate();
         },
         getMonthTitle: function () {
-            var monthName = this.props.monthNames[this.state.value.getMonth()];
+            var monthName = (this.props.showShortNames) 
+            			? this.props.monthNamesShort[this.state.value.getMonth()]
+            			: this.props.monthNames[this.state.value.getMonth()];
             return this.translateIfNeeded(monthName) + ' ' + this.state.value.getFullYear();
         },
         render: template
