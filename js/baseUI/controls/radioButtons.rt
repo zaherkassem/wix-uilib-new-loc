@@ -14,5 +14,8 @@
                checked="{option.value === selectedValue}" onChange="()=>this.handleChange(option.value, option.type);">
         <span></span>
         <span onClick="{this.onClick}">{this.translateIfNeeded(option.label)}</span>
+        <span class="option-info">
+        	<infoIcon rt-if="option.infoText" key="optionInfoIcon" text="{option.infoText}" title="{option.infoTitle}"/>
+        </span>
     </label>
 </div>

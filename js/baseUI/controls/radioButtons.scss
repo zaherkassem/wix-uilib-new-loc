@@ -3,7 +3,14 @@
 .control-radio-buttons {
   box-sizing: border-box;
   position: relative;
-
+	.option-info{
+		position:relative;
+		width:18px;
+		height:18px;
+		visibility:hidden;
+		display: inline-block
+		
+	}
   .info-icon {
     position: absolute;
     top: 0;
@@ -37,14 +44,21 @@
     &:last-child {
       margin-bottom: 0;
     }
+    &:hover {
+	   .option-info {
+	      opacity: 1;
+	      visibility:visible;
+	   }
+	}
   }
-
+  
   span:nth-of-type(2) {
     position: relative;
     top: -4px;
-    display: inline;
+    display: inline-block;
     color: $g-color-d1;
     margin-left: 12px;
+    width:192px;
     @include g-font-f04();
   }
 

@@ -12,7 +12,9 @@ define(['react', 'lodash', 'baseUI/controls/radioButtonsMixin', 'baseUI/controls
                     value: React.PropTypes.string.isRequired,
                     label: React.PropTypes.string.isRequired,
                     className: React.PropTypes.string,
-                    type: React.PropTypes.string
+                    type: React.PropTypes.string,
+                    infoText: React.PropTypes.string,
+                    infoTitle: React.PropTypes.string
                 })),
                 infoText: React.PropTypes.string,
                 infoTitle: React.PropTypes.string

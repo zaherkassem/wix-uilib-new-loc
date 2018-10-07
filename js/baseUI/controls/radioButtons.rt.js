@@ -19,7 +19,18 @@ define([
             'disabled': this.props.disabled,
             'checked': option.value === selectedValue,
             'onChange': onChange1.bind(this, selectedValue, option, optionIndex)
-        }), React.createElement('span', {}), React.createElement('span', { 'onClick': this.onClick }, this.translateIfNeeded(option.label)));
+        }), React.createElement('span', {}), 
+        	option.infoText ? React.createElement('span' , {
+        			'className': 'option-info',
+        		},
+        		React.createElement( infoIcon, {
+                	'key': 'optionInfoIcon',
+                	'text': option.infoText,
+                	'title': option.infoTitle
+            	})
+            ) : null,
+        	React.createElement('span', { 'onClick': this.onClick }, this.translateIfNeeded(option.label))
+        );
     }
     function scopeSelectedValue3() {
         var selectedValue = this.getValueFromProps(this.props);

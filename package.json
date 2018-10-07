@@ -72,6 +72,7 @@
     "sass-loader": "git+https://github.com/yaarams/sass-loader.git",
     "style-loader": "^0.12.3",
     "webpack": "^1.12.13",
+    "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^1.14.1",
     "webpack-merge": "^0.7.3",
     "wnpm-ci": "^6.1.0"
