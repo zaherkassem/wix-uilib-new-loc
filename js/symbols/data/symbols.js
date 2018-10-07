@@ -32,7 +32,7 @@ define(['lodash'], function(_) {
                 "height": "16",
                 "viewBox": "0 0 16 16"
             },
-            "content": (<g><circle fill="#ee5951" cx="8" cy="8" r="8"/> <rect fill="#fff" x="7" y="3" width="2" height="5"/> <rect fill="#fff" x="7" y="10" width="2" height="2"/></g>)
+            "content": (<g><circle fill="#ee5951" cx="8" cy="8" r="8"/><rect fill="#fff" x="7" y="3" width="2" height="5"/> <rect fill="#fff" x="7" y="10" width="2" height="2"/></g>)
         },
         "globe": {
             "svg": {
@@ -353,6 +353,15 @@ define(['lodash'], function(_) {
                 "viewBox": "0 0 8 13"
             },
             "content": (<g fill="#3899ec" fillRule="evenodd" class="cls-1"><path data-name="arrow copy 4" d="M888.905,395.988a0.681,0.681,0,0,0,.5-0.222l4.395-4.741a0.792,0.792,0,0,0,0-1.061l-4.6-4.74a0.669,0.669,0,0,0-.992,0,0.79,0.79,0,0,0,0,1.063l4.11,4.211-3.9,4.21a0.79,0.79,0,0,0,0,1.064A0.673,0.673,0,0,0,888.905,395.988Z" transform="translate(-887 -384.015)"/></g>)
+        },
+        
+        "mobile": {
+        	"svg": {
+                "width": "10",
+                "height": "16",
+                "viewBox": "0 0 10 16"
+            },
+            "content": (<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" transform="translate(-102.000000, -618.000000)"><g transform="translate(78.000000, 78.000000)" fill="#162D3D" fill-rule="nonzero"><g id="Mobile" transform="translate(24.000000, 521.000000)"><g id="mobile_light" transform="translate(0.000000, 19.000000)"><path d="M9,12 L1,12 L1,2 C1,1.449 1.39911111,1 1.88888889,1 L8.1111111,1 C8.6008889,1 9,1.449 9,2 L9,12 Z M9,14 C9,14.551 8.6008889,15 8.1111111,15 L1.88888889,15 C1.39911111,15 1,14.551 1,14 L1,13 L9,13 L9,14 Z M1,2 L9,2 L9,3 L1,3 L1,2 Z M8.1818182,0 L1.81818182,0 C0.81454545,0 0,0.896 0,2 L0,14 C0,15.104 0.81454545,16 1.81818182,16 L8.1818182,16 C9.1854545,16 10,15.104 10,14 L10,2 C10,0.896 9.1854545,0 8.1818182,0 Z" id="Shape"/></g></g></g></g>)
         }
     };
 

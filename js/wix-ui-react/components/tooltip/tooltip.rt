@@ -3,6 +3,8 @@
     value="{this.props.value}"
     alignment="{this.props.alignment}"
     styleType="{this.props.styleType}"
+    delay="{this.props.delay}"
+    openTriggers="{this.props.openTriggers}"
     width="{this.props.width}">
     <span>{this.props.children}</span>
 </tooltip>

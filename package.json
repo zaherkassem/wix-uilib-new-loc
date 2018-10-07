@@ -64,6 +64,7 @@
     "phantomjs": "^1.9.17",
     "postcss-loader": "^0.13.0",
     "react": "^15.3.1",
+    "webui-popover": "^1.2.18",
     "react-cli": "^0.2.0",
     "react-dom": "^15.3.1",
     "react-templates": "0.5.2",
